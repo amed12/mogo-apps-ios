@@ -7,27 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A0EDD9E260E101C0035EAFB /* mogo_appsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0EDD9D260E101C0035EAFB /* mogo_appsApp.swift */; };
-		4A0EDDA0260E101C0035EAFB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0EDD9F260E101C0035EAFB /* ContentView.swift */; };
-		4A0EDDA2260E101C0035EAFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A0EDDA1260E101C0035EAFB /* Assets.xcassets */; };
-		4A0EDDA5260E101C0035EAFB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A0EDDA4260E101C0035EAFB /* Preview Assets.xcassets */; };
-		4A0EDDA7260E101C0035EAFB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0EDDA6260E101C0035EAFB /* Persistence.swift */; };
-		4A0EDDAA260E101C0035EAFB /* mogo_apps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A0EDDA8260E101C0035EAFB /* mogo_apps.xcdatamodeld */; };
+		4A2DC96126122D4100CBD461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DC96026122D4100CBD461 /* AppDelegate.swift */; };
+		4A2DC96326122D4100CBD461 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DC96226122D4100CBD461 /* SceneDelegate.swift */; };
+		4A2DC96526122D4100CBD461 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DC96426122D4100CBD461 /* ViewController.swift */; };
+		4A2DC96826122D4100CBD461 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2DC96626122D4100CBD461 /* Main.storyboard */; };
+		4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DC96926122D4100CBD461 /* mogo_apps_ios.xcdatamodeld */; };
+		4A2DC96D26122D4200CBD461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A2DC96C26122D4200CBD461 /* Assets.xcassets */; };
+		4A2DC97026122D4200CBD461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2DC96E26122D4200CBD461 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4A0EDD9A260E101C0035EAFB /* mogo apps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mogo apps.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A0EDD9D260E101C0035EAFB /* mogo_appsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mogo_appsApp.swift; sourceTree = "<group>"; };
-		4A0EDD9F260E101C0035EAFB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		4A0EDDA1260E101C0035EAFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4A0EDDA4260E101C0035EAFB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4A0EDDA6260E101C0035EAFB /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		4A0EDDA9260E101C0035EAFB /* mogo_apps.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mogo_apps.xcdatamodel; sourceTree = "<group>"; };
-		4A0EDDAB260E101D0035EAFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A2DC95D26122D4100CBD461 /* mogo-apps-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mogo-apps-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A2DC96026122D4100CBD461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4A2DC96226122D4100CBD461 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4A2DC96426122D4100CBD461 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4A2DC96726122D4100CBD461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4A2DC96A26122D4100CBD461 /* mogo_apps_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mogo_apps_ios.xcdatamodel; sourceTree = "<group>"; };
+		4A2DC96C26122D4200CBD461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4A2DC96F26122D4200CBD461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4A2DC97126122D4200CBD461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4A0EDD97260E101C0035EAFB /* Frameworks */ = {
+		4A2DC95A26122D4100CBD461 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,79 +39,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4A0EDD91260E101C0035EAFB = {
+		4A2DC95426122D4100CBD461 = {
 			isa = PBXGroup;
 			children = (
-				4A0EDD9C260E101C0035EAFB /* mogo apps */,
-				4A0EDD9B260E101C0035EAFB /* Products */,
+				4A2DC95F26122D4100CBD461 /* mogo-apps-ios */,
+				4A2DC95E26122D4100CBD461 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4A0EDD9B260E101C0035EAFB /* Products */ = {
+		4A2DC95E26122D4100CBD461 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4A0EDD9A260E101C0035EAFB /* mogo apps.app */,
+				4A2DC95D26122D4100CBD461 /* mogo-apps-ios.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4A0EDD9C260E101C0035EAFB /* mogo apps */ = {
+		4A2DC95F26122D4100CBD461 /* mogo-apps-ios */ = {
 			isa = PBXGroup;
 			children = (
-				4A0EDD9D260E101C0035EAFB /* mogo_appsApp.swift */,
-				4A0EDD9F260E101C0035EAFB /* ContentView.swift */,
-				4A0EDDA1260E101C0035EAFB /* Assets.xcassets */,
-				4A0EDDA6260E101C0035EAFB /* Persistence.swift */,
-				4A0EDDAB260E101D0035EAFB /* Info.plist */,
-				4A0EDDA8260E101C0035EAFB /* mogo_apps.xcdatamodeld */,
-				4A0EDDA3260E101C0035EAFB /* Preview Content */,
+				4A2DC96026122D4100CBD461 /* AppDelegate.swift */,
+				4A2DC96226122D4100CBD461 /* SceneDelegate.swift */,
+				4A2DC96426122D4100CBD461 /* ViewController.swift */,
+				4A2DC96626122D4100CBD461 /* Main.storyboard */,
+				4A2DC96C26122D4200CBD461 /* Assets.xcassets */,
+				4A2DC96E26122D4200CBD461 /* LaunchScreen.storyboard */,
+				4A2DC97126122D4200CBD461 /* Info.plist */,
+				4A2DC96926122D4100CBD461 /* mogo_apps_ios.xcdatamodeld */,
 			);
-			path = "mogo apps";
-			sourceTree = "<group>";
-		};
-		4A0EDDA3260E101C0035EAFB /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				4A0EDDA4260E101C0035EAFB /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
+			path = "mogo-apps-ios";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4A0EDD99260E101C0035EAFB /* mogo apps */ = {
+		4A2DC95C26122D4100CBD461 /* mogo-apps-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4A0EDDAE260E101D0035EAFB /* Build configuration list for PBXNativeTarget "mogo apps" */;
+			buildConfigurationList = 4A2DC97426122D4200CBD461 /* Build configuration list for PBXNativeTarget "mogo-apps-ios" */;
 			buildPhases = (
-				4A0EDD96260E101C0035EAFB /* Sources */,
-				4A0EDD97260E101C0035EAFB /* Frameworks */,
-				4A0EDD98260E101C0035EAFB /* Resources */,
+				4A2DC95926122D4100CBD461 /* Sources */,
+				4A2DC95A26122D4100CBD461 /* Frameworks */,
+				4A2DC95B26122D4100CBD461 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "mogo apps";
-			productName = "mogo apps";
-			productReference = 4A0EDD9A260E101C0035EAFB /* mogo apps.app */;
+			name = "mogo-apps-ios";
+			productName = "mogo-apps-ios";
+			productReference = 4A2DC95D26122D4100CBD461 /* mogo-apps-ios.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4A0EDD92260E101C0035EAFB /* Project object */ = {
+		4A2DC95526122D4100CBD461 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					4A0EDD99260E101C0035EAFB = {
+					4A2DC95C26122D4100CBD461 = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = 4A0EDD95260E101C0035EAFB /* Build configuration list for PBXProject "mogo apps" */;
+			buildConfigurationList = 4A2DC95826122D4100CBD461 /* Build configuration list for PBXProject "mogo-apps-ios" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,44 +112,64 @@
 				en,
 				Base,
 			);
-			mainGroup = 4A0EDD91260E101C0035EAFB;
-			productRefGroup = 4A0EDD9B260E101C0035EAFB /* Products */;
+			mainGroup = 4A2DC95426122D4100CBD461;
+			productRefGroup = 4A2DC95E26122D4100CBD461 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4A0EDD99260E101C0035EAFB /* mogo apps */,
+				4A2DC95C26122D4100CBD461 /* mogo-apps-ios */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4A0EDD98260E101C0035EAFB /* Resources */ = {
+		4A2DC95B26122D4100CBD461 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A0EDDA5260E101C0035EAFB /* Preview Assets.xcassets in Resources */,
-				4A0EDDA2260E101C0035EAFB /* Assets.xcassets in Resources */,
+				4A2DC97026122D4200CBD461 /* LaunchScreen.storyboard in Resources */,
+				4A2DC96D26122D4200CBD461 /* Assets.xcassets in Resources */,
+				4A2DC96826122D4100CBD461 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4A0EDD96260E101C0035EAFB /* Sources */ = {
+		4A2DC95926122D4100CBD461 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A0EDDA7260E101C0035EAFB /* Persistence.swift in Sources */,
-				4A0EDDA0260E101C0035EAFB /* ContentView.swift in Sources */,
-				4A0EDD9E260E101C0035EAFB /* mogo_appsApp.swift in Sources */,
-				4A0EDDAA260E101C0035EAFB /* mogo_apps.xcdatamodeld in Sources */,
+				4A2DC96526122D4100CBD461 /* ViewController.swift in Sources */,
+				4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */,
+				4A2DC96126122D4100CBD461 /* AppDelegate.swift in Sources */,
+				4A2DC96326122D4100CBD461 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		4A2DC96626122D4100CBD461 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A2DC96726122D4100CBD461 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4A2DC96E26122D4200CBD461 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A2DC96F26122D4200CBD461 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		4A0EDDAC260E101D0035EAFB /* Debug */ = {
+		4A2DC97226122D4200CBD461 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -215,7 +230,7 @@
 			};
 			name = Debug;
 		};
-		4A0EDDAD260E101D0035EAFB /* Release */ = {
+		4A2DC97326122D4200CBD461 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -270,42 +285,36 @@
 			};
 			name = Release;
 		};
-		4A0EDDAF260E101D0035EAFB /* Debug */ = {
+		4A2DC97526122D4200CBD461 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"mogo apps/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "mogo apps/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_FILE = "mogo-apps-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mogo-apps";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mogo-apps-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		4A0EDDB0260E101D0035EAFB /* Release */ = {
+		4A2DC97626122D4200CBD461 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"mogo apps/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "mogo apps/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_FILE = "mogo-apps-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mogo-apps";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mogo-apps-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -315,20 +324,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4A0EDD95260E101C0035EAFB /* Build configuration list for PBXProject "mogo apps" */ = {
+		4A2DC95826122D4100CBD461 /* Build configuration list for PBXProject "mogo-apps-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4A0EDDAC260E101D0035EAFB /* Debug */,
-				4A0EDDAD260E101D0035EAFB /* Release */,
+				4A2DC97226122D4200CBD461 /* Debug */,
+				4A2DC97326122D4200CBD461 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4A0EDDAE260E101D0035EAFB /* Build configuration list for PBXNativeTarget "mogo apps" */ = {
+		4A2DC97426122D4200CBD461 /* Build configuration list for PBXNativeTarget "mogo-apps-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4A0EDDAF260E101D0035EAFB /* Debug */,
-				4A0EDDB0260E101D0035EAFB /* Release */,
+				4A2DC97526122D4200CBD461 /* Debug */,
+				4A2DC97626122D4200CBD461 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -336,17 +345,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		4A0EDDA8260E101C0035EAFB /* mogo_apps.xcdatamodeld */ = {
+		4A2DC96926122D4100CBD461 /* mogo_apps_ios.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4A0EDDA9260E101C0035EAFB /* mogo_apps.xcdatamodel */,
+				4A2DC96A26122D4100CBD461 /* mogo_apps_ios.xcdatamodel */,
 			);
-			currentVersion = 4A0EDDA9260E101C0035EAFB /* mogo_apps.xcdatamodel */;
-			path = mogo_apps.xcdatamodeld;
+			currentVersion = 4A2DC96A26122D4100CBD461 /* mogo_apps_ios.xcdatamodel */;
+			path = mogo_apps_ios.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 4A0EDD92260E101C0035EAFB /* Project object */;
+	rootObject = 4A2DC95526122D4100CBD461 /* Project object */;
 }
