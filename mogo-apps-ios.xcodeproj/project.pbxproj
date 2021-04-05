@@ -58,6 +58,7 @@
 		4A2DC95F26122D4100CBD461 /* mogo-apps-ios */ = {
 			isa = PBXGroup;
 			children = (
+				EA669CCB261B6661003D0D14 /* create-goals */,
 				4A2DC96026122D4100CBD461 /* AppDelegate.swift */,
 				4A2DC96226122D4100CBD461 /* SceneDelegate.swift */,
 				4A2DC96426122D4100CBD461 /* ViewController.swift */,
@@ -68,6 +69,13 @@
 				4A2DC96926122D4100CBD461 /* mogo_apps_ios.xcdatamodeld */,
 			);
 			path = "mogo-apps-ios";
+			sourceTree = "<group>";
+		};
+		EA669CCB261B6661003D0D14 /* create-goals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "create-goals";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
