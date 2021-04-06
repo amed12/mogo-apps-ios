@@ -9,6 +9,7 @@ import UIKit
 
 class SavingHistoryCell: UITableViewCell {
 
- 
-
+    @IBOutlet weak var typeTitle: UILabel!
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var amount: UILabel!
 }

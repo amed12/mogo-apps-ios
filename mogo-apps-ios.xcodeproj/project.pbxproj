@@ -17,6 +17,7 @@
 		D45964C4261AE12F00F5FA0D /* SavingHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45964C3261AE12F00F5FA0D /* SavingHistory.storyboard */; };
 		D45964C8261C114200F5FA0D /* SavingHistoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45964C7261C114200F5FA0D /* SavingHistoryScreen.swift */; };
 		D45964CB261C125000F5FA0D /* SavingHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45964CA261C125000F5FA0D /* SavingHistoryCell.swift */; };
+		D45964CE261C279A00F5FA0D /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45964CD261C279A00F5FA0D /* Transaction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D45964C3261AE12F00F5FA0D /* SavingHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SavingHistory.storyboard; sourceTree = "<group>"; };
 		D45964C7261C114200F5FA0D /* SavingHistoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingHistoryScreen.swift; sourceTree = "<group>"; };
 		D45964CA261C125000F5FA0D /* SavingHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingHistoryCell.swift; sourceTree = "<group>"; };
+		D45964CD261C279A00F5FA0D /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				D45964C3261AE12F00F5FA0D /* SavingHistory.storyboard */,
 				D45964C7261C114200F5FA0D /* SavingHistoryScreen.swift */,
 				D45964CA261C125000F5FA0D /* SavingHistoryCell.swift */,
+				D45964CD261C279A00F5FA0D /* Transaction.swift */,
 			);
 			path = "saving-history";
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45964CE261C279A00F5FA0D /* Transaction.swift in Sources */,
 				4A2DC96526122D4100CBD461 /* ViewController.swift in Sources */,
 				4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */,
 				4A2DC96126122D4100CBD461 /* AppDelegate.swift in Sources */,
