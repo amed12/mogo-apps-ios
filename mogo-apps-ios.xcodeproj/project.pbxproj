@@ -14,6 +14,7 @@
 		4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DC96926122D4100CBD461 /* mogo_apps_ios.xcdatamodeld */; };
 		4A2DC96D26122D4200CBD461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A2DC96C26122D4200CBD461 /* Assets.xcassets */; };
 		4A2DC97026122D4200CBD461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2DC96E26122D4200CBD461 /* LaunchScreen.storyboard */; };
+		4A4A9036261BF0BE00D83E1D /* AddGoalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4A9035261BF0BE00D83E1D /* AddGoalButton.swift */; };
 		4A6C35C0261B403D00137090 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A6C35BF261B403D00137090 /* Home.storyboard */; };
 		4A6C35C3261B406D00137090 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C35C2261B406D00137090 /* HomeController.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 		4A2DC96C26122D4200CBD461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A2DC96F26122D4200CBD461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A2DC97126122D4200CBD461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A4A9035261BF0BE00D83E1D /* AddGoalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalButton.swift; sourceTree = "<group>"; };
 		4A6C35BF261B403D00137090 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		4A6C35C2261B406D00137090 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +82,7 @@
 			children = (
 				4A6C35BF261B403D00137090 /* Home.storyboard */,
 				4A6C35C2261B406D00137090 /* HomeController.swift */,
+				4A4A9035261BF0BE00D83E1D /* AddGoalButton.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A4A9036261BF0BE00D83E1D /* AddGoalButton.swift in Sources */,
 				4A2DC96526122D4100CBD461 /* ViewController.swift in Sources */,
 				4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */,
 				4A2DC96126122D4100CBD461 /* AppDelegate.swift in Sources */,
