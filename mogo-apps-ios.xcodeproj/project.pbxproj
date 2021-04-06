@@ -16,6 +16,7 @@
 		4A2DC97026122D4200CBD461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2DC96E26122D4200CBD461 /* LaunchScreen.storyboard */; };
 		D45964C4261AE12F00F5FA0D /* SavingHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45964C3261AE12F00F5FA0D /* SavingHistory.storyboard */; };
 		D45964C8261C114200F5FA0D /* SavingHistoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45964C7261C114200F5FA0D /* SavingHistoryScreen.swift */; };
+		D45964CB261C125000F5FA0D /* SavingHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45964CA261C125000F5FA0D /* SavingHistoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		4A2DC97126122D4200CBD461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D45964C3261AE12F00F5FA0D /* SavingHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SavingHistory.storyboard; sourceTree = "<group>"; };
 		D45964C7261C114200F5FA0D /* SavingHistoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingHistoryScreen.swift; sourceTree = "<group>"; };
+		D45964CA261C125000F5FA0D /* SavingHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingHistoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			children = (
 				D45964C3261AE12F00F5FA0D /* SavingHistory.storyboard */,
 				D45964C7261C114200F5FA0D /* SavingHistoryScreen.swift */,
+				D45964CA261C125000F5FA0D /* SavingHistoryCell.swift */,
 			);
 			path = "saving-history";
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */,
 				4A2DC96126122D4100CBD461 /* AppDelegate.swift in Sources */,
 				4A2DC96326122D4100CBD461 /* SceneDelegate.swift in Sources */,
+				D45964CB261C125000F5FA0D /* SavingHistoryCell.swift in Sources */,
 				D45964C8261C114200F5FA0D /* SavingHistoryScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
