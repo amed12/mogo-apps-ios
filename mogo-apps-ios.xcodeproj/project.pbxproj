@@ -17,6 +17,7 @@
 		ACBD339E261B4CB600F309F7 /* ReminderList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBD339D261B4CB600F309F7 /* ReminderList.storyboard */; };
 		ACBD33BE261C597F00F309F7 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBD33BD261C597F00F309F7 /* ReminderViewController.swift */; };
 		ACBD33C7261CCECD00F309F7 /* ReminderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBD33C6261CCECD00F309F7 /* ReminderViewCell.swift */; };
+		ACBD33CA261DC41E00F309F7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBD33C9261DC41E00F309F7 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		ACBD339D261B4CB600F309F7 /* ReminderList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReminderList.storyboard; sourceTree = "<group>"; };
 		ACBD33BD261C597F00F309F7 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		ACBD33C6261CCECD00F309F7 /* ReminderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewCell.swift; sourceTree = "<group>"; };
+		ACBD33C9261DC41E00F309F7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				ACBD339D261B4CB600F309F7 /* ReminderList.storyboard */,
 				ACBD33BD261C597F00F309F7 /* ReminderViewController.swift */,
 				ACBD33C6261CCECD00F309F7 /* ReminderViewCell.swift */,
+				ACBD33C9261DC41E00F309F7 /* DetailViewController.swift */,
 			);
 			path = "reminder-list";
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */,
 				4A2DC96126122D4100CBD461 /* AppDelegate.swift in Sources */,
 				4A2DC96326122D4100CBD461 /* SceneDelegate.swift in Sources */,
+				ACBD33CA261DC41E00F309F7 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

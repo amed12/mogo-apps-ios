@@ -11,7 +11,6 @@ class ReminderViewCell: UITableViewCell {
 
     @IBOutlet weak var reminderTitle: UILabel!
     @IBOutlet weak var reminderDetail: UILabel!
-    @IBOutlet weak var reminderActionButton: UIButton!
     
     
     
