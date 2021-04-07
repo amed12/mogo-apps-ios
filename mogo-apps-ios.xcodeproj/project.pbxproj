@@ -14,6 +14,8 @@
 		4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DC96926122D4100CBD461 /* mogo_apps_ios.xcdatamodeld */; };
 		4A2DC96D26122D4200CBD461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A2DC96C26122D4200CBD461 /* Assets.xcassets */; };
 		4A2DC97026122D4200CBD461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2DC96E26122D4200CBD461 /* LaunchScreen.storyboard */; };
+		FB738C5C261D71C200B73DF3 /* addWithdrawStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB738C5B261D71C200B73DF3 /* addWithdrawStoryboard.storyboard */; };
+		FB738C5F261D71F700B73DF3 /* addWithdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB738C5E261D71F700B73DF3 /* addWithdrawViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		4A2DC96C26122D4200CBD461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A2DC96F26122D4200CBD461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A2DC97126122D4200CBD461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB738C5B261D71C200B73DF3 /* addWithdrawStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = addWithdrawStoryboard.storyboard; sourceTree = "<group>"; };
+		FB738C5E261D71F700B73DF3 /* addWithdrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addWithdrawViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 		FB9EEC14261C4A350042C600 /* add-withdraw-saving */ = {
 			isa = PBXGroup;
 			children = (
+				FB738C5B261D71C200B73DF3 /* addWithdrawStoryboard.storyboard */,
+				FB738C5E261D71F700B73DF3 /* addWithdrawViewController.swift */,
 			);
 			path = "add-withdraw-saving";
 			sourceTree = "<group>";
@@ -137,6 +143,7 @@
 			files = (
 				4A2DC97026122D4200CBD461 /* LaunchScreen.storyboard in Resources */,
 				4A2DC96D26122D4200CBD461 /* Assets.xcassets in Resources */,
+				FB738C5C261D71C200B73DF3 /* addWithdrawStoryboard.storyboard in Resources */,
 				4A2DC96826122D4100CBD461 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +159,7 @@
 				4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */,
 				4A2DC96126122D4100CBD461 /* AppDelegate.swift in Sources */,
 				4A2DC96326122D4100CBD461 /* SceneDelegate.swift in Sources */,
+				FB738C5F261D71F700B73DF3 /* addWithdrawViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
