@@ -9,6 +9,6 @@ import Foundation
 
 struct Transaction{
     var typeTitle: String
-    var date: Date
+    var date: String
     var amount: Double
 }
