@@ -14,6 +14,19 @@
 		4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DC96926122D4100CBD461 /* mogo_apps_ios.xcdatamodeld */; };
 		4A2DC96D26122D4200CBD461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A2DC96C26122D4200CBD461 /* Assets.xcassets */; };
 		4A2DC97026122D4200CBD461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2DC96E26122D4200CBD461 /* LaunchScreen.storyboard */; };
+		EA020A13261D4E1900B3DE37 /* CreateGoalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA020A12261D4E1900B3DE37 /* CreateGoalController.swift */; };
+		EA020A1B261D618100B3DE37 /* CreateGoalsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA020A1A261D618100B3DE37 /* CreateGoalsCell.swift */; };
+		EA020A21261D71F600B3DE37 /* CreateGoalHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA020A1F261D71F600B3DE37 /* CreateGoalHeaderCell.swift */; };
+		EA020A22261D71F600B3DE37 /* CreateGoalHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA020A20261D71F600B3DE37 /* CreateGoalHeaderCell.xib */; };
+		EA020A27261D732500B3DE37 /* CreateGoalInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA020A25261D732500B3DE37 /* CreateGoalInputCell.swift */; };
+		EA020A28261D732500B3DE37 /* CreateGoalInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA020A26261D732500B3DE37 /* CreateGoalInputCell.xib */; };
+		EA020A2C261D741A00B3DE37 /* CreateGoalActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA020A2A261D741A00B3DE37 /* CreateGoalActionCell.swift */; };
+		EA020A2D261D741A00B3DE37 /* CreateGoalActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA020A2B261D741A00B3DE37 /* CreateGoalActionCell.xib */; };
+		EA020A31261D819100B3DE37 /* IconController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA020A30261D819100B3DE37 /* IconController.swift */; };
+		EA020A34261D81A300B3DE37 /* Icon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA020A33261D81A300B3DE37 /* Icon.storyboard */; };
+		EA020A3A261D837900B3DE37 /* IconCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA020A38261D837900B3DE37 /* IconCollectionCell.swift */; };
+		EA020A3B261D837900B3DE37 /* IconCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA020A39261D837900B3DE37 /* IconCollectionCell.xib */; };
+		EA46B07F261D38D400A3D0DD /* CreateGoals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA46B07E261D38D400A3D0DD /* CreateGoals.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +39,19 @@
 		4A2DC96C26122D4200CBD461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A2DC96F26122D4200CBD461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A2DC97126122D4200CBD461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA020A12261D4E1900B3DE37 /* CreateGoalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalController.swift; sourceTree = "<group>"; };
+		EA020A1A261D618100B3DE37 /* CreateGoalsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalsCell.swift; sourceTree = "<group>"; };
+		EA020A1F261D71F600B3DE37 /* CreateGoalHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalHeaderCell.swift; sourceTree = "<group>"; };
+		EA020A20261D71F600B3DE37 /* CreateGoalHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateGoalHeaderCell.xib; sourceTree = "<group>"; };
+		EA020A25261D732500B3DE37 /* CreateGoalInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalInputCell.swift; sourceTree = "<group>"; };
+		EA020A26261D732500B3DE37 /* CreateGoalInputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateGoalInputCell.xib; sourceTree = "<group>"; };
+		EA020A2A261D741A00B3DE37 /* CreateGoalActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalActionCell.swift; sourceTree = "<group>"; };
+		EA020A2B261D741A00B3DE37 /* CreateGoalActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateGoalActionCell.xib; sourceTree = "<group>"; };
+		EA020A30261D819100B3DE37 /* IconController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconController.swift; sourceTree = "<group>"; };
+		EA020A33261D81A300B3DE37 /* Icon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Icon.storyboard; sourceTree = "<group>"; };
+		EA020A38261D837900B3DE37 /* IconCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectionCell.swift; sourceTree = "<group>"; };
+		EA020A39261D837900B3DE37 /* IconCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IconCollectionCell.xib; sourceTree = "<group>"; };
+		EA46B07E261D38D400A3D0DD /* CreateGoals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateGoals.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +84,7 @@
 		4A2DC95F26122D4100CBD461 /* mogo-apps-ios */ = {
 			isa = PBXGroup;
 			children = (
-				EA669CCB261B6661003D0D14 /* create-goals */,
+				EAB7A386261CB2BA008DC233 /* create-goals */,
 				4A2DC96026122D4100CBD461 /* AppDelegate.swift */,
 				4A2DC96226122D4100CBD461 /* SceneDelegate.swift */,
 				4A2DC96426122D4100CBD461 /* ViewController.swift */,
@@ -71,9 +97,46 @@
 			path = "mogo-apps-ios";
 			sourceTree = "<group>";
 		};
-		EA669CCB261B6661003D0D14 /* create-goals */ = {
+		EA020A1E261D71CB00B3DE37 /* create-goals cell */ = {
 			isa = PBXGroup;
 			children = (
+				EA020A1F261D71F600B3DE37 /* CreateGoalHeaderCell.swift */,
+				EA020A20261D71F600B3DE37 /* CreateGoalHeaderCell.xib */,
+				EA020A25261D732500B3DE37 /* CreateGoalInputCell.swift */,
+				EA020A26261D732500B3DE37 /* CreateGoalInputCell.xib */,
+				EA020A2A261D741A00B3DE37 /* CreateGoalActionCell.swift */,
+				EA020A2B261D741A00B3DE37 /* CreateGoalActionCell.xib */,
+			);
+			path = "create-goals cell";
+			sourceTree = "<group>";
+		};
+		EA020A2F261D815100B3DE37 /* icon-collection */ = {
+			isa = PBXGroup;
+			children = (
+				EA020A36261D830E00B3DE37 /* icon-collection cell */,
+				EA020A30261D819100B3DE37 /* IconController.swift */,
+				EA020A33261D81A300B3DE37 /* Icon.storyboard */,
+			);
+			path = "icon-collection";
+			sourceTree = "<group>";
+		};
+		EA020A36261D830E00B3DE37 /* icon-collection cell */ = {
+			isa = PBXGroup;
+			children = (
+				EA020A38261D837900B3DE37 /* IconCollectionCell.swift */,
+				EA020A39261D837900B3DE37 /* IconCollectionCell.xib */,
+			);
+			path = "icon-collection cell";
+			sourceTree = "<group>";
+		};
+		EAB7A386261CB2BA008DC233 /* create-goals */ = {
+			isa = PBXGroup;
+			children = (
+				EA020A2F261D815100B3DE37 /* icon-collection */,
+				EA020A1E261D71CB00B3DE37 /* create-goals cell */,
+				EA46B07E261D38D400A3D0DD /* CreateGoals.storyboard */,
+				EA020A12261D4E1900B3DE37 /* CreateGoalController.swift */,
+				EA020A1A261D618100B3DE37 /* CreateGoalsCell.swift */,
 			);
 			path = "create-goals";
 			sourceTree = "<group>";
@@ -138,6 +201,12 @@
 				4A2DC97026122D4200CBD461 /* LaunchScreen.storyboard in Resources */,
 				4A2DC96D26122D4200CBD461 /* Assets.xcassets in Resources */,
 				4A2DC96826122D4100CBD461 /* Main.storyboard in Resources */,
+				EA020A22261D71F600B3DE37 /* CreateGoalHeaderCell.xib in Resources */,
+				EA020A2D261D741A00B3DE37 /* CreateGoalActionCell.xib in Resources */,
+				EA46B07F261D38D400A3D0DD /* CreateGoals.storyboard in Resources */,
+				EA020A3B261D837900B3DE37 /* IconCollectionCell.xib in Resources */,
+				EA020A28261D732500B3DE37 /* CreateGoalInputCell.xib in Resources */,
+				EA020A34261D81A300B3DE37 /* Icon.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,9 +218,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A2DC96526122D4100CBD461 /* ViewController.swift in Sources */,
+				EA020A3A261D837900B3DE37 /* IconCollectionCell.swift in Sources */,
+				EA020A13261D4E1900B3DE37 /* CreateGoalController.swift in Sources */,
+				EA020A31261D819100B3DE37 /* IconController.swift in Sources */,
 				4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */,
+				EA020A27261D732500B3DE37 /* CreateGoalInputCell.swift in Sources */,
+				EA020A21261D71F600B3DE37 /* CreateGoalHeaderCell.swift in Sources */,
 				4A2DC96126122D4100CBD461 /* AppDelegate.swift in Sources */,
+				EA020A1B261D618100B3DE37 /* CreateGoalsCell.swift in Sources */,
 				4A2DC96326122D4100CBD461 /* SceneDelegate.swift in Sources */,
+				EA020A2C261D741A00B3DE37 /* CreateGoalActionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
