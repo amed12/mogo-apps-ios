@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1434F7DD261E28CD0089729C /* GoalDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1434F7DC261E28CD0089729C /* GoalDetail.storyboard */; };
+		1434F7E0261E28DF0089729C /* GoalDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1434F7DF261E28DF0089729C /* GoalDetailController.swift */; };
+		1434F7EC261E334A0089729C /* ProgressDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1434F7EB261E334A0089729C /* ProgressDrawer.swift */; };
 		4A2DC96126122D4100CBD461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DC96026122D4100CBD461 /* AppDelegate.swift */; };
 		4A2DC96326122D4100CBD461 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DC96226122D4100CBD461 /* SceneDelegate.swift */; };
 		4A2DC96526122D4100CBD461 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DC96426122D4100CBD461 /* ViewController.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1434F7DC261E28CD0089729C /* GoalDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GoalDetail.storyboard; sourceTree = "<group>"; };
+		1434F7DF261E28DF0089729C /* GoalDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailController.swift; sourceTree = "<group>"; };
+		1434F7EB261E334A0089729C /* ProgressDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDrawer.swift; sourceTree = "<group>"; };
 		4A2DC95D26122D4100CBD461 /* mogo-apps-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mogo-apps-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A2DC96026122D4100CBD461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A2DC96226122D4100CBD461 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +45,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1434F7DB261E28C10089729C /* goal-detail */ = {
+			isa = PBXGroup;
+			children = (
+				1434F7DC261E28CD0089729C /* GoalDetail.storyboard */,
+				1434F7DF261E28DF0089729C /* GoalDetailController.swift */,
+				1434F7EB261E334A0089729C /* ProgressDrawer.swift */,
+			);
+			path = "goal-detail";
+			sourceTree = "<group>";
+		};
 		4A2DC95426122D4100CBD461 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +74,7 @@
 		4A2DC95F26122D4100CBD461 /* mogo-apps-ios */ = {
 			isa = PBXGroup;
 			children = (
+				1434F7DB261E28C10089729C /* goal-detail */,
 				4A2DC96026122D4100CBD461 /* AppDelegate.swift */,
 				4A2DC96226122D4100CBD461 /* SceneDelegate.swift */,
 				4A2DC96426122D4100CBD461 /* ViewController.swift */,
@@ -129,6 +146,7 @@
 			files = (
 				4A2DC97026122D4200CBD461 /* LaunchScreen.storyboard in Resources */,
 				4A2DC96D26122D4200CBD461 /* Assets.xcassets in Resources */,
+				1434F7DD261E28CD0089729C /* GoalDetail.storyboard in Resources */,
 				4A2DC96826122D4100CBD461 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +158,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1434F7E0261E28DF0089729C /* GoalDetailController.swift in Sources */,
+				1434F7EC261E334A0089729C /* ProgressDrawer.swift in Sources */,
 				4A2DC96526122D4100CBD461 /* ViewController.swift in Sources */,
 				4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */,
 				4A2DC96126122D4100CBD461 /* AppDelegate.swift in Sources */,
