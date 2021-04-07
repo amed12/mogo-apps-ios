@@ -10,5 +10,5 @@ import Foundation
 struct Transaction{
     var typeTitle: String
     var date: String
-    var amount: Double
+    var amount: Int
 }
