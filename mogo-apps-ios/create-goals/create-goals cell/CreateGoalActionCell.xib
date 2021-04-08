@@ -17,18 +17,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awO-7i-c43">
-                        <rect key="frame" x="10" y="2" width="170" height="51"/>
+                        <rect key="frame" x="17" y="2" width="170" height="51"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="170" id="OKJ-sb-W33"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3a-3K-y0u">
-                        <rect key="frame" x="267" y="11" width="43" height="33"/>
+                        <rect key="frame" x="255" y="11" width="50" height="33"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="33" id="ROm-as-K8F"/>
+                            <constraint firstAttribute="width" constant="50" id="q9y-Ap-Ilm"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <state key="normal" title="Button">
@@ -38,10 +39,10 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="awO-7i-c43" secondAttribute="bottom" constant="2" id="3w1-JU-X1l"/>
-                    <constraint firstItem="awO-7i-c43" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="6rt-1p-gUB"/>
+                    <constraint firstItem="awO-7i-c43" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="6rt-1p-gUB"/>
                     <constraint firstItem="M3a-3K-y0u" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="89w-pd-FvU"/>
                     <constraint firstItem="awO-7i-c43" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="IcP-Nl-SYX"/>
-                    <constraint firstAttribute="trailing" secondItem="M3a-3K-y0u" secondAttribute="trailing" constant="10" id="lHG-5h-WDz"/>
+                    <constraint firstAttribute="trailing" secondItem="M3a-3K-y0u" secondAttribute="trailing" constant="15" id="lHG-5h-WDz"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

@@ -11,6 +11,7 @@ class CreateGoalInputCell: UITableViewCell, UITextFieldDelegate {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textInput: UITextField!
+    @IBOutlet weak var buttonLock: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,12 +25,24 @@ class CreateGoalInputCell: UITableViewCell, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        textField.resignFirstResponder()
-    }
+            if textField == textInput {
+    //            amountField.text = "IDR \(textField.text!)"
+//                dateField.becomeFirstResponder()
+            } else {
+                textField.resignFirstResponder()
+            }
+        }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
+            if textField == textInput {
+                if textField.placeholder == "IDR 10.000.000" && textField.placeholder == "IDR 1.000.000"{
+                    textInput.text = "IDR \(textField.text!)"
+                }
+//                dateField.becomeFirstResponder()
+            } else {
+                textField.resignFirstResponder()
+            }
+            return true
+        }
     
 }

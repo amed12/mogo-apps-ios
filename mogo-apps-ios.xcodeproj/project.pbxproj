@@ -26,6 +26,8 @@
 		EA020A34261D81A300B3DE37 /* Icon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA020A33261D81A300B3DE37 /* Icon.storyboard */; };
 		EA020A3A261D837900B3DE37 /* IconCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA020A38261D837900B3DE37 /* IconCollectionCell.swift */; };
 		EA020A3B261D837900B3DE37 /* IconCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA020A39261D837900B3DE37 /* IconCollectionCell.xib */; };
+		EA0D214A261E29FE00FA2FBB /* ButtonFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0D2148261E29FE00FA2FBB /* ButtonFooterCell.swift */; };
+		EA0D214B261E29FE00FA2FBB /* ButtonFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0D2149261E29FE00FA2FBB /* ButtonFooterCell.xib */; };
 		EA46B07F261D38D400A3D0DD /* CreateGoals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA46B07E261D38D400A3D0DD /* CreateGoals.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		EA020A33261D81A300B3DE37 /* Icon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Icon.storyboard; sourceTree = "<group>"; };
 		EA020A38261D837900B3DE37 /* IconCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectionCell.swift; sourceTree = "<group>"; };
 		EA020A39261D837900B3DE37 /* IconCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IconCollectionCell.xib; sourceTree = "<group>"; };
+		EA0D2148261E29FE00FA2FBB /* ButtonFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFooterCell.swift; sourceTree = "<group>"; };
+		EA0D2149261E29FE00FA2FBB /* ButtonFooterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonFooterCell.xib; sourceTree = "<group>"; };
 		EA46B07E261D38D400A3D0DD /* CreateGoals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateGoals.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +110,8 @@
 				EA020A26261D732500B3DE37 /* CreateGoalInputCell.xib */,
 				EA020A2A261D741A00B3DE37 /* CreateGoalActionCell.swift */,
 				EA020A2B261D741A00B3DE37 /* CreateGoalActionCell.xib */,
+				EA0D2148261E29FE00FA2FBB /* ButtonFooterCell.swift */,
+				EA0D2149261E29FE00FA2FBB /* ButtonFooterCell.xib */,
 			);
 			path = "create-goals cell";
 			sourceTree = "<group>";
@@ -202,6 +208,7 @@
 				4A2DC96D26122D4200CBD461 /* Assets.xcassets in Resources */,
 				4A2DC96826122D4100CBD461 /* Main.storyboard in Resources */,
 				EA020A22261D71F600B3DE37 /* CreateGoalHeaderCell.xib in Resources */,
+				EA0D214B261E29FE00FA2FBB /* ButtonFooterCell.xib in Resources */,
 				EA020A2D261D741A00B3DE37 /* CreateGoalActionCell.xib in Resources */,
 				EA46B07F261D38D400A3D0DD /* CreateGoals.storyboard in Resources */,
 				EA020A3B261D837900B3DE37 /* IconCollectionCell.xib in Resources */,
@@ -221,6 +228,7 @@
 				EA020A3A261D837900B3DE37 /* IconCollectionCell.swift in Sources */,
 				EA020A13261D4E1900B3DE37 /* CreateGoalController.swift in Sources */,
 				EA020A31261D819100B3DE37 /* IconController.swift in Sources */,
+				EA0D214A261E29FE00FA2FBB /* ButtonFooterCell.swift in Sources */,
 				4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */,
 				EA020A27261D732500B3DE37 /* CreateGoalInputCell.swift in Sources */,
 				EA020A21261D71F600B3DE37 /* CreateGoalHeaderCell.swift in Sources */,

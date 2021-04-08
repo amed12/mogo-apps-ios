@@ -7,14 +7,13 @@
 
 import UIKit
 
-class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
-    
+class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDataSource, CreateGoalHeaderCellDelegate  {
         
     @IBOutlet weak var tableCreateGoals: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tableCreateGoals.separatorColor = .black
         setupView()
     }
     
@@ -22,39 +21,47 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
         tableCreateGoals.register(UINib(nibName: "CreateGoalHeaderCell", bundle: nil), forCellReuseIdentifier: "createGoalHeaderId")
         tableCreateGoals.register(UINib(nibName: "CreateGoalInputCell", bundle: nil), forCellReuseIdentifier: "createGoalInputId")
         tableCreateGoals.register(UINib(nibName: "CreateGoalActionCell", bundle: nil), forCellReuseIdentifier: "createGoalActionIdentifier")
+        tableCreateGoals.register(UINib(nibName: "ButtonFooterCell", bundle: nil), forCellReuseIdentifier: "buttonFooterIdentifier")
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 5
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         switch section {
         case 0:
-            return UIView()
+            let bgView = UIView(frame: CGRect(x: 0, y: 0, width: tableCreateGoals.frame.size.width, height: 22))
+//            bgView.backgroundColor = .systemGroupedBackground
+            return bgView
         case 1:
             let bgView = UIView(frame: CGRect(x: 0, y: 0, width: tableCreateGoals.frame.size.width, height: 33))
             bgView.backgroundColor = .systemGroupedBackground
             let sectionLabel = UILabel(frame: CGRect(x: 0, y: 0, width: bgView.frame.size.width, height: bgView.frame.size.height))
-            sectionLabel.text = "GOAL INFORMATION"
-            sectionLabel.font = .systemFont(ofSize: 16)
+            sectionLabel.text = "   GOAL INFORMATION"
+            sectionLabel.font = .systemFont(ofSize: 13)
             sectionLabel.textColor = .lightGray
             bgView.addSubview(sectionLabel)
             return bgView
         case 2:
             let bgView = UIView(frame: CGRect(x: 0, y: 0, width: tableCreateGoals.frame.size.width, height: 33))
             bgView.backgroundColor = .systemGroupedBackground
-
             return bgView
         case 3:
             let bgView = UIView(frame: CGRect(x: 0, y: 0, width: tableCreateGoals.frame.size.width, height: 33))
             bgView.backgroundColor = .systemGroupedBackground
             let sectionLabel = UILabel(frame: CGRect(x: 0, y: 0, width: bgView.frame.size.width, height: bgView.frame.size.height))
-            sectionLabel.text = "SAVING PREFERENCE"
-            sectionLabel.font = .systemFont(ofSize: 16)
+            sectionLabel.text = "   SAVING PREFERENCE"
+            sectionLabel.font = .systemFont(ofSize: 13)
             sectionLabel.textColor = .lightGray
             bgView.addSubview(sectionLabel)
             return bgView
+        case 4:
+            let bgView = UIView(frame: CGRect(x: 0, y: 0, width: tableCreateGoals.frame.size.width, height: 22))
+            bgView.backgroundColor = .systemGroupedBackground
+            
+            return bgView
+
         default:
             let bgView = UIView(frame: CGRect(x: 0, y: 0, width: tableCreateGoals.frame.size.width, height: 33))
             bgView.backgroundColor = .systemGroupedBackground
@@ -62,17 +69,20 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
             return bgView
         }
     }
-    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         switch section {
         case 0:
             return 22
         case 1:
-            return 44
+            return 33
         case 2:
-            return 22
+            return 33
+//        case 3:
+//            return 33
         case 3:
-            return 44
+            return 30
+        case 4:
+            return 22
         default:
             return 22
         }
@@ -86,8 +96,12 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
             return 1
         case 2:
             return 3
+//        case 3:
+//            return 1
         case 3:
             return 3
+        case 4:
+            return 1
         default:
             return 1
         }
@@ -98,13 +112,17 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
         case 0:
             return 150
         case 1:
-            return 55
+            return 44
         case 2:
-            return 55
+            return 44
+//        case 3:
+//            return 20
         case 3:
-            return 55
+            return 44
+        case 4:
+            return 44
         default:
-            return 55
+            return 44
         }
     }
 
@@ -112,21 +130,26 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
         switch indexPath.section {
         case 0:
             let Cell = (tableView.dequeueReusableCell(withIdentifier: "createGoalHeaderId", for: indexPath) as? CreateGoalHeaderCell)!
-            Cell.buttonIcon.addTarget(self, action: #selector(openIconGallery), for: .touchUpInside)
+            Cell.delegate = self
             return Cell
         case 1:
             let Cell = (tableView.dequeueReusableCell(withIdentifier: "createGoalInputId", for: indexPath) as? CreateGoalInputCell)!
             Cell.titleLabel.text = "Goal Name"
+            Cell.textInput.placeholder = "Buy a house"
             return Cell
         case 2:
             let Cell = (tableView.dequeueReusableCell(withIdentifier: "createGoalInputId", for: indexPath) as? CreateGoalInputCell)!
             switch indexPath.row {
             case 0:
                 Cell.titleLabel.text = "Goal Budget"
+                Cell.textInput.placeholder = "IDR 10.000.000"
             case 1:
                 Cell.titleLabel.text = "Target Date"
+                Cell.textInput.placeholder = "1 January 2021"
+                Cell.textInput.addTarget(self, action: #selector(targetAction), for: .touchUpInside)
             case 2:
                 Cell.titleLabel.text = "Montly Saving"
+                Cell.textInput.placeholder = "IDR 1.000.000"
             default:
                 Cell.titleLabel.text = "Goal Name"
             }
@@ -135,7 +158,7 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
             let Cell = (tableView.dequeueReusableCell(withIdentifier: "createGoalActionIdentifier", for: indexPath) as? CreateGoalActionCell)!
             switch indexPath.row {
             case 0:
-                Cell.titleLabel.text = "Saving Frequence"
+                Cell.titleLabel.text = "Saving Frequency"
                 Cell.buttonTarget.addTarget(self, action: #selector(freqAction), for: .touchUpInside)
             case 1:
                 Cell.titleLabel.text = "Saving Date"
@@ -147,6 +170,10 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
                 Cell.titleLabel.text = "Goal Name"
             }
             return Cell
+        case 4:
+            let Cell = (tableView.dequeueReusableCell(withIdentifier: "buttonFooterIdentifier", for: indexPath) as? ButtonFooterCell)!
+            return Cell
+            
         default:
             let Cell = (tableView.dequeueReusableCell(withIdentifier: "createGoalInputId", for: indexPath) as? CreateGoalInputCell)!
             return Cell
@@ -154,21 +181,30 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
      }
     
     
-    @objc func freqAction() {
+    
+    @objc func targetAction() {
         print("A")
     }
     
-    @objc func dateAction() {
+    @objc func freqAction() {
         print("B")
     }
     
-    @objc func timeAction() {
+    @objc func dateAction() {
         print("C")
     }
     
-    @objc func openIconGallery() {
-        
+    @objc func timeAction() {
+        print("D")
     }
+    
+    
+    func openCollectionGallery(status: Bool) {
+        let storyboardDestination = UIStoryboard(name: "Icon", bundle: nil)
+        guard let destinationVC = storyboardDestination.instantiateInitialViewController() else { return }
+        self.present(destinationVC, animated: true, completion: nil)
+    }
+
     
     /*
     // MARK: - Navigation
