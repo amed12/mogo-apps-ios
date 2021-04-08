@@ -17,6 +17,8 @@
 		4A6C35C0261B403D00137090 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A6C35BF261B403D00137090 /* Home.storyboard */; };
 		4A6C35C3261B406D00137090 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C35C2261B406D00137090 /* HomeController.swift */; };
 		4A7A4F68261E298300CE0D77 /* ProgressDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7A4F67261E298300CE0D77 /* ProgressDrawer.swift */; };
+		4A94F867261EA4D0002DC560 /* EmptyDataGoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A94F865261EA4D0002DC560 /* EmptyDataGoalCell.swift */; };
+		4A94F868261EA4D0002DC560 /* EmptyDataGoalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A94F866261EA4D0002DC560 /* EmptyDataGoalCell.xib */; };
 		4AFB09B6261D72E1009BB2CC /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFB09B5261D72E1009BB2CC /* MyButton.swift */; };
 		4AFB09BC261D7329009BB2CC /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFB09BA261D7329009BB2CC /* HomeViewCell.swift */; };
 		4AFB09BD261D7329009BB2CC /* HomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AFB09BB261D7329009BB2CC /* HomeViewCell.xib */; };
@@ -35,6 +37,8 @@
 		4A6C35BF261B403D00137090 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		4A6C35C2261B406D00137090 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		4A7A4F67261E298300CE0D77 /* ProgressDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDrawer.swift; sourceTree = "<group>"; };
+		4A94F865261EA4D0002DC560 /* EmptyDataGoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataGoalCell.swift; sourceTree = "<group>"; };
+		4A94F866261EA4D0002DC560 /* EmptyDataGoalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyDataGoalCell.xib; sourceTree = "<group>"; };
 		4AFB09B5261D72E1009BB2CC /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
 		4AFB09BA261D7329009BB2CC /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		4AFB09BB261D7329009BB2CC /* HomeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewCell.xib; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 			children = (
 				4AFB09BA261D7329009BB2CC /* HomeViewCell.swift */,
 				4AFB09BB261D7329009BB2CC /* HomeViewCell.xib */,
+				4A94F865261EA4D0002DC560 /* EmptyDataGoalCell.swift */,
+				4A94F866261EA4D0002DC560 /* EmptyDataGoalCell.xib */,
 			);
 			path = homeCell;
 			sourceTree = "<group>";
@@ -163,6 +169,7 @@
 			files = (
 				4A2DC97026122D4200CBD461 /* LaunchScreen.storyboard in Resources */,
 				4A6C35C0261B403D00137090 /* Home.storyboard in Resources */,
+				4A94F868261EA4D0002DC560 /* EmptyDataGoalCell.xib in Resources */,
 				4A2DC96D26122D4200CBD461 /* Assets.xcassets in Resources */,
 				4AFB09BD261D7329009BB2CC /* HomeViewCell.xib in Resources */,
 				4A2DC96826122D4100CBD461 /* Main.storyboard in Resources */,
@@ -177,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A2DC96526122D4100CBD461 /* ViewController.swift in Sources */,
+				4A94F867261EA4D0002DC560 /* EmptyDataGoalCell.swift in Sources */,
 				4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */,
 				4AFB09BC261D7329009BB2CC /* HomeViewCell.swift in Sources */,
 				4A2DC96126122D4100CBD461 /* AppDelegate.swift in Sources */,

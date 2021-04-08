@@ -25,6 +25,8 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
         var budgetGoal : Int
     }
     var segmentActive = 0
+    var isProductEmpty = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -35,31 +37,33 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     
     private func setupView(){
+        goalTableView.register(UINib(nibName: "EmptyDataGoalCell", bundle: nil), forCellReuseIdentifier: "IdGoalNoData")
         goalTableView.register(UINib(nibName: "HomeViewCell", bundle: nil), forCellReuseIdentifier: "GoalCellIdentifier")
-        
-      // Set the position to the center of the screen
-      // Call the animation from extension class
-
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return segmentActive == 0 ? 3 : 10
+        return segmentActive == 0 ? 1 : 10
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return segmentActive == 0 ? 230 : 100
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = goalTableView.dequeueReusableCell(withIdentifier: "GoalCellIdentifier", for: indexPath) as? HomeViewCell
-        let dataGoalDummy = DataGoal(imageGoal: "MoneyGoal", titleGoal: "Trip Bali", dateGoal: "12/02/2020", budgetGoal: 23000)
-        cell?.GoalTitle.text = "\(dataGoalDummy.titleGoal)"
-        cell?.GoalDate.text = "\(dataGoalDummy.dateGoal)"
-        cell?.GoalBudget.text = "\(dataGoalDummy.budgetGoal)"
-        
-        cell?.progressGoal.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
-        cell?.progressGoal.center = (cell?.progressGoal.center)!
-        cell?.progressGoal.progressAnimation(toValue: 0.5, duration: circularViewDuration)
-        return cell!
+        if segmentActive == 0 {
+            let cell = goalTableView.dequeueReusableCell(withIdentifier: "IdGoalNoData", for: indexPath) as? EmptyDataGoalCell
+            return cell!
+        }else{
+            let cell = goalTableView.dequeueReusableCell(withIdentifier: "GoalCellIdentifier", for: indexPath) as? HomeViewCell
+            let dataGoalDummy = DataGoal(imageGoal: "MoneyGoal", titleGoal: "Trip Bali", dateGoal: "12/02/2020", budgetGoal: 23000)
+            cell?.GoalTitle.text = "\(dataGoalDummy.titleGoal)"
+            cell?.GoalDate.text = "\(dataGoalDummy.dateGoal)"
+            cell?.GoalBudget.text = "\(dataGoalDummy.budgetGoal)"
+            cell?.progressGoal.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+            cell?.progressGoal.center = (cell?.progressGoal.center)!
+            cell?.progressGoal.progressAnimation(toValue: 0.5, duration: circularViewDuration)
+            return cell!
+            
+        }
     }
 }
