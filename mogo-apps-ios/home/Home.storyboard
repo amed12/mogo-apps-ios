@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="258"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MoneyEmoji" translatesAutoresizingMaskIntoConstraints="NO" id="M4S-vq-4k6">
-                                <rect key="frame" x="142" y="48.000000000000007" width="107" height="66.666666666666686"/>
+                                <rect key="frame" x="141" y="48.000000000000007" width="108" height="66.666666666666686"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have saved" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocB-ww-IGy">
                                 <rect key="frame" x="135.33333333333334" y="118.66666666666669" width="119.66666666666666" height="20"/>
@@ -39,7 +39,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qv5-y6-lHZ" customClass="MyButton" customModule="mogo_apps_ios" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qv5-y6-lHZ" customClass="MyButton">
                                 <rect key="frame" x="100" y="197.33333333333334" width="190" height="32"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
@@ -59,11 +59,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Magnifier" translatesAutoresizingMaskIntoConstraints="NO" id="m50-Gk-hjJ">
-                                <rect key="frame" x="342" y="293" width="24" height="22"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Magnifier" translatesAutoresizingMaskIntoConstraints="NO" id="m50-Gk-hjJ">
+                                <rect key="frame" x="342" y="293.66666666666669" width="24" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="kBW-ow-iqg"/>
+                                    <constraint firstAttribute="height" constant="22" id="kwo-YW-dIz"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="Sort" translatesAutoresizingMaskIntoConstraints="NO" id="dCa-7q-Kzy">
-                                <rect key="frame" x="308.33333333333331" y="293" width="24" height="22"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Sort" translatesAutoresizingMaskIntoConstraints="NO" id="dCa-7q-Kzy">
+                                <rect key="frame" x="308.66666666666669" y="293.66666666666669" width="24" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="3ha-E7-UTS"/>
+                                    <constraint firstAttribute="width" constant="24" id="xPj-Yn-yAG"/>
+                                </constraints>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ROL-us-md1">
                                 <rect key="frame" x="19" y="337" width="347" height="32"/>
@@ -71,10 +79,17 @@
                                     <segment title="Active"/>
                                     <segment title="Completed"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="2JD-Mz-5QX" eventType="valueChanged" id="LAJ-ag-M9o"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C0m-TQ-ycU">
                                 <rect key="frame" x="19" y="378" width="347" height="422"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="2JD-Mz-5QX" id="jSL-iE-zNo"/>
+                                    <outlet property="delegate" destination="2JD-Mz-5QX" id="jzA-UP-dTm"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VJE-Fl-jKn"/>
@@ -90,16 +105,16 @@
                             <constraint firstItem="ROL-us-md1" firstAttribute="top" secondItem="ppk-Ka-gVD" secondAttribute="bottom" constant="19" id="Kew-fM-7RH"/>
                             <constraint firstItem="aQI-Du-Lw0" firstAttribute="top" secondItem="aaI-2e-hao" secondAttribute="top" id="Ld5-Ku-3t1"/>
                             <constraint firstItem="ppk-Ka-gVD" firstAttribute="leading" secondItem="VJE-Fl-jKn" secondAttribute="leading" constant="19" id="MBp-8h-7ZG"/>
+                            <constraint firstItem="dCa-7q-Kzy" firstAttribute="centerY" secondItem="ppk-Ka-gVD" secondAttribute="centerY" id="N4t-W4-7HG"/>
                             <constraint firstItem="VJE-Fl-jKn" firstAttribute="trailing" secondItem="m50-Gk-hjJ" secondAttribute="trailing" constant="24" id="Nc8-l3-jTm"/>
                             <constraint firstItem="ROL-us-md1" firstAttribute="leading" secondItem="ppk-Ka-gVD" secondAttribute="leading" id="OWk-yi-dof"/>
                             <constraint firstItem="dxJ-f2-VM2" firstAttribute="top" secondItem="VJE-Fl-jKn" secondAttribute="top" constant="5" id="Oqf-v6-71q"/>
                             <constraint firstItem="aQI-Du-Lw0" firstAttribute="leading" secondItem="aaI-2e-hao" secondAttribute="leading" id="PoO-qC-LUi"/>
                             <constraint firstItem="opk-kM-F52" firstAttribute="centerX" secondItem="aaI-2e-hao" secondAttribute="centerX" id="Q4z-F5-V7s"/>
-                            <constraint firstItem="dxJ-f2-VM2" firstAttribute="leading" secondItem="M4S-vq-4k6" secondAttribute="trailing" constant="95" id="TE2-Sh-rly"/>
                             <constraint firstItem="ROL-us-md1" firstAttribute="trailing" secondItem="m50-Gk-hjJ" secondAttribute="trailing" id="UZs-1j-PFt"/>
+                            <constraint firstItem="m50-Gk-hjJ" firstAttribute="centerY" secondItem="dCa-7q-Kzy" secondAttribute="centerY" id="VBG-09-2Kb"/>
                             <constraint firstItem="qv5-y6-lHZ" firstAttribute="leading" secondItem="VJE-Fl-jKn" secondAttribute="leading" constant="100" id="Vc9-Y0-Xou"/>
                             <constraint firstItem="dxJ-f2-VM2" firstAttribute="top" secondItem="VJE-Fl-jKn" secondAttribute="top" constant="5" id="Xmb-CM-QoD"/>
-                            <constraint firstItem="m50-Gk-hjJ" firstAttribute="top" secondItem="aQI-Du-Lw0" secondAttribute="bottom" constant="35" id="YBy-1i-0xR"/>
                             <constraint firstItem="ocB-ww-IGy" firstAttribute="centerX" secondItem="aaI-2e-hao" secondAttribute="centerX" id="Z9C-uS-E7h"/>
                             <constraint firstItem="VJE-Fl-jKn" firstAttribute="bottom" secondItem="aQI-Du-Lw0" secondAttribute="bottom" constant="552" id="f0H-4f-reD"/>
                             <constraint firstItem="VJE-Fl-jKn" firstAttribute="trailing" secondItem="dxJ-f2-VM2" secondAttribute="trailing" constant="16" id="fsA-GS-XU1"/>
@@ -108,9 +123,7 @@
                             <constraint firstItem="VJE-Fl-jKn" firstAttribute="trailing" secondItem="dxJ-f2-VM2" secondAttribute="trailing" constant="16" id="mYx-TY-9He"/>
                             <constraint firstItem="VJE-Fl-jKn" firstAttribute="trailing" secondItem="qv5-y6-lHZ" secondAttribute="trailing" constant="100" id="o7y-NF-kue"/>
                             <constraint firstItem="VJE-Fl-jKn" firstAttribute="trailing" secondItem="dxJ-f2-VM2" secondAttribute="trailing" constant="16" id="qdF-Eg-LIa"/>
-                            <constraint firstItem="M4S-vq-4k6" firstAttribute="leading" secondItem="VJE-Fl-jKn" secondAttribute="leading" constant="142" id="r8a-oO-PBc"/>
                             <constraint firstItem="m50-Gk-hjJ" firstAttribute="leading" secondItem="dCa-7q-Kzy" secondAttribute="trailing" constant="9.5" id="sUp-1F-z69"/>
-                            <constraint firstItem="dCa-7q-Kzy" firstAttribute="top" secondItem="aQI-Du-Lw0" secondAttribute="bottom" constant="35" id="whP-pG-t1F"/>
                             <constraint firstItem="qv5-y6-lHZ" firstAttribute="top" secondItem="opk-kM-F52" secondAttribute="bottom" constant="14" id="whX-Mf-6Y5"/>
                             <constraint firstItem="aQI-Du-Lw0" firstAttribute="trailing" secondItem="aaI-2e-hao" secondAttribute="trailing" id="xLR-Yy-wic"/>
                             <constraint firstItem="ppk-Ka-gVD" firstAttribute="top" secondItem="aQI-Du-Lw0" secondAttribute="bottom" constant="33" id="xMK-Ou-tkt"/>
@@ -120,10 +133,10 @@
                     </view>
                     <connections>
                         <outlet property="AddGoalButton" destination="qv5-y6-lHZ" id="DTX-xo-ox6"/>
-                        <outlet property="GoalTableView" destination="C0m-TQ-ycU" id="6Zt-0p-Tli"/>
                         <outlet property="LabelSaved" destination="ocB-ww-IGy" id="6xS-0d-cdM"/>
                         <outlet property="MoneyGoalStatus" destination="opk-kM-F52" id="KN4-N4-A3M"/>
                         <outlet property="SegmentedGoal" destination="ROL-us-md1" id="0st-jY-VWI"/>
+                        <outlet property="goalTableView" destination="C0m-TQ-ycU" id="6Zt-0p-Tli"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5OA-gs-EOq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

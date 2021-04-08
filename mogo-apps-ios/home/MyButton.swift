@@ -1,8 +1,8 @@
 //
-//  AddGoalButton.swift
+//  MyButton.swift
 //  mogo-apps-ios
 //
-//  Created by Achmad Fathullah on 06/04/21.
+//  Created by Achmad Fathullah on 07/04/21.
 //
 
 import UIKit
