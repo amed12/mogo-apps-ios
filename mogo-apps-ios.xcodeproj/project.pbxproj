@@ -28,6 +28,11 @@
 		4AD0A11526208BE40075118A /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A10B26208BE40075118A /* MyButton.swift */; };
 		4AD0A12526208ED50075118A /* addWithdrawStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0A12326208ED50075118A /* addWithdrawStoryboard.storyboard */; };
 		4AD0A12626208ED50075118A /* addWithdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A12426208ED50075118A /* addWithdrawViewController.swift */; };
+		4AD0A130262091F10075118A /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A12B262091F10075118A /* PresentationController.swift */; };
+		4AD0A131262091F10075118A /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A12C262091F10075118A /* OverlayView.swift */; };
+		4AD0A132262091F10075118A /* GoalUpdateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A12D262091F10075118A /* GoalUpdateController.swift */; };
+		4AD0A133262091F10075118A /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0A12E262091F10075118A /* OverlayView.xib */; };
+		4AD0A134262091F10075118A /* GoalUpdate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0A12F262091F10075118A /* GoalUpdate.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +59,11 @@
 		4AD0A10B26208BE40075118A /* MyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
 		4AD0A12326208ED50075118A /* addWithdrawStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = addWithdrawStoryboard.storyboard; sourceTree = "<group>"; };
 		4AD0A12426208ED50075118A /* addWithdrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addWithdrawViewController.swift; sourceTree = "<group>"; };
+		4AD0A12B262091F10075118A /* PresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
+		4AD0A12C262091F10075118A /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		4AD0A12D262091F10075118A /* GoalUpdateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalUpdateController.swift; sourceTree = "<group>"; };
+		4AD0A12E262091F10075118A /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
+		4AD0A12F262091F10075118A /* GoalUpdate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GoalUpdate.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +96,7 @@
 		4A2DC95F26122D4100CBD461 /* mogo-apps-ios */ = {
 			isa = PBXGroup;
 			children = (
+				4AD0A12A262091F10075118A /* goal-update */,
 				4AD0A12226208ED50075118A /* add-withdraw-saving */,
 				4AD0A0FF26208BE40075118A /* home */,
 				4AD0A0CF262081730075118A /* saving-history */,
@@ -142,6 +153,18 @@
 				4AD0A12426208ED50075118A /* addWithdrawViewController.swift */,
 			);
 			path = "add-withdraw-saving";
+			sourceTree = "<group>";
+		};
+		4AD0A12A262091F10075118A /* goal-update */ = {
+			isa = PBXGroup;
+			children = (
+				4AD0A12B262091F10075118A /* PresentationController.swift */,
+				4AD0A12C262091F10075118A /* OverlayView.swift */,
+				4AD0A12D262091F10075118A /* GoalUpdateController.swift */,
+				4AD0A12E262091F10075118A /* OverlayView.xib */,
+				4AD0A12F262091F10075118A /* GoalUpdate.storyboard */,
+			);
+			path = "goal-update";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,8 +225,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A2DC97026122D4200CBD461 /* LaunchScreen.storyboard in Resources */,
+				4AD0A133262091F10075118A /* OverlayView.xib in Resources */,
 				4AD0A0D6262081730075118A /* SavingHistory.storyboard in Resources */,
 				4A2DC96D26122D4200CBD461 /* Assets.xcassets in Resources */,
+				4AD0A134262091F10075118A /* GoalUpdate.storyboard in Resources */,
 				4AD0A11026208BE40075118A /* Home.storyboard in Resources */,
 				4A2DC96826122D4100CBD461 /* Main.storyboard in Resources */,
 				4AD0A11426208BE40075118A /* HomeViewCell.xib in Resources */,
@@ -228,10 +253,13 @@
 				4AD0A11326208BE40075118A /* HomeViewCell.swift in Sources */,
 				4A2DC96126122D4100CBD461 /* AppDelegate.swift in Sources */,
 				4AD0A10D26208BE40075118A /* HomeController.swift in Sources */,
+				4AD0A131262091F10075118A /* OverlayView.swift in Sources */,
+				4AD0A130262091F10075118A /* PresentationController.swift in Sources */,
 				4A2DC96326122D4100CBD461 /* SceneDelegate.swift in Sources */,
 				4AD0A0D5262081730075118A /* SavingHistoryCell.swift in Sources */,
 				4AD0A0D4262081730075118A /* SavingHistoryScreen.swift in Sources */,
 				4AD0A12626208ED50075118A /* addWithdrawViewController.swift in Sources */,
+				4AD0A132262091F10075118A /* GoalUpdateController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
