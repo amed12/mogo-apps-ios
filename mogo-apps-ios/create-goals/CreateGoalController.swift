@@ -7,14 +7,50 @@
 
 import UIKit
 
-class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDataSource, CreateGoalHeaderCellDelegate  {
+
+class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDataSource, CreateGoalHeaderCellDelegate, UIPickerViewDelegate, UIPickerViewDataSource, CreateGoalActionCellDelegate  {
+    
         
     @IBOutlet weak var tableCreateGoals: UITableView!
+    @IBOutlet weak var pickerView: UIPickerView!
+    
+    var frequencyArray = ["Monthly", "Weekly"]
+    var monthArray = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"]
+    var weekArray = ["senin","selasa","rabu","kamis","jumat","sabtu","mingu"]
+    
+    var isPickerHide = true
+    var isMonth = false
+    var isfreq = false
+    var isWeek = false
+    var freqSelection = ""
+    var monthSelection = ""
+    var weekSelection = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        setupPicker(isPickerShow: isPickerHide)
         self.tableCreateGoals.separatorColor = .darkGray
+    }
+    
+    private func setupPicker(isPickerShow: Bool) {
+        pickerView.isHidden = isPickerShow
+        // Toolbar
+//       let btnDone = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(donePicker))
+//
+//       let barAccessory = UIToolbar(frame: CGRect(x: 0, y: 0, width: pickerView.frame.width, height: 44))
+//       barAccessory.barStyle = .default
+//       barAccessory.isTranslucent = false
+//       barAccessory.items = [btnDone]
+//        barAccessory.isUserInteractionEnabled = true
+//       pickerView.addSubview(barAccessory)
+
+    }
+    
+    @objc func donePicker() {
+        print("asd")
+        pickerView.isHidden = true
+        tableCreateGoals.reloadData()
     }
     
     private func setupView() {
@@ -151,13 +187,18 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
             return Cell
         case 3:
             let Cell = (tableView.dequeueReusableCell(withIdentifier: "createGoalActionIdentifier", for: indexPath) as? CreateGoalActionCell)!
+            Cell.delegate = self
             switch indexPath.row {
             case 0:
                 Cell.titleLabel.text = "Saving Frequency"
-                Cell.buttonTarget.addTarget(self, action: #selector(freqAction), for: .touchUpInside)
+                Cell.buttonTarget.setTitle(freqSelection, for: .normal)
+//                Cell.buttonTarget.addTarget(self, action: #selector(freqAction), for: .touchUpInside)
+                Cell.source = isfreq ? "freq" : "month"
             case 1:
                 Cell.titleLabel.text = "Saving Date"
-                Cell.buttonTarget.addTarget(self, action: #selector(dateAction), for: .touchUpInside)
+                Cell.buttonTarget.setTitle(isMonth ? monthSelection : weekSelection, for: .normal)
+//                Cell.buttonTarget.addTarget(self, action: #selector(dateAction), for: .touchUpInside)
+                Cell.source = isMonth ? "month" : "week"
             case 2:
                 Cell.titleLabel.text = "Saving Time"
                 Cell.buttonTarget.addTarget(self, action: #selector(timeAction), for: .touchUpInside)
@@ -176,15 +217,6 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
      }
     
     
-    
-    @objc func freqAction() {
-        print("B")
-    }
-    
-    @objc func dateAction() {
-        print("C")
-    }
-    
     @objc func timeAction() {
         print("D")
     }
@@ -196,15 +228,63 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
         self.present(destinationVC, animated: true, completion: nil)
     }
 
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // Number of columns of data
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
-    */
+    
+    // The number of rows of data
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if isMonth {
+            return monthArray.count
+        } else {
+            return frequencyArray.count
+        }
+    }
+    
+    // The data to return fopr the row and component (column) that's being passed in
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        print(frequencyArray[row])
+        if isMonth {
+            return monthArray[row]
+        } else {
+            return frequencyArray[row]
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if isMonth {
+            monthSelection = monthArray[row]
+        } else {
+            freqSelection = frequencyArray[row]
+            if frequencyArray[row] == "Monthly" {
+                isMonth = true
+                isfreq = false
+////                isWeek = false
+            } else {
+                isMonth = false
+                isfreq = true
+            }
+        }
+        setupPicker(isPickerShow: true)
+        tableCreateGoals.reloadData()
+    }
+    
+    func showPicker(isShow: Bool, forValue: String) {
+        switch forValue {
+        case "month":
+            isMonth = true
+            isfreq = false
+        case "freq":
+            isMonth = false
+            isfreq = true
+        default:
+            isMonth = false
+            isfreq = false
+        }
+//        isMonth = forValue == "month" ? true : false
+        setupPicker(isPickerShow: isShow ? false : true)
+    }
+    
 
 }

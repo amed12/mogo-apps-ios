@@ -25,14 +25,27 @@
                                     <outlet property="delegate" destination="eem-CF-NoZ" id="ezf-Lk-cqd"/>
                                 </connections>
                             </tableView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVi-bw-qyq">
+                                <rect key="frame" x="0.0" y="660" width="390" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Ntn-J6-n6r"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="eem-CF-NoZ" id="7Sq-vG-acX"/>
+                                    <outlet property="delegate" destination="eem-CF-NoZ" id="059-xj-a5y"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MXd-aU-0hO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="MXd-aU-0hO" firstAttribute="bottom" secondItem="CVi-bw-qyq" secondAttribute="bottom" id="8XC-wS-tFU"/>
                             <constraint firstItem="sJ1-F6-QHb" firstAttribute="leading" secondItem="MXd-aU-0hO" secondAttribute="leading" id="Hlr-sa-xZb"/>
                             <constraint firstItem="sJ1-F6-QHb" firstAttribute="bottom" secondItem="MXd-aU-0hO" secondAttribute="bottom" id="QRg-ux-QeA"/>
                             <constraint firstItem="sJ1-F6-QHb" firstAttribute="top" secondItem="MXd-aU-0hO" secondAttribute="top" id="dc1-TP-aaJ"/>
+                            <constraint firstItem="CVi-bw-qyq" firstAttribute="leading" secondItem="MXd-aU-0hO" secondAttribute="leading" id="jUA-zZ-Xni"/>
                             <constraint firstItem="sJ1-F6-QHb" firstAttribute="trailing" secondItem="MXd-aU-0hO" secondAttribute="trailing" id="tta-sY-XEq"/>
+                            <constraint firstItem="CVi-bw-qyq" firstAttribute="trailing" secondItem="MXd-aU-0hO" secondAttribute="trailing" id="yXd-jG-z22"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create Goals" id="QSC-js-Dcn">
@@ -44,6 +57,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="pickerView" destination="CVi-bw-qyq" id="723-l5-RjI"/>
                         <outlet property="tableCreateGoals" destination="sJ1-F6-QHb" id="71m-a4-HZ1"/>
                     </connections>
                 </viewController>

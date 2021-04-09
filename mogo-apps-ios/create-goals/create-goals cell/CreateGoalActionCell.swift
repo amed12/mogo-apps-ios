@@ -7,8 +7,13 @@
 
 import UIKit
 
+protocol CreateGoalActionCellDelegate: class {
+    func showPicker(isShow: Bool, forValue: String)
+}
+
 class CreateGoalActionCell: UITableViewCell {
     
+    weak var delegate: CreateGoalActionCellDelegate?
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var buttonTarget: UIButton! {
@@ -17,9 +22,13 @@ class CreateGoalActionCell: UITableViewCell {
             buttonTarget.backgroundColor = .systemGroupedBackground
         }
     }
+    
+    let frequencyValue: [String] = ["monthly", "weekly"]
+    var source = ""
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        buttonTarget.addTarget(self, action: #selector(pickerClicked), for: .touchUpInside)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,9 +37,17 @@ class CreateGoalActionCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    var toolBar = UIToolbar()
-    var picker  = UIPickerView()
-    
-    @IBAction func pickerbutton(_ sender: Any) {
+    @objc func pickerClicked() {
+        switch source {
+        case "freq":
+            self.delegate?.showPicker(isShow: true, forValue: source)
+        case "month" :
+            self.delegate?.showPicker(isShow: true, forValue: source)
+        case "week":
+            self.delegate?.showPicker(isShow: true, forValue: source)
+        default:
+            self.delegate?.showPicker(isShow: true, forValue: source)
+        }
     }
+    
 }
