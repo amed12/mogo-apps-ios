@@ -36,6 +36,11 @@
 		4AD0A145262093C10075118A /* ProgressDrawer2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A142262093C10075118A /* ProgressDrawer2.swift */; };
 		4AD0A146262093C10075118A /* GoalDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A143262093C10075118A /* GoalDetailController.swift */; };
 		4AD0A147262093C10075118A /* GoalDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0A144262093C10075118A /* GoalDetail.storyboard */; };
+		4AD0A154262095BE0075118A /* ReminderObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A14F262095BE0075118A /* ReminderObject.swift */; };
+		4AD0A155262095BE0075118A /* ReminderList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0A150262095BE0075118A /* ReminderList.storyboard */; };
+		4AD0A156262095BE0075118A /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A151262095BE0075118A /* ReminderViewController.swift */; };
+		4AD0A157262095BE0075118A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A152262095BE0075118A /* DetailViewController.swift */; };
+		4AD0A158262095BE0075118A /* ReminderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A153262095BE0075118A /* ReminderViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +75,11 @@
 		4AD0A142262093C10075118A /* ProgressDrawer2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressDrawer2.swift; sourceTree = "<group>"; };
 		4AD0A143262093C10075118A /* GoalDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalDetailController.swift; sourceTree = "<group>"; };
 		4AD0A144262093C10075118A /* GoalDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GoalDetail.storyboard; sourceTree = "<group>"; };
+		4AD0A14F262095BE0075118A /* ReminderObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderObject.swift; sourceTree = "<group>"; };
+		4AD0A150262095BE0075118A /* ReminderList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReminderList.storyboard; sourceTree = "<group>"; };
+		4AD0A151262095BE0075118A /* ReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
+		4AD0A152262095BE0075118A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		4AD0A153262095BE0075118A /* ReminderViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +112,7 @@
 		4A2DC95F26122D4100CBD461 /* mogo-apps-ios */ = {
 			isa = PBXGroup;
 			children = (
+				4AD0A14E262095BD0075118A /* reminder-list */,
 				4AD0A141262093C10075118A /* goal-detail */,
 				4AD0A12A262091F10075118A /* goal-update */,
 				4AD0A12226208ED50075118A /* add-withdraw-saving */,
@@ -184,6 +195,18 @@
 			path = "goal-detail";
 			sourceTree = "<group>";
 		};
+		4AD0A14E262095BD0075118A /* reminder-list */ = {
+			isa = PBXGroup;
+			children = (
+				4AD0A14F262095BE0075118A /* ReminderObject.swift */,
+				4AD0A150262095BE0075118A /* ReminderList.storyboard */,
+				4AD0A151262095BE0075118A /* ReminderViewController.swift */,
+				4AD0A152262095BE0075118A /* DetailViewController.swift */,
+				4AD0A153262095BE0075118A /* ReminderViewCell.swift */,
+			);
+			path = "reminder-list";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -245,6 +268,7 @@
 				4AD0A133262091F10075118A /* OverlayView.xib in Resources */,
 				4AD0A147262093C10075118A /* GoalDetail.storyboard in Resources */,
 				4AD0A0D6262081730075118A /* SavingHistory.storyboard in Resources */,
+				4AD0A155262095BE0075118A /* ReminderList.storyboard in Resources */,
 				4A2DC96D26122D4200CBD461 /* Assets.xcassets in Resources */,
 				4AD0A134262091F10075118A /* GoalUpdate.storyboard in Resources */,
 				4AD0A11026208BE40075118A /* Home.storyboard in Resources */,
@@ -268,13 +292,17 @@
 				4AD0A11526208BE40075118A /* MyButton.swift in Sources */,
 				4AD0A11126208BE40075118A /* EmptyDataGoalCell.swift in Sources */,
 				4AD0A145262093C10075118A /* ProgressDrawer2.swift in Sources */,
+				4AD0A157262095BE0075118A /* DetailViewController.swift in Sources */,
 				4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */,
 				4AD0A11326208BE40075118A /* HomeViewCell.swift in Sources */,
+				4AD0A154262095BE0075118A /* ReminderObject.swift in Sources */,
 				4A2DC96126122D4100CBD461 /* AppDelegate.swift in Sources */,
 				4AD0A10D26208BE40075118A /* HomeController.swift in Sources */,
 				4AD0A131262091F10075118A /* OverlayView.swift in Sources */,
+				4AD0A156262095BE0075118A /* ReminderViewController.swift in Sources */,
 				4AD0A130262091F10075118A /* PresentationController.swift in Sources */,
 				4A2DC96326122D4100CBD461 /* SceneDelegate.swift in Sources */,
+				4AD0A158262095BE0075118A /* ReminderViewCell.swift in Sources */,
 				4AD0A146262093C10075118A /* GoalDetailController.swift in Sources */,
 				4AD0A0D5262081730075118A /* SavingHistoryCell.swift in Sources */,
 				4AD0A0D4262081730075118A /* SavingHistoryScreen.swift in Sources */,
