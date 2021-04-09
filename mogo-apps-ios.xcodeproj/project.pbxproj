@@ -14,6 +14,7 @@
 		4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DC96926122D4100CBD461 /* mogo_apps_ios.xcdatamodeld */; };
 		4A2DC96D26122D4200CBD461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A2DC96C26122D4200CBD461 /* Assets.xcassets */; };
 		4A2DC97026122D4200CBD461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2DC96E26122D4200CBD461 /* LaunchScreen.storyboard */; };
+		AC3F21FA261EBBF500E1473D /* ReminderObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3F21F9261EBBF500E1473D /* ReminderObject.swift */; };
 		ACBD339E261B4CB600F309F7 /* ReminderList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBD339D261B4CB600F309F7 /* ReminderList.storyboard */; };
 		ACBD33BE261C597F00F309F7 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBD33BD261C597F00F309F7 /* ReminderViewController.swift */; };
 		ACBD33C7261CCECD00F309F7 /* ReminderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBD33C6261CCECD00F309F7 /* ReminderViewCell.swift */; };
@@ -30,6 +31,7 @@
 		4A2DC96C26122D4200CBD461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A2DC96F26122D4200CBD461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A2DC97126122D4200CBD461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC3F21F9261EBBF500E1473D /* ReminderObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderObject.swift; sourceTree = "<group>"; };
 		ACBD339D261B4CB600F309F7 /* ReminderList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReminderList.storyboard; sourceTree = "<group>"; };
 		ACBD33BD261C597F00F309F7 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		ACBD33C6261CCECD00F309F7 /* ReminderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewCell.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				ACBD33BD261C597F00F309F7 /* ReminderViewController.swift */,
 				ACBD33C6261CCECD00F309F7 /* ReminderViewCell.swift */,
 				ACBD33C9261DC41E00F309F7 /* DetailViewController.swift */,
+				AC3F21F9261EBBF500E1473D /* ReminderObject.swift */,
 			);
 			path = "reminder-list";
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				4A2DC96526122D4100CBD461 /* ViewController.swift in Sources */,
 				ACBD33BE261C597F00F309F7 /* ReminderViewController.swift in Sources */,
 				4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */,
+				AC3F21FA261EBBF500E1473D /* ReminderObject.swift in Sources */,
 				4A2DC96126122D4100CBD461 /* AppDelegate.swift in Sources */,
 				4A2DC96326122D4100CBD461 /* SceneDelegate.swift in Sources */,
 				ACBD33CA261DC41E00F309F7 /* DetailViewController.swift in Sources */,

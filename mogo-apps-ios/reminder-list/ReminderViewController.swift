@@ -13,18 +13,26 @@ class ReminderViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @IBOutlet weak var reminderTable: UITableView!
     
-    
-    var reminderTitleArray = ["Trip to Sumba", "Lamborghini Aventador", "Trip to New Zealand"]
-    var reminderDetailArray = ["Add Saving IDR 500.000", "Add Saving IDR 1.000.000", "Add Saving IDR 2.500.000"]
+    var reminders: [Reminder] = []
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.title = "Saving Reminder"
+        reminders = createArray()
+    }
+    
+    
+    func createArray() -> [Reminder] {
+        
+        let reminder1 = Reminder(reminderTitle: "Trip to Sumba", reminderDetail: "Add Saving IDR 500.000")
+        let reminder2 = Reminder(reminderTitle: "Lamborghini Aventador", reminderDetail: "Add Saving IDR 1.000.000")
+        let reminder3 = Reminder(reminderTitle: "Trip to New Zealand", reminderDetail: "Add Saving IDR 2.500.000")
+        return [reminder1, reminder2, reminder3]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return reminderTitleArray.count
+        return reminders.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -44,8 +52,8 @@ class ReminderViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             tableView.beginUpdates()
-            reminderTitleArray.remove(at: indexPath.row)
-            reminderDetailArray.remove(at: indexPath.row)
+            reminders.remove(at: indexPath.row)
+          //reminderDetailArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .fade)
             tableView.endUpdates()
         }

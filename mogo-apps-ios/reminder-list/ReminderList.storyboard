@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LCX-3n-X5M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3A4-SH-H6Z">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -16,15 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eN9-Tz-Xeb">
-                                <rect key="frame" x="346" y="40" width="48" height="30"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" red="0.086274509803921567" green="0.47450980392156861" blue="0.43137254901960786" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AyT-5L-sx3">
-                                <rect key="frame" x="0.0" y="80" width="414" height="792"/>
+                                <rect key="frame" x="0.0" y="128" width="414" height="744"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="81D-1r-W00"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="reminderCellIdentifier" textLabel="Xuu-iV-tqV" detailTextLabel="eZr-iY-xSX" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="k3F-aF-QXs" customClass="ReminderViewCell" customModule="mogo_apps_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="58"/>
@@ -60,26 +57,28 @@
                                     <outlet property="delegate" destination="LCX-3n-X5M" id="ybl-H6-YQN"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminder List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A65-uv-1Zb">
-                                <rect key="frame" x="155" y="44.5" width="113" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REMINDER LIST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVt-m4-0vW">
+                                <rect key="frame" x="20" y="104" width="97" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="X4e-zt-I8r"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="eN9-Tz-Xeb" firstAttribute="leading" secondItem="A65-uv-1Zb" secondAttribute="trailing" constant="78" id="1EF-uX-xr1"/>
-                            <constraint firstItem="AyT-5L-sx3" firstAttribute="top" secondItem="eN9-Tz-Xeb" secondAttribute="bottom" constant="10" id="4Oz-XY-CzY"/>
-                            <constraint firstItem="eN9-Tz-Xeb" firstAttribute="centerY" secondItem="A65-uv-1Zb" secondAttribute="centerY" id="8SE-TG-4bk"/>
-                            <constraint firstItem="AyT-5L-sx3" firstAttribute="leading" secondItem="X4e-zt-I8r" secondAttribute="leading" id="Asb-7J-YCf"/>
-                            <constraint firstItem="AyT-5L-sx3" firstAttribute="bottom" secondItem="X4e-zt-I8r" secondAttribute="bottom" constant="10" id="JEk-ZQ-np6"/>
-                            <constraint firstItem="eN9-Tz-Xeb" firstAttribute="top" secondItem="IgH-GC-sG6" secondAttribute="topMargin" constant="-4" id="YIH-6g-sWg"/>
-                            <constraint firstItem="eN9-Tz-Xeb" firstAttribute="trailing" secondItem="IgH-GC-sG6" secondAttribute="trailingMargin" id="p0K-o5-lww"/>
-                            <constraint firstItem="AyT-5L-sx3" firstAttribute="centerX" secondItem="IgH-GC-sG6" secondAttribute="centerX" id="zje-UB-UUg"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="AyT-5L-sx3" secondAttribute="bottom" constant="-10" id="4sO-vh-bsF"/>
+                            <constraint firstItem="AyT-5L-sx3" firstAttribute="top" secondItem="iVt-m4-0vW" secondAttribute="bottom" constant="8" symbolic="YES" id="5tB-9a-RTj"/>
+                            <constraint firstItem="iVt-m4-0vW" firstAttribute="leading" secondItem="IgH-GC-sG6" secondAttribute="leadingMargin" id="HCw-le-EGH"/>
+                            <constraint firstItem="AyT-5L-sx3" firstAttribute="top" secondItem="X4e-zt-I8r" secondAttribute="top" constant="40" id="gmF-lJ-C0R"/>
+                            <constraint firstItem="AyT-5L-sx3" firstAttribute="centerX" secondItem="IgH-GC-sG6" secondAttribute="centerX" id="h7C-dO-DMg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="TFC-md-0Ok">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="cancel" id="VAS-6O-oxr">
+                            <color key="tintColor" red="0.086274509799999996" green="0.47450980390000003" blue="0.43137254899999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="reminderTable" destination="AyT-5L-sx3" id="Ie2-96-Baw"/>
                         <segue destination="EsT-ex-Ahp" kind="showDetail" identifier="segueToDetail" id="zaq-V9-441"/>
@@ -87,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nIL-bD-8xh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="79.6875"/>
+            <point key="canvasLocation" x="951" y="80"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="m9X-C7-00J">
@@ -103,12 +102,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FzJ-tu-E5M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="841" y="250"/>
+            <point key="canvasLocation" x="1750.7246376811595" y="249.77678571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Aiz-Rp-vu6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3A4-SH-H6Z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="viO-ED-9Db">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LCX-3n-X5M" kind="relationship" relationship="rootViewController" id="iEW-gh-KHI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U9J-uY-rae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="79.6875"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
