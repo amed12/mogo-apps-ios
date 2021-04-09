@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I3x-cm-8yV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Saving History-->
+        <scene sceneID="407-Sc-q3w">
+            <objects>
+                <viewController storyboardIdentifier="savingHistory" id="I0S-ZD-j0a" customClass="SavingHistoryScreen" customModule="mogo_apps_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sZS-Nf-GPr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G3O-mT-VXY">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SavingHistoryCell" rowHeight="54" id="rdD-aH-shX" customClass="SavingHistoryCell" customModule="mogo_apps_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rdD-aH-shX" id="3go-B0-8Fj">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="54"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEg-Yj-ckZ">
+                                                    <rect key="frame" x="336" y="16.5" width="60" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="5Va-t8-eDf"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="typeTitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="646-Th-T2E">
+                                                    <rect key="frame" x="18" y="10" width="68" height="19.5"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <bool key="isElement" value="NO"/>
+                                                    </accessibility>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <color key="textColor" red="0.092533282940000003" green="0.47499495739999997" blue="0.43137055639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwC-eD-W6f">
+                                                    <rect key="frame" x="18" y="31" width="25.5" height="14"/>
+                                                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="sEg-Yj-ckZ" secondAttribute="trailing" constant="18" id="8BQ-4Z-2oF"/>
+                                                <constraint firstItem="646-Th-T2E" firstAttribute="top" secondItem="3go-B0-8Fj" secondAttribute="top" constant="10" id="I53-Eg-X34"/>
+                                                <constraint firstItem="646-Th-T2E" firstAttribute="leading" secondItem="3go-B0-8Fj" secondAttribute="leading" constant="18" id="S4Q-J9-oFa"/>
+                                                <constraint firstItem="kwC-eD-W6f" firstAttribute="top" secondItem="3go-B0-8Fj" secondAttribute="top" constant="31" id="Vzk-sD-ENS"/>
+                                                <constraint firstItem="sEg-Yj-ckZ" firstAttribute="centerY" secondItem="3go-B0-8Fj" secondAttribute="centerY" id="eBy-wS-4f8"/>
+                                                <constraint firstItem="kwC-eD-W6f" firstAttribute="leading" secondItem="646-Th-T2E" secondAttribute="leading" id="tfM-yh-eHw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" hint="savingHistoryCell" identifier="savingHistoryCell" label="savingHistoryCell">
+                                            <accessibilityTraits key="traits" searchField="YES"/>
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
+                                        <connections>
+                                            <outlet property="amount" destination="sEg-Yj-ckZ" id="E0I-91-b7P"/>
+                                            <outlet property="date" destination="kwC-eD-W6f" id="C4x-Ju-T8l"/>
+                                            <outlet property="typeTitle" destination="646-Th-T2E" id="oIF-cx-t5y"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="I0S-ZD-j0a" id="ijb-Ad-9Nt"/>
+                                    <outlet property="delegate" destination="I0S-ZD-j0a" id="gFG-nt-mIq"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ea4-4I-b51">
+                                <rect key="frame" x="0.0" y="-44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Saving History" leftItemsSupplementBackButton="YES" id="VPj-z9-aeC"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iSC-57-hbc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="G3O-mT-VXY" firstAttribute="top" secondItem="ea4-4I-b51" secondAttribute="bottom" constant="88" id="1HI-JF-McN"/>
+                            <constraint firstItem="iSC-57-hbc" firstAttribute="trailing" secondItem="G3O-mT-VXY" secondAttribute="trailing" id="A1S-cz-Jf4"/>
+                            <constraint firstItem="G3O-mT-VXY" firstAttribute="top" secondItem="iSC-57-hbc" secondAttribute="top" id="C0z-jU-lJY"/>
+                            <constraint firstItem="ea4-4I-b51" firstAttribute="trailing" secondItem="G3O-mT-VXY" secondAttribute="trailing" id="S5T-FE-dz2"/>
+                            <constraint firstItem="G3O-mT-VXY" firstAttribute="leading" secondItem="iSC-57-hbc" secondAttribute="leading" id="qAr-Mr-SxK"/>
+                            <constraint firstItem="ea4-4I-b51" firstAttribute="leading" secondItem="sZS-Nf-GPr" secondAttribute="leading" id="s2H-gI-eDB"/>
+                            <constraint firstItem="iSC-57-hbc" firstAttribute="bottom" secondItem="G3O-mT-VXY" secondAttribute="bottom" id="xaH-vs-t4i"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Saving History" id="IKi-U9-gHO">
+                        <barButtonItem key="leftBarButtonItem" title="Back" image="chevron.backward" catalog="system" style="plain" id="zOR-45-iZr"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="SavingHistoryTable" destination="G3O-mT-VXY" id="ZdY-hd-flg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="28c-sE-LqL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="768.11594202898561" y="-33.482142857142854"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="g8r-cH-mXc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I3x-cm-8yV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SWM-n8-PeF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="I0S-ZD-j0a" kind="relationship" relationship="rootViewController" id="XQp-L0-BxJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MiG-Q0-DVs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-142.02898550724638" y="-33.482142857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
