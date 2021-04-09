@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		145B31C3261FEB4F00794EC2 /* GoalUpdate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 145B31C2261FEB4F00794EC2 /* GoalUpdate.storyboard */; };
+		145B31C6261FEB5B00794EC2 /* GoalUpdateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145B31C5261FEB5B00794EC2 /* GoalUpdateController.swift */; };
+		145B31D6261FF18F00794EC2 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145B31D5261FF18F00794EC2 /* PresentationController.swift */; };
+		145B31D9261FF30600794EC2 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 145B31D8261FF30600794EC2 /* OverlayView.xib */; };
+		145B31DF261FF54C00794EC2 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145B31DE261FF54C00794EC2 /* OverlayView.swift */; };
 		4A2DC96126122D4100CBD461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DC96026122D4100CBD461 /* AppDelegate.swift */; };
 		4A2DC96326122D4100CBD461 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DC96226122D4100CBD461 /* SceneDelegate.swift */; };
 		4A2DC96526122D4100CBD461 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DC96426122D4100CBD461 /* ViewController.swift */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		145B31C2261FEB4F00794EC2 /* GoalUpdate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GoalUpdate.storyboard; sourceTree = "<group>"; };
+		145B31C5261FEB5B00794EC2 /* GoalUpdateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalUpdateController.swift; sourceTree = "<group>"; };
+		145B31D5261FF18F00794EC2 /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
+		145B31D8261FF30600794EC2 /* OverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
+		145B31DE261FF54C00794EC2 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 		4A2DC95D26122D4100CBD461 /* mogo-apps-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mogo-apps-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A2DC96026122D4100CBD461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A2DC96226122D4100CBD461 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +49,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		145B31BD261FEAEC00794EC2 /* goal-update */ = {
+			isa = PBXGroup;
+			children = (
+				145B31C2261FEB4F00794EC2 /* GoalUpdate.storyboard */,
+				145B31C5261FEB5B00794EC2 /* GoalUpdateController.swift */,
+				145B31D5261FF18F00794EC2 /* PresentationController.swift */,
+				145B31D8261FF30600794EC2 /* OverlayView.xib */,
+				145B31DE261FF54C00794EC2 /* OverlayView.swift */,
+			);
+			path = "goal-update";
+			sourceTree = "<group>";
+		};
 		4A2DC95426122D4100CBD461 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +80,7 @@
 		4A2DC95F26122D4100CBD461 /* mogo-apps-ios */ = {
 			isa = PBXGroup;
 			children = (
+				145B31BD261FEAEC00794EC2 /* goal-update */,
 				4A2DC96026122D4100CBD461 /* AppDelegate.swift */,
 				4A2DC96226122D4100CBD461 /* SceneDelegate.swift */,
 				4A2DC96426122D4100CBD461 /* ViewController.swift */,
@@ -129,6 +152,8 @@
 			files = (
 				4A2DC97026122D4200CBD461 /* LaunchScreen.storyboard in Resources */,
 				4A2DC96D26122D4200CBD461 /* Assets.xcassets in Resources */,
+				145B31D9261FF30600794EC2 /* OverlayView.xib in Resources */,
+				145B31C3261FEB4F00794EC2 /* GoalUpdate.storyboard in Resources */,
 				4A2DC96826122D4100CBD461 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,8 +167,11 @@
 			files = (
 				4A2DC96526122D4100CBD461 /* ViewController.swift in Sources */,
 				4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */,
+				145B31DF261FF54C00794EC2 /* OverlayView.swift in Sources */,
+				145B31C6261FEB5B00794EC2 /* GoalUpdateController.swift in Sources */,
 				4A2DC96126122D4100CBD461 /* AppDelegate.swift in Sources */,
 				4A2DC96326122D4100CBD461 /* SceneDelegate.swift in Sources */,
+				145B31D6261FF18F00794EC2 /* PresentationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
