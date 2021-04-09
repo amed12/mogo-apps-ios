@@ -10,7 +10,7 @@ import UIKit
 
 class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDataSource, CreateGoalHeaderCellDelegate, UIPickerViewDelegate, UIPickerViewDataSource, CreateGoalActionCellDelegate  {
     
-        
+    
     @IBOutlet weak var tableCreateGoals: UITableView!
     @IBOutlet weak var pickerView: UIPickerView!
     
@@ -50,7 +50,7 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
         switch section {
         case 0:
             let bgView = UIView(frame: CGRect(x: 0, y: 0, width: tableCreateGoals.frame.size.width, height: 22))
-//            bgView.backgroundColor = .systemGroupedBackground
+            //            bgView.backgroundColor = .systemGroupedBackground
             return bgView
         case 1:
             let bgView = UIView(frame: CGRect(x: 0, y: 0, width: tableCreateGoals.frame.size.width, height: 33))
@@ -79,7 +79,7 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
             bgView.backgroundColor = .systemGroupedBackground
             
             return bgView
-
+            
         default:
             let bgView = UIView(frame: CGRect(x: 0, y: 0, width: tableCreateGoals.frame.size.width, height: 33))
             bgView.backgroundColor = .systemGroupedBackground
@@ -137,7 +137,7 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
             return 44
         }
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
@@ -183,6 +183,7 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
                 Cell.indexSelect = indexPath.row
             case 2:
                 Cell.titleLabel.text = "Saving Time"
+                Cell.source = "waktu"
             default:
                 Cell.titleLabel.text = "Goal Name"
             }
@@ -195,7 +196,7 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
             let Cell = (tableView.dequeueReusableCell(withIdentifier: "createGoalInputId", for: indexPath) as? CreateGoalInputCell)!
             return Cell
         }
-     }
+    }
     
     private func setupPicker(isPickerShow: Bool) {
         pickerView.isHidden = isPickerShow
@@ -204,20 +205,24 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func showPicker(isShow: Bool, forValue: String) {
         print(forValue)
-        if forValue == "month" {
-            isMonth = true
-            isfreq = false
-            isWeek = false
-        } else if forValue == "week" {
-            isMonth = false
-            isWeek = true
-            isfreq = false
-        } else {
-            isfreq = true
-            isMonth = false
-            isWeek = false
+        if forValue != "waktu" {
+            if forValue == "month" {
+                isMonth = true
+                isfreq = false
+                isWeek = false
+            } else if forValue == "week" {
+                isMonth = false
+                isWeek = true
+                isfreq = false
+            } else {
+                isfreq = true
+                isMonth = false
+                isWeek = false
+            }
+            setupPicker(isPickerShow: isShow ? false : true)
+        }else{
+            setupDatePicker()
         }
-        setupPicker(isPickerShow: isShow ? false : true)
     }
     
     func openCollectionGallery(status: Bool) {
@@ -225,7 +230,7 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
         guard let destinationVC = storyboardDestination.instantiateInitialViewController() else { return }
         self.present(destinationVC, animated: true, completion: nil)
     }
-
+    
     // Number of columns of data
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -276,7 +281,7 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
         setupPicker(isPickerShow: true)
         tableCreateGoals.reloadData()
     }
-
+    
     func setupDatePicker(){
         
         self.datePicker = UIDatePicker.init(frame: CGRect(x: 0, y: 0, width: self.view.bounds.height, height: 150))
@@ -285,7 +290,7 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
         
         
     }
-
+    
     
     @objc func targetDateTime() {
         
