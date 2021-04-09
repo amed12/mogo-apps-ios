@@ -14,6 +14,10 @@
 		4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DC96926122D4100CBD461 /* mogo_apps_ios.xcdatamodeld */; };
 		4A2DC96D26122D4200CBD461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A2DC96C26122D4200CBD461 /* Assets.xcassets */; };
 		4A2DC97026122D4200CBD461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2DC96E26122D4200CBD461 /* LaunchScreen.storyboard */; };
+		4AD0A0D4262081730075118A /* SavingHistoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A0D0262081730075118A /* SavingHistoryScreen.swift */; };
+		4AD0A0D5262081730075118A /* SavingHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A0D1262081730075118A /* SavingHistoryCell.swift */; };
+		4AD0A0D6262081730075118A /* SavingHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0A0D2262081730075118A /* SavingHistory.storyboard */; };
+		4AD0A0D7262081730075118A /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A0D3262081730075118A /* Transaction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		4A2DC96C26122D4200CBD461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A2DC96F26122D4200CBD461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A2DC97126122D4200CBD461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AD0A0D0262081730075118A /* SavingHistoryScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavingHistoryScreen.swift; sourceTree = "<group>"; };
+		4AD0A0D1262081730075118A /* SavingHistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavingHistoryCell.swift; sourceTree = "<group>"; };
+		4AD0A0D2262081730075118A /* SavingHistory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SavingHistory.storyboard; sourceTree = "<group>"; };
+		4AD0A0D3262081730075118A /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 		4A2DC95F26122D4100CBD461 /* mogo-apps-ios */ = {
 			isa = PBXGroup;
 			children = (
+				4AD0A0CF262081730075118A /* saving-history */,
 				4A2DC96026122D4100CBD461 /* AppDelegate.swift */,
 				4A2DC96226122D4100CBD461 /* SceneDelegate.swift */,
 				4A2DC96426122D4100CBD461 /* ViewController.swift */,
@@ -68,6 +77,17 @@
 				4A2DC96926122D4100CBD461 /* mogo_apps_ios.xcdatamodeld */,
 			);
 			path = "mogo-apps-ios";
+			sourceTree = "<group>";
+		};
+		4AD0A0CF262081730075118A /* saving-history */ = {
+			isa = PBXGroup;
+			children = (
+				4AD0A0D0262081730075118A /* SavingHistoryScreen.swift */,
+				4AD0A0D1262081730075118A /* SavingHistoryCell.swift */,
+				4AD0A0D2262081730075118A /* SavingHistory.storyboard */,
+				4AD0A0D3262081730075118A /* Transaction.swift */,
+			);
+			path = "saving-history";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A2DC97026122D4200CBD461 /* LaunchScreen.storyboard in Resources */,
+				4AD0A0D6262081730075118A /* SavingHistory.storyboard in Resources */,
 				4A2DC96D26122D4200CBD461 /* Assets.xcassets in Resources */,
 				4A2DC96826122D4100CBD461 /* Main.storyboard in Resources */,
 			);
@@ -140,10 +161,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AD0A0D7262081730075118A /* Transaction.swift in Sources */,
 				4A2DC96526122D4100CBD461 /* ViewController.swift in Sources */,
 				4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */,
 				4A2DC96126122D4100CBD461 /* AppDelegate.swift in Sources */,
 				4A2DC96326122D4100CBD461 /* SceneDelegate.swift in Sources */,
+				4AD0A0D5262081730075118A /* SavingHistoryCell.swift in Sources */,
+				4AD0A0D4262081730075118A /* SavingHistoryScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
