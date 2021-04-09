@@ -18,6 +18,14 @@
 		4AD0A0D5262081730075118A /* SavingHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A0D1262081730075118A /* SavingHistoryCell.swift */; };
 		4AD0A0D6262081730075118A /* SavingHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0A0D2262081730075118A /* SavingHistory.storyboard */; };
 		4AD0A0D7262081730075118A /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A0D3262081730075118A /* Transaction.swift */; };
+		4AD0A10C26208BE40075118A /* ProgressDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A10026208BE40075118A /* ProgressDrawer.swift */; };
+		4AD0A10D26208BE40075118A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A10126208BE40075118A /* HomeController.swift */; };
+		4AD0A11026208BE40075118A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0A10526208BE40075118A /* Home.storyboard */; };
+		4AD0A11126208BE40075118A /* EmptyDataGoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A10726208BE40075118A /* EmptyDataGoalCell.swift */; };
+		4AD0A11226208BE40075118A /* EmptyDataGoalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0A10826208BE40075118A /* EmptyDataGoalCell.xib */; };
+		4AD0A11326208BE40075118A /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A10926208BE40075118A /* HomeViewCell.swift */; };
+		4AD0A11426208BE40075118A /* HomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0A10A26208BE40075118A /* HomeViewCell.xib */; };
+		4AD0A11526208BE40075118A /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A10B26208BE40075118A /* MyButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +42,14 @@
 		4AD0A0D1262081730075118A /* SavingHistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavingHistoryCell.swift; sourceTree = "<group>"; };
 		4AD0A0D2262081730075118A /* SavingHistory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SavingHistory.storyboard; sourceTree = "<group>"; };
 		4AD0A0D3262081730075118A /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		4AD0A10026208BE40075118A /* ProgressDrawer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressDrawer.swift; sourceTree = "<group>"; };
+		4AD0A10126208BE40075118A /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		4AD0A10526208BE40075118A /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		4AD0A10726208BE40075118A /* EmptyDataGoalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyDataGoalCell.swift; sourceTree = "<group>"; };
+		4AD0A10826208BE40075118A /* EmptyDataGoalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyDataGoalCell.xib; sourceTree = "<group>"; };
+		4AD0A10926208BE40075118A /* HomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		4AD0A10A26208BE40075118A /* HomeViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewCell.xib; sourceTree = "<group>"; };
+		4AD0A10B26208BE40075118A /* MyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +82,7 @@
 		4A2DC95F26122D4100CBD461 /* mogo-apps-ios */ = {
 			isa = PBXGroup;
 			children = (
+				4AD0A0FF26208BE40075118A /* home */,
 				4AD0A0CF262081730075118A /* saving-history */,
 				4A2DC96026122D4100CBD461 /* AppDelegate.swift */,
 				4A2DC96226122D4100CBD461 /* SceneDelegate.swift */,
@@ -88,6 +105,29 @@
 				4AD0A0D3262081730075118A /* Transaction.swift */,
 			);
 			path = "saving-history";
+			sourceTree = "<group>";
+		};
+		4AD0A0FF26208BE40075118A /* home */ = {
+			isa = PBXGroup;
+			children = (
+				4AD0A10626208BE40075118A /* homeCell */,
+				4AD0A10026208BE40075118A /* ProgressDrawer.swift */,
+				4AD0A10126208BE40075118A /* HomeController.swift */,
+				4AD0A10526208BE40075118A /* Home.storyboard */,
+				4AD0A10B26208BE40075118A /* MyButton.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		4AD0A10626208BE40075118A /* homeCell */ = {
+			isa = PBXGroup;
+			children = (
+				4AD0A10726208BE40075118A /* EmptyDataGoalCell.swift */,
+				4AD0A10826208BE40075118A /* EmptyDataGoalCell.xib */,
+				4AD0A10926208BE40075118A /* HomeViewCell.swift */,
+				4AD0A10A26208BE40075118A /* HomeViewCell.xib */,
+			);
+			path = homeCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +190,10 @@
 				4A2DC97026122D4200CBD461 /* LaunchScreen.storyboard in Resources */,
 				4AD0A0D6262081730075118A /* SavingHistory.storyboard in Resources */,
 				4A2DC96D26122D4200CBD461 /* Assets.xcassets in Resources */,
+				4AD0A11026208BE40075118A /* Home.storyboard in Resources */,
 				4A2DC96826122D4100CBD461 /* Main.storyboard in Resources */,
+				4AD0A11426208BE40075118A /* HomeViewCell.xib in Resources */,
+				4AD0A11226208BE40075118A /* EmptyDataGoalCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,9 +205,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AD0A0D7262081730075118A /* Transaction.swift in Sources */,
+				4AD0A10C26208BE40075118A /* ProgressDrawer.swift in Sources */,
 				4A2DC96526122D4100CBD461 /* ViewController.swift in Sources */,
+				4AD0A11526208BE40075118A /* MyButton.swift in Sources */,
+				4AD0A11126208BE40075118A /* EmptyDataGoalCell.swift in Sources */,
 				4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */,
+				4AD0A11326208BE40075118A /* HomeViewCell.swift in Sources */,
 				4A2DC96126122D4100CBD461 /* AppDelegate.swift in Sources */,
+				4AD0A10D26208BE40075118A /* HomeController.swift in Sources */,
 				4A2DC96326122D4100CBD461 /* SceneDelegate.swift in Sources */,
 				4AD0A0D5262081730075118A /* SavingHistoryCell.swift in Sources */,
 				4AD0A0D4262081730075118A /* SavingHistoryScreen.swift in Sources */,
