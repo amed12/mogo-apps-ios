@@ -23,6 +23,7 @@ class addWithdrawViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var dateField: UITextField!
     
+    
     let datePicker = UIDatePicker()
     var amount = ""
     var source = 0
@@ -94,26 +95,31 @@ class addWithdrawViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == amountField {
-//            amountField.text = "IDR \(textField.text!)"
-            dateField.becomeFirstResponder()
-        } else {
-            textField.resignFirstResponder()
-        }
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == amountField {
             amountField.text = "IDR \(textField.text!)"
             dateField.becomeFirstResponder()
         } else {
             textField.resignFirstResponder()
         }
-        return true
     }
+    
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        if textField == amountField {
+//            amountField.text = "IDR \(textField.text!)"
+//            dateField.becomeFirstResponder()
+//        } else {
+//            textField.resignFirstResponder()
+//        }
+//        return true
+//    }
     
     func clearButton(){
         amountField.clearButtonMode = .always
         amountField.clearButtonMode = .whileEditing
+    }
+    
+    @IBAction func saveButtonAction(_ sender: UIBarButtonItem) {
+        print(amountField.text!)
+        print(dateField.text!)
     }
     /*
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -137,4 +143,7 @@ class addWithdrawViewController: UIViewController, UITextFieldDelegate {
     }
     */
 
+    
+    
+    
 }
