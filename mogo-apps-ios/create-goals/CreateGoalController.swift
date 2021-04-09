@@ -18,6 +18,7 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
     var monthArray = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"]
     var weekArray = ["senin","selasa","rabu","kamis","jumat","sabtu","mingu"]
     
+    var datePicker: UIDatePicker!
     var isPickerHide = true
     var isMonth = false
     var isfreq = false
@@ -33,25 +34,6 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
         self.tableCreateGoals.separatorColor = .darkGray
     }
     
-    private func setupPicker(isPickerShow: Bool) {
-        pickerView.isHidden = isPickerShow
-        // Toolbar
-//       let btnDone = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(donePicker))
-//
-//       let barAccessory = UIToolbar(frame: CGRect(x: 0, y: 0, width: pickerView.frame.width, height: 44))
-//       barAccessory.barStyle = .default
-//       barAccessory.isTranslucent = false
-//       barAccessory.items = [btnDone]
-//        barAccessory.isUserInteractionEnabled = true
-//       pickerView.addSubview(barAccessory)
-
-    }
-    
-    @objc func donePicker() {
-        print("asd")
-        pickerView.isHidden = true
-        tableCreateGoals.reloadData()
-    }
     
     private func setupView() {
         tableCreateGoals.register(UINib(nibName: "CreateGoalHeaderCell", bundle: nil), forCellReuseIdentifier: "createGoalHeaderId")
@@ -192,16 +174,15 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
             case 0:
                 Cell.titleLabel.text = "Saving Frequency"
                 Cell.buttonTarget.setTitle(freqSelection, for: .normal)
-//                Cell.buttonTarget.addTarget(self, action: #selector(freqAction), for: .touchUpInside)
-                Cell.source = isfreq ? "freq" : "month"
+                Cell.source = "freq"
+                Cell.indexSelect = indexPath.row
             case 1:
                 Cell.titleLabel.text = "Saving Date"
                 Cell.buttonTarget.setTitle(isMonth ? monthSelection : weekSelection, for: .normal)
-//                Cell.buttonTarget.addTarget(self, action: #selector(dateAction), for: .touchUpInside)
                 Cell.source = isMonth ? "month" : "week"
+                Cell.indexSelect = indexPath.row
             case 2:
                 Cell.titleLabel.text = "Saving Time"
-                Cell.buttonTarget.addTarget(self, action: #selector(timeAction), for: .touchUpInside)
             default:
                 Cell.titleLabel.text = "Goal Name"
             }
@@ -216,11 +197,28 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
         }
      }
     
-    
-    @objc func timeAction() {
-        print("D")
+    private func setupPicker(isPickerShow: Bool) {
+        pickerView.isHidden = isPickerShow
+        pickerView.reloadAllComponents()
     }
     
+    func showPicker(isShow: Bool, forValue: String) {
+        print(forValue)
+        if forValue == "month" {
+            isMonth = true
+            isfreq = false
+            isWeek = false
+        } else if forValue == "week" {
+            isMonth = false
+            isWeek = true
+            isfreq = false
+        } else {
+            isfreq = true
+            isMonth = false
+            isWeek = false
+        }
+        setupPicker(isPickerShow: isShow ? false : true)
+    }
     
     func openCollectionGallery(status: Bool) {
         let storyboardDestination = UIStoryboard(name: "Icon", bundle: nil)
@@ -235,8 +233,11 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
     
     // The number of rows of data
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        print("numberOfRowsInComponent ismonth:\(isMonth), isfreq:\(isfreq)")
         if isMonth {
             return monthArray.count
+        } else if isWeek {
+            return weekArray.count
         } else {
             return frequencyArray.count
         }
@@ -244,47 +245,81 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
     
     // The data to return fopr the row and component (column) that's being passed in
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        print(frequencyArray[row])
+        print("titleForRow ismonth:\(isMonth), isfreq:\(isfreq)")
         if isMonth {
             return monthArray[row]
+        } else if isWeek {
+            return weekArray[row]
         } else {
             return frequencyArray[row]
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print("didSelectRow ismonth:\(isMonth), isfreq:\(isfreq)")
         if isMonth {
             monthSelection = monthArray[row]
+        } else if isWeek {
+            weekSelection = weekArray[row]
         } else {
             freqSelection = frequencyArray[row]
             if frequencyArray[row] == "Monthly" {
                 isMonth = true
                 isfreq = false
-////                isWeek = false
+                isWeek = false
             } else {
                 isMonth = false
-                isfreq = true
+                isfreq = false
+                isWeek = true
             }
         }
         setupPicker(isPickerShow: true)
         tableCreateGoals.reloadData()
     }
+
+    func setupDatePicker(){
+        
+        self.datePicker = UIDatePicker.init(frame: CGRect(x: 0, y: 0, width: self.view.bounds.height, height: 150))
+        datePicker.datePickerMode = .time
+        datePicker.addTarget(self, action: #selector(targetDateTime), for: .allEvents)
+        
+        
+    }
+
     
-    func showPicker(isShow: Bool, forValue: String) {
-        switch forValue {
-        case "month":
-            isMonth = true
-            isfreq = false
-        case "freq":
-            isMonth = false
-            isfreq = true
-        default:
-            isMonth = false
-            isfreq = false
-        }
-//        isMonth = forValue == "month" ? true : false
-        setupPicker(isPickerShow: isShow ? false : true)
+    @objc func targetDateTime() {
+        
     }
     
-
+    
+    //    var datePicker: UIDatePicker!
+    //
+    //    func setupDatePicker() {
+    //
+    //
+    //        self.datePicker = UIDatePicker.init(frame: CGRect(x: 0, y: 0, width: self.contentView.bounds.width, height: 150))
+    //        datePicker.datePickerMode = .time
+    //        datePicker.addTarget(self, action: #selector(self.targetDatePicker), for: .allEvents)
+    //
+    //        if #available(iOS 13.4, *) {
+    //            datePicker.preferredDatePickerStyle = .wheels
+    //        }
+    //        self.textInput.inputView = datePicker
+    //        let toolBar:UIToolbar = UIToolbar.init(frame: CGRect(x: 0, y: 0, width: self.contentView.bounds.width, height: 44))
+    //        let spaceButton:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+    //        let doneButton:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(self.tapOnDone))
+    //        toolBar.setItems([spaceButton, doneButton], animated: true)
+    //        self.textInput.inputAccessoryView = toolBar
+    //    }
+    //
+    //    @objc func targetDatePicker(){
+    //
+    //        let dateFormat = DateFormatter()
+    //        dateFormat.dateStyle = .medium
+    //        self.textInput.text = dateFormat.string(from: datePicker.date)
+    //    }
+    //
+    //    @objc func tapOnDone() {
+    //        textInput.resignFirstResponder()
+    //    }
 }

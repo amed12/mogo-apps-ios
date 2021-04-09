@@ -14,7 +14,7 @@ protocol CreateGoalActionCellDelegate: class {
 class CreateGoalActionCell: UITableViewCell {
     
     weak var delegate: CreateGoalActionCellDelegate?
-
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var buttonTarget: UIButton! {
         didSet {
@@ -25,6 +25,7 @@ class CreateGoalActionCell: UITableViewCell {
     
     let frequencyValue: [String] = ["monthly", "weekly"]
     var source = ""
+    var indexSelect = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,16 +39,9 @@ class CreateGoalActionCell: UITableViewCell {
     }
     
     @objc func pickerClicked() {
-        switch source {
-        case "freq":
-            self.delegate?.showPicker(isShow: true, forValue: source)
-        case "month" :
-            self.delegate?.showPicker(isShow: true, forValue: source)
-        case "week":
-            self.delegate?.showPicker(isShow: true, forValue: source)
-        default:
-            self.delegate?.showPicker(isShow: true, forValue: source)
-        }
+        print(indexSelect)
+        self.delegate?.showPicker(isShow: true, forValue: source)
     }
+    
     
 }

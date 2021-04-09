@@ -20,10 +20,7 @@ class CreateGoalInputCell: UITableViewCell, UITextFieldDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         textInput.delegate = self
-        // Initialization code
-//        if isDate {
-            setupDatePicker()
-//        }
+        setupDatePicker()
     }
     
 
@@ -35,7 +32,6 @@ class CreateGoalInputCell: UITableViewCell, UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField.placeholder == "IDR 10.000.000" || textField.placeholder == "IDR 1.000.000"{
-//            textInput.text = "IDR \(textField.text!)"
             textInput.inputView = .none
             textField.becomeFirstResponder()
         } else if textField.placeholder == "Buy a house"{
@@ -49,8 +45,11 @@ class CreateGoalInputCell: UITableViewCell, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
             if textField == textInput {
-    //            amountField.text = "IDR \(textField.text!)"
-                datePicker.becomeFirstResponder()
+                if textField.placeholder == "IDR 10.000.000" || textField.placeholder == "IDR 1.000.000"{
+                        textInput.text = "IDR \(textField.text!)"
+                    } else {
+                        datePicker.becomeFirstResponder()
+                    }
             } else {
                 textField.resignFirstResponder()
             }
@@ -70,7 +69,6 @@ class CreateGoalInputCell: UITableViewCell, UITextFieldDelegate {
             return true
         }
     
-    
     //function date picker
     var datePicker: UIDatePicker!
     
@@ -84,19 +82,11 @@ class CreateGoalInputCell: UITableViewCell, UITextFieldDelegate {
         if #available(iOS 13.4, *) {
             datePicker.preferredDatePickerStyle = .wheels
         }
-        
-//        datePicker.preferredDatePickerStyle = .compact
-        
         self.textInput.inputView = datePicker
-        
         let toolBar:UIToolbar = UIToolbar.init(frame: CGRect(x: 0, y: 0, width: self.contentView.bounds.width, height: 44))
-        
         let spaceButton:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-        
         let doneButton:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(self.tapOnDone))
-        
         toolBar.setItems([spaceButton, doneButton], animated: true)
-        
         self.textInput.inputAccessoryView = toolBar
     }
     
@@ -110,8 +100,8 @@ class CreateGoalInputCell: UITableViewCell, UITextFieldDelegate {
     @objc func tapOnDone() {
         textInput.resignFirstResponder()
     }
+    
     @IBAction func imageAction(_ sender: UIButton) {
-//        print("gw klik")
         if temp == 0{
             buttonLock.setImage(UIImage(named: "Lock"), for: .normal)
             temp = 1
