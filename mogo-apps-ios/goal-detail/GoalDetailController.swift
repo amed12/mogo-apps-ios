@@ -10,6 +10,9 @@ import UIKit
 class GoalDetailController: UIViewController {
     var circleProgressView: ProgressDrawer!
     var circularViewDuration: TimeInterval = 2
+    let budget: Double = 12000000
+    let saving: Double = 6000000
+    var result: Double = 0.0
     
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var progressView: UIView!
@@ -41,16 +44,18 @@ class GoalDetailController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        progressPercentage.text = "\(String(format: "%.0f", (saving/budget) * 100))%"
         drawCircleView()
         addCornerRadius()
         addBorders()
     }
 
     func drawCircleView() {
+        result = saving / budget
         circleProgressView = ProgressDrawer(frame: .zero)
+        circleProgressView.result = result
         circleProgressView.center = progressView.center
         circleProgressView.progressAnimation(duration: circularViewDuration)
-
         progressView.addSubview(circleProgressView)
     }
     
@@ -90,7 +95,9 @@ class GoalDetailController: UIViewController {
     
  
     @IBAction func editButton(_ sender: UIBarButtonItem) {
-        showAlert()
+        if result >= 1 {
+            showAlert()
+        }
     }
     
     func showAlert() {

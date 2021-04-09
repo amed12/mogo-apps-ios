@@ -8,6 +8,8 @@
 import UIKit
 
 class ProgressDrawer: UIView {
+    var result: Double = 0.0
+    
     private var circleLayer = CAShapeLayer()
     private var progressLayer = CAShapeLayer()
     
@@ -59,7 +61,7 @@ class ProgressDrawer: UIView {
         let circularProgressAnimation = CABasicAnimation(keyPath: "strokeEnd")
         // set the end time
         circularProgressAnimation.duration = duration
-        circularProgressAnimation.toValue = 0.5
+        circularProgressAnimation.toValue = result
         circularProgressAnimation.fillMode = .forwards
         circularProgressAnimation.isRemovedOnCompletion = false
         progressLayer.add(circularProgressAnimation, forKey: "progressAnim")
