@@ -88,7 +88,8 @@ class GoalDetailController: UIViewController {
         savingHistoryView.layer.borderWidth = 0.5
     }
     
-    @IBAction func savingHistoryButton(_ sender: Any) {
+ 
+    @IBAction func editButton(_ sender: UIBarButtonItem) {
         showAlert()
     }
     

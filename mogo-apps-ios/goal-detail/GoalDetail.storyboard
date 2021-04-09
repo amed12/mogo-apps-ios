@@ -272,9 +272,6 @@
                                         <state key="normal" image="chevron.right" catalog="system">
                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <connections>
-                                            <action selector="savingHistoryButton:" destination="tQt-9S-hGW" eventType="touchUpInside" id="dsF-jC-qeF"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -283,7 +280,17 @@
                         <viewLayoutGuide key="safeArea" id="g4q-2L-ax4"/>
                         <color key="backgroundColor" red="0.95697981119999997" green="0.95656996969999997" blue="0.97255247830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Goal Detail" id="7WI-xF-mf5"/>
+                    <navigationItem key="navigationItem" title="Goal Detail" id="7WI-xF-mf5">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="Ys8-dh-f6Z">
+                            <color key="tintColor" red="0.086274509803921567" green="0.47450980392156861" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="F42-dz-P5e">
+                            <color key="tintColor" red="0.086274509803921567" green="0.47450980392156861" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="editButton:" destination="tQt-9S-hGW" id="be8-R0-hS3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addView" destination="Ple-k2-Ajv" id="mCj-4V-wWw"/>
                         <outlet property="goalBudgetValue" destination="tnw-mz-Xht" id="oMU-0J-BaN"/>
@@ -312,7 +319,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cIq-vT-8BP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="279.71014492753625" y="176.78571428571428"/>
+            <point key="canvasLocation" x="157" y="177"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H4O-Gl-tU0">
