@@ -111,10 +111,14 @@ class CreateGoalInputCell: UITableViewCell, UITextFieldDelegate {
         textInput.resignFirstResponder()
     }
     @IBAction func imageAction(_ sender: UIButton) {
+//        print("gw klik")
         if temp == 0{
-            buttonLock.setImage(UIImage(named: "cool"), for: .normal)
-        } else {
-            buttonLock.setImage(UIImage(named: "sad"), for: .normal)
+            buttonLock.setImage(UIImage(named: "Lock"), for: .normal)
+            temp = 1
+            
+        } else if temp == 1 {
+            buttonLock.setImage(UIImage(named: "Unlock"), for: .normal)
+            temp = 0
         }
         
     }
