@@ -37,6 +37,7 @@ class addWithdrawViewController: UIViewController, UITextFieldDelegate {
 
         borderView()
         createDatePicker()
+        clearButton()
         // Do any additional setup after loading the view.
     }
     
@@ -108,6 +109,11 @@ class addWithdrawViewController: UIViewController, UITextFieldDelegate {
             textField.resignFirstResponder()
         }
         return true
+    }
+    
+    func clearButton(){
+        amountField.clearButtonMode = .always
+        amountField.clearButtonMode = .whileEditing
     }
     /*
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
