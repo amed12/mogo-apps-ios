@@ -13,8 +13,8 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableCreateGoals.separatorColor = .black
         setupView()
+        self.tableCreateGoals.separatorColor = .darkGray
     }
     
     private func setupView() {
@@ -44,7 +44,7 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
             bgView.addSubview(sectionLabel)
             return bgView
         case 2:
-            let bgView = UIView(frame: CGRect(x: 0, y: 0, width: tableCreateGoals.frame.size.width, height: 33))
+            let bgView = UIView(frame: CGRect(x: 0, y: 0, width: tableCreateGoals.frame.size.width, height: 22))
             bgView.backgroundColor = .systemGroupedBackground
             return bgView
         case 3:
@@ -76,9 +76,7 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
         case 1:
             return 33
         case 2:
-            return 33
-//        case 3:
-//            return 33
+            return 22
         case 3:
             return 30
         case 4:
@@ -96,8 +94,6 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
             return 1
         case 2:
             return 3
-//        case 3:
-//            return 1
         case 3:
             return 3
         case 4:
@@ -115,8 +111,6 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
             return 44
         case 2:
             return 44
-//        case 3:
-//            return 20
         case 3:
             return 44
         case 4:
@@ -136,6 +130,7 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
             let Cell = (tableView.dequeueReusableCell(withIdentifier: "createGoalInputId", for: indexPath) as? CreateGoalInputCell)!
             Cell.titleLabel.text = "Goal Name"
             Cell.textInput.placeholder = "Buy a house"
+            Cell.buttonLock.isHidden = true
             return Cell
         case 2:
             let Cell = (tableView.dequeueReusableCell(withIdentifier: "createGoalInputId", for: indexPath) as? CreateGoalInputCell)!
@@ -146,7 +141,7 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
             case 1:
                 Cell.titleLabel.text = "Target Date"
                 Cell.textInput.placeholder = "1 January 2021"
-                Cell.textInput.addTarget(self, action: #selector(targetAction), for: .touchUpInside)
+                Cell.isDate = true
             case 2:
                 Cell.titleLabel.text = "Montly Saving"
                 Cell.textInput.placeholder = "IDR 1.000.000"
@@ -172,8 +167,8 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
             return Cell
         case 4:
             let Cell = (tableView.dequeueReusableCell(withIdentifier: "buttonFooterIdentifier", for: indexPath) as? ButtonFooterCell)!
+            Cell.buttonDelete.isHidden = true
             return Cell
-            
         default:
             let Cell = (tableView.dequeueReusableCell(withIdentifier: "createGoalInputId", for: indexPath) as? CreateGoalInputCell)!
             return Cell
@@ -181,10 +176,6 @@ class CreateGoalController: UIViewController, UITableViewDelegate, UITableViewDa
      }
     
     
-    
-    @objc func targetAction() {
-        print("A")
-    }
     
     @objc func freqAction() {
         print("B")

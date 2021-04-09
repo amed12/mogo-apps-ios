@@ -8,6 +8,7 @@
 import UIKit
 
 class CreateGoalActionCell: UITableViewCell {
+    
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var buttonTarget: UIButton! {
@@ -27,4 +28,9 @@ class CreateGoalActionCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    var toolBar = UIToolbar()
+    var picker  = UIPickerView()
+    
+    @IBAction func pickerbutton(_ sender: Any) {
+    }
 }
