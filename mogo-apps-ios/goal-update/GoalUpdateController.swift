@@ -16,6 +16,9 @@ class GoalUpdateController: UIViewController {
     
     @objc func showMiracle() {
         let slideVC = OverlayView()
+        // Kirim data 0 - 4
+        slideVC.flag = 4
+        
         slideVC.modalPresentationStyle = .custom
         slideVC.transitioningDelegate = self
         self.present(slideVC, animated: true, completion: nil)

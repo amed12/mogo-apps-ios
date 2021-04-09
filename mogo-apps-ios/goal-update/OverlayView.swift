@@ -6,40 +6,78 @@
 //
 
 import UIKit
+import Foundation
 
 class OverlayView: UIViewController {
     
     var hasSetPointOrigin = false
     var pointOrigin: CGPoint?
     
-    
-
-    
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var headerLabel: UILabel!
+    
     @IBOutlet weak var imageResult: UIImageView!
+    
     @IBOutlet weak var statusResult: UILabel!
+    
     @IBOutlet weak var descriptionResult: UILabel!
+    
     @IBOutlet weak var buttonView: UIView!
     
-    
-//    @IBOutlet weak var slideIdicator: UIView!
-//    @IBOutlet weak var imageView: UIImageView!
-//    @IBOutlet weak var labelTitle: UILabel!
-//    @IBOutlet weak var subscribeButton: UIView!
-//
-    
+    var flag = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Terima data
+        generateText()
+        ////
+        
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizerAction))
         view.addGestureRecognizer(panGesture)
-        
-//        slideIdicator.roundCorners(.allCorners, radius: 10)
-//        subscribeButton.roundCorners(.allCorners, radius: 10)
-        
         headerView.roundCorners(.allCorners, radius: 10)
         buttonView.roundCorners(.allCorners, radius: 10)
+    }
+    
+    func generateText(){
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor(cgColor: #colorLiteral(red: 0.0862745098, green: 0.4745098039, blue: 0.431372549, alpha: 1)), NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18)]
+        if flag >= 0 && flag <= 3 {
+            headerLabel.text = "Goals Update"
+            var description = ""
+            let a = "Trip to Sumba"
+            let b = "12 April 2025."
+            if flag == 0 {
+                imageResult.image = UIImage(named: "happy_hands")
+                statusResult.text = "Good Job!"
+                description = "If If you stay on track, you could achieve \(a) by \(b)"
+            } else if flag == 1 {
+                imageResult.image = UIImage(named: "shocked")
+                statusResult.text = "Oops, you saved IDR 1.000.000 less!"
+                description = "To achieve \(a) goal on time, you need to start saving \(b) or change the target date."
+            } else if flag == 2 {
+                imageResult.image = UIImage(named: "rich")
+                statusResult.text = "Whoa, you saved IDR 1.000.000 more!"
+                description = "If you keep saving like this, you could achieve \(a) by \(b)"
+            } else if flag == 3 {
+                imageResult.image = UIImage(named: "sad")
+                statusResult.text = "Ah, ok..."
+                description = "To achieve \(a) goal on time, you need to save \(b) starting next month."
+            }
+            let result = NSMutableAttributedString(string: description)
+            result.addAttributes(attributes, range: NSRange(location: (description.index(of: a)?.utf16Offset(in: description))!, length: a.count))
+            result.addAttributes(attributes, range: NSRange(location: (description.index(of: b)?.utf16Offset(in: description))!, length: b.count))
+            descriptionResult.attributedText = result
+        } else {
+            var status = ""
+            let c = "iPhone 12"
+            headerLabel.text = "Congratulations!"
+            imageResult.image = UIImage(named: "cool")
+            status = "You have achieved \(c) goal!"
+            descriptionResult.text = "Now you can find the goal in Completed section."
+            let result = NSMutableAttributedString(string: status)
+            result.addAttributes(attributes, range: NSRange(location: (status.index(of: c)?.utf16Offset(in: status))!, length: c.count))
+            statusResult.attributedText = result
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -70,8 +108,31 @@ class OverlayView: UIViewController {
         }
     }
     
-
     @IBAction func okButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension StringProtocol {
+    func index<S: StringProtocol>(of string: S, options: String.CompareOptions = []) -> Index? {
+        range(of: string, options: options)?.lowerBound
+    }
+    func endIndex<S: StringProtocol>(of string: S, options: String.CompareOptions = []) -> Index? {
+        range(of: string, options: options)?.upperBound
+    }
+    func indices<S: StringProtocol>(of string: S, options: String.CompareOptions = []) -> [Index] {
+        ranges(of: string, options: options).map(\.lowerBound)
+    }
+    func ranges<S: StringProtocol>(of string: S, options: String.CompareOptions = []) -> [Range<Index>] {
+        var result: [Range<Index>] = []
+        var startIndex = self.startIndex
+        while startIndex < endIndex,
+            let range = self[startIndex...]
+                .range(of: string, options: options) {
+                result.append(range)
+                startIndex = range.lowerBound < range.upperBound ? range.upperBound :
+                    index(range.lowerBound, offsetBy: 1, limitedBy: endIndex) ?? endIndex
+        }
+        return result
     }
 }
