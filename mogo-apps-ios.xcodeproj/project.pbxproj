@@ -26,6 +26,8 @@
 		4AD0A11326208BE40075118A /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A10926208BE40075118A /* HomeViewCell.swift */; };
 		4AD0A11426208BE40075118A /* HomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0A10A26208BE40075118A /* HomeViewCell.xib */; };
 		4AD0A11526208BE40075118A /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A10B26208BE40075118A /* MyButton.swift */; };
+		4AD0A12526208ED50075118A /* addWithdrawStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0A12326208ED50075118A /* addWithdrawStoryboard.storyboard */; };
+		4AD0A12626208ED50075118A /* addWithdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A12426208ED50075118A /* addWithdrawViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		4AD0A10926208BE40075118A /* HomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		4AD0A10A26208BE40075118A /* HomeViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewCell.xib; sourceTree = "<group>"; };
 		4AD0A10B26208BE40075118A /* MyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
+		4AD0A12326208ED50075118A /* addWithdrawStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = addWithdrawStoryboard.storyboard; sourceTree = "<group>"; };
+		4AD0A12426208ED50075118A /* addWithdrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addWithdrawViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 		4A2DC95F26122D4100CBD461 /* mogo-apps-ios */ = {
 			isa = PBXGroup;
 			children = (
+				4AD0A12226208ED50075118A /* add-withdraw-saving */,
 				4AD0A0FF26208BE40075118A /* home */,
 				4AD0A0CF262081730075118A /* saving-history */,
 				4A2DC96026122D4100CBD461 /* AppDelegate.swift */,
@@ -128,6 +133,15 @@
 				4AD0A10A26208BE40075118A /* HomeViewCell.xib */,
 			);
 			path = homeCell;
+			sourceTree = "<group>";
+		};
+		4AD0A12226208ED50075118A /* add-withdraw-saving */ = {
+			isa = PBXGroup;
+			children = (
+				4AD0A12326208ED50075118A /* addWithdrawStoryboard.storyboard */,
+				4AD0A12426208ED50075118A /* addWithdrawViewController.swift */,
+			);
+			path = "add-withdraw-saving";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +207,7 @@
 				4AD0A11026208BE40075118A /* Home.storyboard in Resources */,
 				4A2DC96826122D4100CBD461 /* Main.storyboard in Resources */,
 				4AD0A11426208BE40075118A /* HomeViewCell.xib in Resources */,
+				4AD0A12526208ED50075118A /* addWithdrawStoryboard.storyboard in Resources */,
 				4AD0A11226208BE40075118A /* EmptyDataGoalCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +231,7 @@
 				4A2DC96326122D4100CBD461 /* SceneDelegate.swift in Sources */,
 				4AD0A0D5262081730075118A /* SavingHistoryCell.swift in Sources */,
 				4AD0A0D4262081730075118A /* SavingHistoryScreen.swift in Sources */,
+				4AD0A12626208ED50075118A /* addWithdrawViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
