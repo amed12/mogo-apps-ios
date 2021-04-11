@@ -33,9 +33,9 @@ class ProgressDrawer: UIView {
         // aesthetics
         circleLayer.fillColor = UIColor.clear.cgColor
         circleLayer.lineCap = .round
-        circleLayer.lineWidth = 20.0
+        circleLayer.lineWidth = 15.0
         circleLayer.strokeEnd = 1.0
-        circleLayer.strokeColor = UIColor.white.cgColor
+        circleLayer.strokeColor = UIColor.init(cgColor: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.937254902, alpha: 1)).cgColor
         // added circleLayer to layer
         layer.addSublayer(circleLayer)
         // progressLayer path defined to circularPath
@@ -43,7 +43,7 @@ class ProgressDrawer: UIView {
         // aesthetics
         progressLayer.fillColor = UIColor.clear.cgColor
         progressLayer.lineCap = .round
-        progressLayer.lineWidth = 10.0
+        progressLayer.lineWidth = 15.0
         progressLayer.strokeEnd = 0
         progressLayer.strokeColor = #colorLiteral(red: 0.0862745098, green: 0.4745098039, blue: 0.431372549, alpha: 1).cgColor
         // added progressLayer to layer

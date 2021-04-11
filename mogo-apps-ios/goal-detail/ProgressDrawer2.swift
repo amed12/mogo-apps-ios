@@ -46,7 +46,7 @@ class ProgressDrawer2: UIView {
         progressLayer.path = circularPath.cgPath
         // aesthetics
         progressLayer.fillColor = UIColor.clear.cgColor
-        progressLayer.lineCap = .square
+        progressLayer.lineCap = .round
         progressLayer.lineWidth = 20.0
         progressLayer.strokeEnd = 0
         progressLayer.strokeColor = UIColor.init(cgColor: #colorLiteral(red: 0.0862745098, green: 0.4745098039, blue: 0.431372549, alpha: 1)).cgColor
