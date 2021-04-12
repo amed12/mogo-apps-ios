@@ -28,7 +28,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5XO-c3-VeL">
                                 <rect key="frame" x="10" y="10" width="25" height="25"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -82,6 +82,7 @@
                 <outlet property="GoalBudget" destination="Mgv-EQ-cXK" id="zRS-z2-W4i"/>
                 <outlet property="GoalDate" destination="1LO-Bk-puT" id="4Tr-wh-tBj"/>
                 <outlet property="GoalImage" destination="6Sv-Be-ryC" id="gh1-Ia-YZF"/>
+                <outlet property="GoalPercent" destination="5XO-c3-VeL" id="k03-1p-hn9"/>
                 <outlet property="GoalTitle" destination="lRe-zP-TRE" id="LB2-8a-as4"/>
                 <outlet property="progressGoal" destination="mR6-6c-9g2" id="BTP-71-mET"/>
             </connections>
