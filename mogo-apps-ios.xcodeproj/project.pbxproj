@@ -14,6 +14,12 @@
 		4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DC96926122D4100CBD461 /* mogo_apps_ios.xcdatamodeld */; };
 		4A2DC96D26122D4200CBD461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A2DC96C26122D4200CBD461 /* Assets.xcassets */; };
 		4A2DC97026122D4200CBD461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2DC96E26122D4200CBD461 /* LaunchScreen.storyboard */; };
+		4A726F002623455F00562DAC /* CreateGoals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A726EF82623455F00562DAC /* CreateGoals.storyboard */; };
+		4A726F012623455F00562DAC /* CreateGoalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A726EF92623455F00562DAC /* CreateGoalController.swift */; };
+		4A726F022623455F00562DAC /* IconController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A726EFB2623455F00562DAC /* IconController.swift */; };
+		4A726F032623455F00562DAC /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A726EFD2623455F00562DAC /* CollectionViewCell.swift */; };
+		4A726F042623455F00562DAC /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A726EFE2623455F00562DAC /* CollectionViewCell.xib */; };
+		4A726F052623455F00562DAC /* Icon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A726EFF2623455F00562DAC /* Icon.storyboard */; };
 		4AD0A0D4262081730075118A /* SavingHistoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A0D0262081730075118A /* SavingHistoryScreen.swift */; };
 		4AD0A0D5262081730075118A /* SavingHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A0D1262081730075118A /* SavingHistoryCell.swift */; };
 		4AD0A0D6262081730075118A /* SavingHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0A0D2262081730075118A /* SavingHistory.storyboard */; };
@@ -41,6 +47,8 @@
 		4AD0A156262095BE0075118A /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A151262095BE0075118A /* ReminderViewController.swift */; };
 		4AD0A157262095BE0075118A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A152262095BE0075118A /* DetailViewController.swift */; };
 		4AD0A158262095BE0075118A /* ReminderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A153262095BE0075118A /* ReminderViewCell.swift */; };
+		FBB4AC90262367EB0057B329 /* withdraw.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBB4AC8F262367EB0057B329 /* withdraw.storyboard */; };
+		FBB4AC93262368060057B329 /* withdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4AC92262368060057B329 /* withdrawViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +61,12 @@
 		4A2DC96C26122D4200CBD461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A2DC96F26122D4200CBD461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A2DC97126122D4200CBD461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A726EF82623455F00562DAC /* CreateGoals.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateGoals.storyboard; sourceTree = "<group>"; };
+		4A726EF92623455F00562DAC /* CreateGoalController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGoalController.swift; sourceTree = "<group>"; };
+		4A726EFB2623455F00562DAC /* IconController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconController.swift; sourceTree = "<group>"; };
+		4A726EFD2623455F00562DAC /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		4A726EFE2623455F00562DAC /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		4A726EFF2623455F00562DAC /* Icon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Icon.storyboard; sourceTree = "<group>"; };
 		4AD0A0D0262081730075118A /* SavingHistoryScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavingHistoryScreen.swift; sourceTree = "<group>"; };
 		4AD0A0D1262081730075118A /* SavingHistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavingHistoryCell.swift; sourceTree = "<group>"; };
 		4AD0A0D2262081730075118A /* SavingHistory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SavingHistory.storyboard; sourceTree = "<group>"; };
@@ -80,6 +94,8 @@
 		4AD0A151262095BE0075118A /* ReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		4AD0A152262095BE0075118A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4AD0A153262095BE0075118A /* ReminderViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewCell.swift; sourceTree = "<group>"; };
+		FBB4AC8F262367EB0057B329 /* withdraw.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = withdraw.storyboard; sourceTree = "<group>"; };
+		FBB4AC92262368060057B329 /* withdrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = withdrawViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +128,7 @@
 		4A2DC95F26122D4100CBD461 /* mogo-apps-ios */ = {
 			isa = PBXGroup;
 			children = (
+				4A726EF72623455F00562DAC /* create-goals */,
 				4AD0A14E262095BD0075118A /* reminder-list */,
 				4AD0A141262093C10075118A /* goal-detail */,
 				4AD0A12A262091F10075118A /* goal-update */,
@@ -128,6 +145,35 @@
 				4A2DC96926122D4100CBD461 /* mogo_apps_ios.xcdatamodeld */,
 			);
 			path = "mogo-apps-ios";
+			sourceTree = "<group>";
+		};
+		4A726EF72623455F00562DAC /* create-goals */ = {
+			isa = PBXGroup;
+			children = (
+				4A726EFA2623455F00562DAC /* icon-collection */,
+				4A726EF92623455F00562DAC /* CreateGoalController.swift */,
+				4A726EF82623455F00562DAC /* CreateGoals.storyboard */,
+			);
+			path = "create-goals";
+			sourceTree = "<group>";
+		};
+		4A726EFA2623455F00562DAC /* icon-collection */ = {
+			isa = PBXGroup;
+			children = (
+				4A726EFC2623455F00562DAC /* icon-collection-cell */,
+				4A726EFB2623455F00562DAC /* IconController.swift */,
+				4A726EFF2623455F00562DAC /* Icon.storyboard */,
+			);
+			path = "icon-collection";
+			sourceTree = "<group>";
+		};
+		4A726EFC2623455F00562DAC /* icon-collection-cell */ = {
+			isa = PBXGroup;
+			children = (
+				4A726EFD2623455F00562DAC /* CollectionViewCell.swift */,
+				4A726EFE2623455F00562DAC /* CollectionViewCell.xib */,
+			);
+			path = "icon-collection-cell";
 			sourceTree = "<group>";
 		};
 		4AD0A0CF262081730075118A /* saving-history */ = {
@@ -169,6 +215,8 @@
 			children = (
 				4AD0A12326208ED50075118A /* addWithdrawStoryboard.storyboard */,
 				4AD0A12426208ED50075118A /* addWithdrawViewController.swift */,
+				FBB4AC8F262367EB0057B329 /* withdraw.storyboard */,
+				FBB4AC92262368060057B329 /* withdrawViewController.swift */,
 			);
 			path = "add-withdraw-saving";
 			sourceTree = "<group>";
@@ -266,12 +314,16 @@
 			files = (
 				4A2DC97026122D4200CBD461 /* LaunchScreen.storyboard in Resources */,
 				4AD0A133262091F10075118A /* OverlayView.xib in Resources */,
+				4A726F052623455F00562DAC /* Icon.storyboard in Resources */,
 				4AD0A147262093C10075118A /* GoalDetail.storyboard in Resources */,
+				FBB4AC90262367EB0057B329 /* withdraw.storyboard in Resources */,
 				4AD0A0D6262081730075118A /* SavingHistory.storyboard in Resources */,
 				4AD0A155262095BE0075118A /* ReminderList.storyboard in Resources */,
 				4A2DC96D26122D4200CBD461 /* Assets.xcassets in Resources */,
 				4AD0A134262091F10075118A /* GoalUpdate.storyboard in Resources */,
 				4AD0A11026208BE40075118A /* Home.storyboard in Resources */,
+				4A726F042623455F00562DAC /* CollectionViewCell.xib in Resources */,
+				4A726F002623455F00562DAC /* CreateGoals.storyboard in Resources */,
 				4A2DC96826122D4100CBD461 /* Main.storyboard in Resources */,
 				4AD0A11426208BE40075118A /* HomeViewCell.xib in Resources */,
 				4AD0A12526208ED50075118A /* addWithdrawStoryboard.storyboard in Resources */,
@@ -290,13 +342,17 @@
 				4AD0A10C26208BE40075118A /* ProgressDrawer.swift in Sources */,
 				4A2DC96526122D4100CBD461 /* ViewController.swift in Sources */,
 				4AD0A11526208BE40075118A /* MyButton.swift in Sources */,
+				FBB4AC93262368060057B329 /* withdrawViewController.swift in Sources */,
 				4AD0A11126208BE40075118A /* EmptyDataGoalCell.swift in Sources */,
+				4A726F032623455F00562DAC /* CollectionViewCell.swift in Sources */,
+				4A726F012623455F00562DAC /* CreateGoalController.swift in Sources */,
 				4AD0A145262093C10075118A /* ProgressDrawer2.swift in Sources */,
 				4AD0A157262095BE0075118A /* DetailViewController.swift in Sources */,
 				4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */,
 				4AD0A11326208BE40075118A /* HomeViewCell.swift in Sources */,
 				4AD0A154262095BE0075118A /* ReminderObject.swift in Sources */,
 				4A2DC96126122D4100CBD461 /* AppDelegate.swift in Sources */,
+				4A726F022623455F00562DAC /* IconController.swift in Sources */,
 				4AD0A10D26208BE40075118A /* HomeController.swift in Sources */,
 				4AD0A131262091F10075118A /* OverlayView.swift in Sources */,
 				4AD0A156262095BE0075118A /* ReminderViewController.swift in Sources */,

@@ -11,7 +11,7 @@ class GoalDetailController: UIViewController {
     var circleProgressView: ProgressDrawer2!
     var circularViewDuration: TimeInterval = 2
     let budget: Double = 12000000
-    let saving: Double = 6000000
+    let saving: Double = 12000000
     var result: Double = 0.0
     
     @IBOutlet weak var profileView: UIView!
@@ -96,12 +96,20 @@ class GoalDetailController: UIViewController {
  
     @IBAction func editButton(_ sender: UIBarButtonItem) {
         if result >= 1 {
-            showAlert()
+            showAlert(title: "Edit Goal")
         }
     }
     
-    func showAlert() {
-        let alert = UIAlertController(title: "Edit Goal", message: "Changing the value of completed goal may affect the goal status.", preferredStyle: .alert)
+    
+    @IBAction func withdrawButton(_ sender: UIButton) {
+        if result >= 1 {
+            showAlert(title: "Withdraw Goal")
+        }
+    }
+    
+    
+    func showAlert(title: String) {
+        let alert = UIAlertController(title: "\(title)", message: "Changing the value of completed goal may affect the goal status.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
             print("Undefined")
         }))
@@ -110,4 +118,7 @@ class GoalDetailController: UIViewController {
         }))
         present(alert, animated: true)
     }
+    
+    @IBAction func unwindToFirstViewController(_ sender: UIStoryboardSegue) {
+        }
 }

@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Add Withdraw View Controller-->
+        <!--Add Saving-->
         <scene sceneID="QoO-NA-uLs">
             <objects>
                 <viewController id="4Zn-sW-yDF" customClass="addWithdrawViewController" customModule="mogo_apps_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -113,14 +113,18 @@
                             <constraint firstItem="iB9-VO-J6B" firstAttribute="trailing" secondItem="6Aj-HJ-6IK" secondAttribute="trailing" id="oAm-vF-qSP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="eIL-o8-Fp8">
+                    <navigationItem key="navigationItem" title="Add Saving" id="eIL-o8-Fp8">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cpd-Bw-5xj">
                             <color key="tintColor" red="0.093237645920000001" green="0.47508078809999998" blue="0.43137091399999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="jET-xq-VV0" kind="unwind" unwindAction="unwindToFirstViewController:" id="p3e-Os-GKc"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="a3M-xe-wl6">
                             <color key="tintColor" red="0.093237645920000001" green="0.47508078809999998" blue="0.43137091399999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="saveButtonAction:" destination="4Zn-sW-yDF" id="cbo-cb-prG"/>
+                                <segue destination="jET-xq-VV0" kind="unwind" unwindAction="unwindToFirstViewController:" id="BDk-2c-LWc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -135,6 +139,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dE1-M4-rQS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="jET-xq-VV0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="946.15384615384608" y="-180.56872037914692"/>
         </scene>
