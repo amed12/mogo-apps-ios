@@ -48,6 +48,8 @@
 		4AD0A156262095BE0075118A /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A151262095BE0075118A /* ReminderViewController.swift */; };
 		4AD0A157262095BE0075118A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A152262095BE0075118A /* DetailViewController.swift */; };
 		4AD0A158262095BE0075118A /* ReminderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A153262095BE0075118A /* ReminderViewCell.swift */; };
+		EA28361726240FB5006D204D /* EditGoals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA28361626240FB5006D204D /* EditGoals.storyboard */; };
+		EA28361A26240FD0006D204D /* EditGoalsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA28361926240FD0006D204D /* EditGoalsController.swift */; };
 		FBB4AC90262367EB0057B329 /* withdraw.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBB4AC8F262367EB0057B329 /* withdraw.storyboard */; };
 		FBB4AC93262368060057B329 /* withdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4AC92262368060057B329 /* withdrawViewController.swift */; };
 /* End PBXBuildFile section */
@@ -96,6 +98,8 @@
 		4AD0A151262095BE0075118A /* ReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		4AD0A152262095BE0075118A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4AD0A153262095BE0075118A /* ReminderViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewCell.swift; sourceTree = "<group>"; };
+		EA28361626240FB5006D204D /* EditGoals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditGoals.storyboard; sourceTree = "<group>"; };
+		EA28361926240FD0006D204D /* EditGoalsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalsController.swift; sourceTree = "<group>"; };
 		FBB4AC8F262367EB0057B329 /* withdraw.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = withdraw.storyboard; sourceTree = "<group>"; };
 		FBB4AC92262368060057B329 /* withdrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = withdrawViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +160,8 @@
 				4A726EFA2623455F00562DAC /* icon-collection */,
 				4A726EF92623455F00562DAC /* CreateGoalController.swift */,
 				4A726EF82623455F00562DAC /* CreateGoals.storyboard */,
+				EA28361626240FB5006D204D /* EditGoals.storyboard */,
+				EA28361926240FD0006D204D /* EditGoalsController.swift */,
 			);
 			path = "create-goals";
 			sourceTree = "<group>";
@@ -339,6 +345,7 @@
 				4AD0A11426208BE40075118A /* HomeViewCell.xib in Resources */,
 				4AD0A12526208ED50075118A /* addWithdrawStoryboard.storyboard in Resources */,
 				4AD0A11226208BE40075118A /* EmptyDataGoalCell.xib in Resources */,
+				EA28361726240FB5006D204D /* EditGoals.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +363,7 @@
 				FBB4AC93262368060057B329 /* withdrawViewController.swift in Sources */,
 				4AD0A11126208BE40075118A /* EmptyDataGoalCell.swift in Sources */,
 				4A726F032623455F00562DAC /* CollectionViewCell.swift in Sources */,
+				EA28361A26240FD0006D204D /* EditGoalsController.swift in Sources */,
 				4A726F012623455F00562DAC /* CreateGoalController.swift in Sources */,
 				4AD0A145262093C10075118A /* ProgressDrawer2.swift in Sources */,
 				4AD0A157262095BE0075118A /* DetailViewController.swift in Sources */,
