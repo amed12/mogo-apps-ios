@@ -91,6 +91,14 @@
                                     <outlet property="delegate" destination="2JD-Mz-5QX" id="jzA-UP-dTm"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vW-38-r2R">
+                                <rect key="frame" x="344" y="66" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="   "/>
+                                <connections>
+                                    <segue destination="bOQ-8e-wKL" kind="presentation" id="qCU-ON-tga"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VJE-Fl-jKn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -142,6 +150,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5OA-gs-EOq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130.76923076923077" y="115.16587677725119"/>
+        </scene>
+        <!--ReminderList-->
+        <scene sceneID="mpw-rB-B5j">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ReminderList" id="bOQ-8e-wKL" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lfn-vt-BU0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="677" y="-6"/>
         </scene>
     </scenes>
     <designables>

@@ -49,12 +49,13 @@
                                         <connections>
                                             <outlet property="reminderDetail" destination="eZr-iY-xSX" id="lyG-tS-ADI"/>
                                             <outlet property="reminderTitle" destination="Xuu-iV-tqV" id="JFh-Xf-ff8"/>
+                                            <segue destination="ySu-TT-TxW" kind="presentation" id="kZw-eU-mLj"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="LCX-3n-X5M" id="Sfi-2Y-cme"/>
-                                    <outlet property="delegate" destination="LCX-3n-X5M" id="ybl-H6-YQN"/>
+                                    <outlet property="dataSource" destination="LCX-3n-X5M" id="9YP-ty-mmf"/>
+                                    <outlet property="delegate" destination="LCX-3n-X5M" id="o4V-oe-kXm"/>
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REMINDER LIST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVt-m4-0vW">
@@ -77,23 +78,34 @@
                     <navigationItem key="navigationItem" id="TFC-md-0Ok">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="cancel" id="VAS-6O-oxr">
                             <color key="tintColor" red="0.086274509799999996" green="0.47450980390000003" blue="0.43137254899999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="bH3-Ua-Fpz" kind="unwind" unwindAction="unwindToFirstViewController:" id="Hn5-Ga-1FD"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="reminderTable" destination="AyT-5L-sx3" id="Ie2-96-Baw"/>
-                        <segue destination="EsT-ex-Ahp" kind="showDetail" identifier="segueToDetail" id="zaq-V9-441"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nIL-bD-8xh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="bH3-Ua-Fpz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="951" y="80"/>
+        </scene>
+        <!--addWithdrawStoryboard-->
+        <scene sceneID="pOQ-eX-SlN">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="segueAddWithdraw" storyboardName="addWithdrawStoryboard" id="ySu-TT-TxW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xkJ-q4-9NQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934" y="577"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="m9X-C7-00J">
             <objects>
                 <viewController id="EsT-ex-Ahp" customClass="DetailViewController" customModule="mogo_apps_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Jq-Fi-56a">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="gye-D4-47s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -103,6 +115,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FzJ-tu-E5M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1750.7246376811595" y="249.77678571428569"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="knQ-GV-Ezd">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LlU-gT-x4O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="fromHome" storyboardName="Home" id="KCq-4m-0Xl" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="OW8-eZ-72l"/>
+                </viewControllerPlaceholder>
+            </objects>
+            <point key="canvasLocation" x="661" y="-291"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Aiz-Rp-vu6">
