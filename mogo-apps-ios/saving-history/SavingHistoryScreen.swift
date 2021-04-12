@@ -44,6 +44,10 @@ class SavingHistoryScreen: UIViewController, UITableViewDataSource, UITableViewD
         }
     
     
+    //navigation to goal detail
+        @IBAction func test(_ sender: UIBarButtonItem) {
+            self.navigationController?.popViewController(animated: true)
+        }
     /*
     // MARK: - Navigation
 

@@ -121,4 +121,12 @@ class GoalDetailController: UIViewController {
     
     @IBAction func unwindToFirstViewController(_ sender: UIStoryboardSegue) {
         }
+    
+    // navigation to saving history
+       @IBAction func toHistory(_ sender: UIButton) {
+           let shStoryboard = UIStoryboard(name: "SavingHistory", bundle: nil)
+           let vc = (shStoryboard.instantiateViewController(identifier: "savingHistoryID") as? SavingHistoryScreen)!
+           self.navigationController?.pushViewController(vc, animated: true)
+       }
 }
+
