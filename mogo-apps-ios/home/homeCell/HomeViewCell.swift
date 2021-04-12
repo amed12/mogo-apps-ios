@@ -15,6 +15,7 @@ class HomeViewCell: UITableViewCell {
     @IBOutlet weak var GoalDate: UILabel!
     @IBOutlet weak var GoalBudget: UILabel!
     @IBOutlet weak var GoalProgressView: UIView!
+    @IBOutlet weak var GoalPercent: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
