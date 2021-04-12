@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I3x-cm-8yV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uk0-Fb-gFq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -11,7 +11,7 @@
         <!--Saving History-->
         <scene sceneID="407-Sc-q3w">
             <objects>
-                <viewController storyboardIdentifier="savingHistory" id="I0S-ZD-j0a" customClass="SavingHistoryScreen" customModule="mogo_apps_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="savingHistoryID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I0S-ZD-j0a" customClass="SavingHistoryScreen" customModule="mogo_apps_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sZS-Nf-GPr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,7 +78,7 @@
                                 </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ea4-4I-b51">
-                                <rect key="frame" x="0.0" y="-44" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Saving History" leftItemsSupplementBackButton="YES" id="VPj-z9-aeC"/>
                                 </items>
@@ -87,17 +87,22 @@
                         <viewLayoutGuide key="safeArea" id="iSC-57-hbc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="G3O-mT-VXY" firstAttribute="top" secondItem="ea4-4I-b51" secondAttribute="bottom" constant="88" id="1HI-JF-McN"/>
+                            <constraint firstItem="G3O-mT-VXY" firstAttribute="top" secondItem="ea4-4I-b51" secondAttribute="bottom" id="06n-BH-NyA"/>
                             <constraint firstItem="iSC-57-hbc" firstAttribute="trailing" secondItem="G3O-mT-VXY" secondAttribute="trailing" id="A1S-cz-Jf4"/>
                             <constraint firstItem="G3O-mT-VXY" firstAttribute="top" secondItem="iSC-57-hbc" secondAttribute="top" id="C0z-jU-lJY"/>
-                            <constraint firstItem="ea4-4I-b51" firstAttribute="trailing" secondItem="G3O-mT-VXY" secondAttribute="trailing" id="S5T-FE-dz2"/>
+                            <constraint firstItem="ea4-4I-b51" firstAttribute="trailing" secondItem="G3O-mT-VXY" secondAttribute="trailing" id="INK-qv-0xK"/>
                             <constraint firstItem="G3O-mT-VXY" firstAttribute="leading" secondItem="iSC-57-hbc" secondAttribute="leading" id="qAr-Mr-SxK"/>
                             <constraint firstItem="ea4-4I-b51" firstAttribute="leading" secondItem="sZS-Nf-GPr" secondAttribute="leading" id="s2H-gI-eDB"/>
                             <constraint firstItem="iSC-57-hbc" firstAttribute="bottom" secondItem="G3O-mT-VXY" secondAttribute="bottom" id="xaH-vs-t4i"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Saving History" id="IKi-U9-gHO">
-                        <barButtonItem key="leftBarButtonItem" title="Back" image="chevron.backward" catalog="system" style="plain" id="zOR-45-iZr"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" image="chevron.backward" catalog="system" style="done" id="zOR-45-iZr">
+                            <color key="tintColor" red="0.092533282940000003" green="0.47499495739999997" blue="0.43137055639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="test:" destination="I0S-ZD-j0a" id="WJ3-Ps-Y4y"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="SavingHistoryTable" destination="G3O-mT-VXY" id="ZdY-hd-flg"/>
@@ -105,25 +110,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="28c-sE-LqL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="768.11594202898561" y="-33.482142857142854"/>
+            <point key="canvasLocation" x="2588.4057971014495" y="-33.482142857142854"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="g8r-cH-mXc">
+        <scene sceneID="utR-Np-MzB">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I3x-cm-8yV" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uk0-Fb-gFq" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SWM-n8-PeF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nzr-fq-U8t">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="I0S-ZD-j0a" kind="relationship" relationship="rootViewController" id="XQp-L0-BxJ"/>
+                        <segue destination="I0S-ZD-j0a" kind="relationship" relationship="rootViewController" id="FKN-gF-LZ5"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MiG-Q0-DVs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5iI-vj-fjR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-142.02898550724638" y="-33.482142857142854"/>
+            <point key="canvasLocation" x="1678.2608695652175" y="-33.482142857142854"/>
         </scene>
     </scenes>
     <resources>

@@ -19,7 +19,12 @@ class SavingHistoryScreen: UIViewController, UITableViewDataSource, UITableViewD
 
         // Do any additional setup after loading the view.
     }
-
+    
+    //navigation to goal detail
+    @IBAction func test(_ sender: UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     func createArray() -> [Transaction] {
         // get data dari coredata
         let tr1 = Transaction(typeTitle:"Withdraw", date:"21 May 2021", amount: 12345)
@@ -37,6 +42,10 @@ class SavingHistoryScreen: UIViewController, UITableViewDataSource, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "SavingHistoryCell") as! SavingHistoryCell
         cell.setTransaction(transaction: transaction)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.navigationController?.popViewController(animated: true)
     }
  
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
