@@ -65,8 +65,17 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
             cell?.progressGoal.center = (cell?.progressGoal.center)!
             cell?.progressGoal.progressAnimation(toValue: result, duration: circularViewDuration)
             return cell!
-            
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if !listGoal.isEmpty {
+            navigateToDetailGoal(goalObject: listGoal[indexPath.row])
+        }
+    }
+    
+    private func navigateToDetailGoal(goalObject: GoalObject) {
+        print(goalObject)
     }
     
     func generateDummyActive()  {
