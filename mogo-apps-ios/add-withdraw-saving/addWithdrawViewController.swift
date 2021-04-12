@@ -26,7 +26,7 @@ class addWithdrawViewController: UIViewController, UITextFieldDelegate {
     
     let datePicker = UIDatePicker()
     var amount = ""
-    var source = 0
+ //   var source = 0
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -34,7 +34,7 @@ class addWithdrawViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = source == 0 ? "Add" : "Withdraw"
+ //       self.title = source == 0 ? "Add" : "Withdraw"
 
         borderView()
         createDatePicker()
@@ -45,10 +45,8 @@ class addWithdrawViewController: UIViewController, UITextFieldDelegate {
     //bikin border
     func borderView(){
         let view = self
-        
-        view.amountCellView.layer.borderColor = UIColor.lightGray.cgColor //ganti border color
-        view.amountCellView.layer.borderWidth = 0.5  //border width
-    
+        view.amountCellView.layer.borderColor = UIColor.lightGray.cgColor
+        view.amountCellView.layer.borderWidth = 0.5
         view.dateCellView.layer.borderColor = UIColor.lightGray.cgColor
         view.dateCellView.layer.borderWidth = 0.5
     }
@@ -95,9 +93,11 @@ class addWithdrawViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == amountField {
+            print("Hello World")
             amountField.text = "IDR \(textField.text!)"
             dateField.becomeFirstResponder()
         } else {
+            print("World Hello")
             textField.resignFirstResponder()
         }
     }
@@ -121,6 +121,8 @@ class addWithdrawViewController: UIViewController, UITextFieldDelegate {
         print(amountField.text!)
         print(dateField.text!)
     }
+    
+  
     /*
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if !textField.text!.isEmpty {

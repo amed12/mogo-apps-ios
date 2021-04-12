@@ -47,6 +47,8 @@
 		4AD0A156262095BE0075118A /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A151262095BE0075118A /* ReminderViewController.swift */; };
 		4AD0A157262095BE0075118A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A152262095BE0075118A /* DetailViewController.swift */; };
 		4AD0A158262095BE0075118A /* ReminderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A153262095BE0075118A /* ReminderViewCell.swift */; };
+		FBB4AC90262367EB0057B329 /* withdraw.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBB4AC8F262367EB0057B329 /* withdraw.storyboard */; };
+		FBB4AC93262368060057B329 /* withdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4AC92262368060057B329 /* withdrawViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +94,8 @@
 		4AD0A151262095BE0075118A /* ReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		4AD0A152262095BE0075118A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4AD0A153262095BE0075118A /* ReminderViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewCell.swift; sourceTree = "<group>"; };
+		FBB4AC8F262367EB0057B329 /* withdraw.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = withdraw.storyboard; sourceTree = "<group>"; };
+		FBB4AC92262368060057B329 /* withdrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = withdrawViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +215,8 @@
 			children = (
 				4AD0A12326208ED50075118A /* addWithdrawStoryboard.storyboard */,
 				4AD0A12426208ED50075118A /* addWithdrawViewController.swift */,
+				FBB4AC8F262367EB0057B329 /* withdraw.storyboard */,
+				FBB4AC92262368060057B329 /* withdrawViewController.swift */,
 			);
 			path = "add-withdraw-saving";
 			sourceTree = "<group>";
@@ -310,6 +316,7 @@
 				4AD0A133262091F10075118A /* OverlayView.xib in Resources */,
 				4A726F052623455F00562DAC /* Icon.storyboard in Resources */,
 				4AD0A147262093C10075118A /* GoalDetail.storyboard in Resources */,
+				FBB4AC90262367EB0057B329 /* withdraw.storyboard in Resources */,
 				4AD0A0D6262081730075118A /* SavingHistory.storyboard in Resources */,
 				4AD0A155262095BE0075118A /* ReminderList.storyboard in Resources */,
 				4A2DC96D26122D4200CBD461 /* Assets.xcassets in Resources */,
@@ -335,6 +342,7 @@
 				4AD0A10C26208BE40075118A /* ProgressDrawer.swift in Sources */,
 				4A2DC96526122D4100CBD461 /* ViewController.swift in Sources */,
 				4AD0A11526208BE40075118A /* MyButton.swift in Sources */,
+				FBB4AC93262368060057B329 /* withdrawViewController.swift in Sources */,
 				4AD0A11126208BE40075118A /* EmptyDataGoalCell.swift in Sources */,
 				4A726F032623455F00562DAC /* CollectionViewCell.swift in Sources */,
 				4A726F012623455F00562DAC /* CreateGoalController.swift in Sources */,

@@ -59,6 +59,9 @@
                                                 <state key="normal" title="Add">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="ax3-gh-2Pc" kind="presentation" id="5u4-jT-lgY"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.086274509799999996" green="0.47450980390000003" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -76,6 +79,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="withdrawButton:" destination="tQt-9S-hGW" eventType="touchUpInside" id="SXR-t9-d76"/>
+                                                    <segue destination="8rX-bd-kkT" kind="presentation" id="A7j-ub-azB"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -323,6 +327,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cIq-vT-8BP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="103" y="177"/>
+        </scene>
+        <!--addWithdrawStoryboard-->
+        <scene sceneID="bJb-oJ-Xep">
+            <objects>
+                <viewControllerPlaceholder storyboardName="addWithdrawStoryboard" id="ax3-gh-2Pc" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mHL-yp-kus"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SuU-qE-lvC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="791" y="26"/>
+        </scene>
+        <!--withdraw-->
+        <scene sceneID="zCY-hZ-jc5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="withdraw" id="8rX-bd-kkT" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="iOt-kh-6kn"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yyW-bC-kuR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="779" y="177"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H4O-Gl-tU0">
