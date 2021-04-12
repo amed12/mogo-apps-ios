@@ -118,4 +118,7 @@ class GoalDetailController: UIViewController {
         }))
         present(alert, animated: true)
     }
+    
+    @IBAction func unwindToFirstViewController(_ sender: UIStoryboardSegue) {
+        }
 }
