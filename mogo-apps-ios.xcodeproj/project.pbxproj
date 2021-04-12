@@ -20,6 +20,7 @@
 		4A726F032623455F00562DAC /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A726EFD2623455F00562DAC /* CollectionViewCell.swift */; };
 		4A726F042623455F00562DAC /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A726EFE2623455F00562DAC /* CollectionViewCell.xib */; };
 		4A726F052623455F00562DAC /* Icon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A726EFF2623455F00562DAC /* Icon.storyboard */; };
+		4AC610A42623EA1A00E9898F /* GoalObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC610A32623EA1A00E9898F /* GoalObject.swift */; };
 		4AD0A0D4262081730075118A /* SavingHistoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A0D0262081730075118A /* SavingHistoryScreen.swift */; };
 		4AD0A0D5262081730075118A /* SavingHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A0D1262081730075118A /* SavingHistoryCell.swift */; };
 		4AD0A0D6262081730075118A /* SavingHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0A0D2262081730075118A /* SavingHistory.storyboard */; };
@@ -65,6 +66,7 @@
 		4A726EFD2623455F00562DAC /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		4A726EFE2623455F00562DAC /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		4A726EFF2623455F00562DAC /* Icon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Icon.storyboard; sourceTree = "<group>"; };
+		4AC610A32623EA1A00E9898F /* GoalObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalObject.swift; sourceTree = "<group>"; };
 		4AD0A0D0262081730075118A /* SavingHistoryScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavingHistoryScreen.swift; sourceTree = "<group>"; };
 		4AD0A0D1262081730075118A /* SavingHistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavingHistoryCell.swift; sourceTree = "<group>"; };
 		4AD0A0D2262081730075118A /* SavingHistory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SavingHistory.storyboard; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 		4A2DC95F26122D4100CBD461 /* mogo-apps-ios */ = {
 			isa = PBXGroup;
 			children = (
+				4AC610A22623E9F400E9898F /* model */,
 				4A726EF72623455F00562DAC /* create-goals */,
 				4AD0A14E262095BD0075118A /* reminder-list */,
 				4AD0A141262093C10075118A /* goal-detail */,
@@ -170,6 +173,14 @@
 				4A726EFE2623455F00562DAC /* CollectionViewCell.xib */,
 			);
 			path = "icon-collection-cell";
+			sourceTree = "<group>";
+		};
+		4AC610A22623E9F400E9898F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4AC610A32623EA1A00E9898F /* GoalObject.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		4AD0A0CF262081730075118A /* saving-history */ = {
@@ -344,6 +355,7 @@
 				4AD0A11326208BE40075118A /* HomeViewCell.swift in Sources */,
 				4AD0A154262095BE0075118A /* ReminderObject.swift in Sources */,
 				4A2DC96126122D4100CBD461 /* AppDelegate.swift in Sources */,
+				4AC610A42623EA1A00E9898F /* GoalObject.swift in Sources */,
 				4A726F022623455F00562DAC /* IconController.swift in Sources */,
 				4AD0A10D26208BE40075118A /* HomeController.swift in Sources */,
 				4AD0A131262091F10075118A /* OverlayView.swift in Sources */,
