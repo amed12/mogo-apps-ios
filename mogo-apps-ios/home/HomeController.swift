@@ -20,6 +20,7 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
     var listGoal :[GoalObject] = []
     var segmentActive = 0
     var isProductEmpty = false
+    var scenario = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,14 +32,33 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
     
     @IBAction func segmentChanged(_ sender: UISegmentedControl) {
         segmentActive = sender.selectedSegmentIndex
-        segmentActive == 0 ? generateDummyEmpty() : generateDummyComplete()
+        if segmentActive == 0 {
+            switch scenario {
+            case 0:
+                generateDummyEmpty()
+            default:
+                generateDummyEmpty()
+            }
+        }else {
+            switch scenario {
+            case 0:
+                generateDummyEmpty()
+            default:
+                generateDummyEmpty()
+            }
+        }
         goalTableView.reloadData()
     }
     
     private func setupView(){
-        generateDummyEmpty()
         goalTableView.register(UINib(nibName: "EmptyDataGoalCell", bundle: nil), forCellReuseIdentifier: "IdGoalNoData")
         goalTableView.register(UINib(nibName: "HomeViewCell", bundle: nil), forCellReuseIdentifier: "GoalCellIdentifier")
+        switch scenario {
+        case 0:
+            generateDummyEmpty()
+        default:
+            generateDummyActive()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,6 +72,11 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if isProductEmpty {
             let cell = goalTableView.dequeueReusableCell(withIdentifier: "IdGoalNoData", for: indexPath) as? EmptyDataGoalCell
+            if segmentActive == 1 {
+                cell?.EmptyLabel.text = "You don’t have any completed goal yet. Keep saving to complete your active goal!"
+            } else{
+                cell?.EmptyLabel.text = "You don’t have any active goal yet, let’s start by press the ‘Add Goal’ button!  "
+            }
             return cell!
         }else{
             let cell = goalTableView.dequeueReusableCell(withIdentifier: "GoalCellIdentifier", for: indexPath) as? HomeViewCell
