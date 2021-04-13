@@ -58,8 +58,8 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
             cell?.GoalImage.image = UIImage(named: data.icon)
             var result: Double = 0.0
             var percent: Double = 0.0
-            percent = Double(data.amountSaving) / Double(data.goalBudget) * 100.0
-            result = Double(data.amountSaving) / Double(data.goalBudget)
+            percent = Double(data.totalSaving) / Double(data.goalBudget) * 100.0
+            result = Double(data.totalSaving) / Double(data.goalBudget)
             cell?.GoalPercent.text = "\(percent) %"
             cell?.progressGoal.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
             cell?.progressGoal.center = (cell?.progressGoal.center)!
@@ -79,17 +79,17 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     
     func generateDummyActive()  {
-        let goal1 = GoalObject(icon: "rich", name: "Trip to Labuan Bajo", goalBudget: 5000000, targetDate: "5-Mei-2022", amountSaving: 385000, isComplete: false, savingFrequency: "Monthly", savingDate: "14", savingTime: "12:00")
-        let goal2 = GoalObject(icon: "hardShocked", name: "Trip to Labuan Bajo", goalBudget: 12000000, targetDate: "5-Mei-2022", amountSaving: 1500000, isComplete: false, savingFrequency: "Monthly", savingDate: "14", savingTime: "12:00")
-        let goal3 = GoalObject(icon: "happy", name: "Trip to Labuan Bajo", goalBudget: 5000000, targetDate: "5-Mei-2022", amountSaving: 385000, isComplete: false, savingFrequency: "Monthly", savingDate: "14", savingTime: "12:00")
+        let goal1 = GoalObject(icon: "rich", name: "Trip to Labuan Bajo", goalBudget: 5000000, targetDate: "5-Mei-2022", amountSaving: 385000, totalSaving: 385000, isComplete: false, savingFrequency: "Monthly", savingDate: "14", savingTime: "12:00")
+        let goal2 = GoalObject(icon: "hardShocked", name: "Trip to Labuan Bajo", goalBudget: 12000000, targetDate: "5-Mei-2022", amountSaving: 1500000, totalSaving: 385000, isComplete: false, savingFrequency: "Monthly", savingDate: "14", savingTime: "12:00")
+        let goal3 = GoalObject(icon: "happy", name: "Trip to Labuan Bajo", goalBudget: 5000000, targetDate: "5-Mei-2022", amountSaving: 385000, totalSaving: 385000, isComplete: false, savingFrequency: "Monthly", savingDate: "14", savingTime: "12:00")
         listGoal = [goal1,goal2,goal3]
         isProductEmpty = false
         goalTableView.reloadData()
     }
     
     func generateDummyComplete()  {
-        let goal1 = GoalObject(icon: "hardShocked", name: "Trip to Labuan Bajo", goalBudget: 5000000, targetDate: "5-Mei-2022", amountSaving: 385000, isComplete: false, savingFrequency: "Monthly", savingDate: "14", savingTime: "12:00")
-        let goal2 = GoalObject(icon: "skull", name: "Trip to Labuan Bajo", goalBudget: 5000000, targetDate: "5-Mei-2022", amountSaving: 385000, isComplete: false, savingFrequency: "Monthly", savingDate: "14", savingTime: "12:00")
+        let goal1 = GoalObject(icon: "hardShocked", name: "Trip to Labuan Bajo", goalBudget: 5000000, targetDate: "5-Mei-2022", amountSaving: 385000, totalSaving: 385000, isComplete: false, savingFrequency: "Monthly", savingDate: "14", savingTime: "12:00")
+        let goal2 = GoalObject(icon: "skull", name: "Trip to Labuan Bajo", goalBudget: 5000000, targetDate: "5-Mei-2022", amountSaving: 385000, totalSaving: 385000, isComplete: false, savingFrequency: "Monthly", savingDate: "14", savingTime: "12:00")
         listGoal = [goal1,goal2]
         isProductEmpty = false
         goalTableView.reloadData()

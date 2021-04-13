@@ -14,6 +14,7 @@ struct GoalObject {
     var goalBudget :Int
     var targetDate :String
     var amountSaving :Int
+    var totalSaving :Int
     var isComplete :Bool
     //saving-prefence
     var savingFrequency :String
