@@ -22,12 +22,15 @@ class ReminderViewController: UIViewController, UITableViewDataSource, UITableVi
         reminders = createArray()
     }
     
+    @IBAction func unwindToFirstViewController(_ sender: UIStoryboardSegue) {
+        }
     
     func createArray() -> [Reminder] {
         
-        let reminder1 = Reminder(reminderTitle: "IPhone 12", reminderDetail: "Add Saving IDR 500.000")
+        let reminder1 = Reminder(reminderTitle: "IPhone 12", reminderDetail: "Add Saving IDR 1.500.000")
         return [reminder1]
     }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reminders.count
@@ -38,9 +41,11 @@ class ReminderViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let reminder = reminders[indexPath.row]
         let cell = (tableView.dequeueReusableCell(withIdentifier: "reminderCellIdentifier", for: indexPath) as? ReminderViewCell)!
-        
+        cell.setReminder(reminder: reminder)
         return cell
+    
     }
     
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -56,5 +61,4 @@ class ReminderViewController: UIViewController, UITableViewDataSource, UITableVi
             tableView.endUpdates()
         }
     }
-    
 }
