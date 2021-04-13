@@ -40,6 +40,8 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
                 generateDummyScenario1()
             case 2:
                 generateDummyScenario2()
+            case 3:
+                generateDummyScenario3()
             default:
                 generateDummyEmpty()
             }
@@ -50,6 +52,8 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
             case 1:
                 generateDummyEmpty()
             case 2:
+                generateDummyEmpty()
+            case 3:
                 generateDummyEmpty()
             default:
                 generateDummyEmpty()
@@ -68,6 +72,8 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
             generateDummyScenario1()
         case 2:
             generateDummyScenario2()
+        case 3:
+            generateDummyScenario3()
         default:
             generateDummyActive()
         }
@@ -87,7 +93,7 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
             if segmentActive == 1 {
                 cell?.EmptyLabel.text = "You don’t have any completed goal yet. Keep saving to complete your active goal!"
             } else{
-                cell?.EmptyLabel.text = "You don’t have any active goal yet, let’s start by press the ‘Add Goal’ button!  "
+                cell?.EmptyLabel.text = "You don’t have any active goal yet, let’s start by press the ‘Add Goal’ button!"
             }
             return cell!
         }else{
@@ -142,6 +148,16 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
         isProductEmpty = false
         goalTableView.reloadData()
     }
+    
+    func generateDummyScenario3()  {
+        let goal1 = GoalObject(icon: "rocket", name: "Trip to Labuan Bajo", goalBudget: 5000000, targetDate: "May 5, 2022", amountSaving: 385000, totalSaving: 0, isComplete: false, savingFrequency: "Monthly", savingDate: "28", savingTime: "12:00")
+        let goal2 = GoalObject(icon: "iphone", name: "iPhone 12", goalBudget: 12000000, targetDate: "Dec 20, 2021", amountSaving: 1500000, totalSaving: 0, isComplete: false, savingFrequency: "Weekly", savingDate: "Sunday", savingTime: "18:00")
+        let goal3 = GoalObject(icon: "party", name: "Sweet 17th", goalBudget: 2700000, targetDate: "Jan 1, 2022", amountSaving: 300000, totalSaving: 0, isComplete: false, savingFrequency: "Monthly", savingDate: "15", savingTime: "18:00")
+        listGoal = [goal1,goal2,goal3]
+        isProductEmpty = false
+        goalTableView.reloadData()
+    }
+    
     
     func generateDummyComplete()  {
         let goal1 = GoalObject(icon: "hardShocked", name: "Trip to Labuan Bajo", goalBudget: 5000000, targetDate: "5-Mei-2022", amountSaving: 385000, totalSaving: 385000, isComplete: false, savingFrequency: "Monthly", savingDate: "14", savingTime: "12:00")
