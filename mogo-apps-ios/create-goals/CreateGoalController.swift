@@ -83,6 +83,8 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
         createTimePicker()
         pickerView.delegate = self
         pickerView.dataSource = self
+        budgetInput.delegate = self
+        monthInput.delegate = self
         freqInput.inputView = pickerView
         savingDateInput.inputView = pickerView
     }
@@ -131,19 +133,43 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField == goalInput{
-            goalInput.becomeFirstResponder()
+        if textField == budgetInput{
+            if budgetInput.placeholder == "IDR 10.000.000"{
+                budgetInput.text = "IDR \(textField.text!)"
+            } else {
+                datePicker.becomeFirstResponder()
+            }
+        } else if textField == monthInput{
+            if monthInput.placeholder == "IDR 1.000.000"{
+                monthInput.text = "IDR \(textField.text!)"
+            } else {
+                datePicker.becomeFirstResponder()
+            }
         } else {
             textField.resignFirstResponder()
         }
     }
     
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        if textField == budgetInput{
+//            if budgetInput.placeholder == "IDR 10.000.000"{
+//                budgetInput.text = "IDR\(textField.text!)"
+//            }
+//            budgetInput.becomeFirstResponder()
+//        } else {
+//            textField.resignFirstResponder()
+//        }
+//        return true
+//    }
+    
     @IBAction func budgetLock(_ sender: UIButton) {
         if temp == 0 {
             budgetLock.setImage(UIImage(named: "Lock"), for: .normal)
+            self.budgetInput.isEnabled = false
             temp = 1
         } else if temp == 1 {
             budgetLock.setImage(UIImage(named: "Unlock"), for: .normal)
+            self.budgetInput.isEnabled = true
             temp = 0
         }
     }
@@ -151,9 +177,11 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
     @IBAction func dateLock(_ sender: Any) {
         if temp == 0 {
             dateLock.setImage(UIImage(named: "Lock"), for: .normal)
+            self.dateInput.isEnabled = false
             temp = 1
         } else if temp == 1 {
             dateLock.setImage(UIImage(named: "Unlock"), for: .normal)
+            self.dateInput.isEnabled = true
             temp = 0
         }
     }
@@ -161,9 +189,11 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
     @IBAction func monthLock(_ sender: Any) {
         if temp == 0 {
             monthLock.setImage(UIImage(named: "Lock"), for: .normal)
+            self.monthInput.isEnabled = false
             temp = 1
         } else if temp == 1 {
             monthLock.setImage(UIImage(named: "Unlock"), for: .normal)
+            self.monthInput.isEnabled = true
             temp = 0
         }
     }
