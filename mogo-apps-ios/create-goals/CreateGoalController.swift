@@ -9,6 +9,8 @@ import UIKit
 
 
 class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    
 
     //viewheader
     @IBOutlet weak var headerView: UIView!
@@ -73,10 +75,12 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
     var monthSelection = ""
     var weekSelection = ""
     
+    
     //skenario 1
     var budget1 = "IDR 4500000"
     var saving1 = "IDR 347000"
     var date1 = "May 5, 2022"
+    var iconSelected = "cool"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,6 +96,7 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
         monthInput.delegate = self
         freqInput.inputView = pickerView
         savingDateInput.inputView = pickerView
+        imageIcon.image = UIImage(named: iconSelected)
         
         if budgetInput.text == "IDR 4500000" && dateInput.text == "May 5, 2020" {
             monthInput.text == "IDR 347000"
@@ -313,6 +318,14 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
     
     private func setupPicker() {
         pickerView.reloadAllComponents()
+    }
+
+    @IBAction func clickIcon(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Icon", bundle: nil)
+        
+        let navVC = (storyboard.instantiateViewController(identifier: "iconVC") as? IconController)!
+        
+        self.navigationController?.pushViewController(navVC, animated: true)
     }
     
     @IBAction func buttonSave(_ sender: UIBarButtonItem) {

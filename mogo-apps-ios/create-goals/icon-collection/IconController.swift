@@ -7,10 +7,13 @@
 
 import UIKit
 
+
 class IconController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
 
     @IBOutlet weak var iconCollection: UICollectionView!
+    
+    var index = 0
     
     var imageArray = ["iphone", "rocket", "party", "cool", "embarrassed", "happy_hands", "happy", "hardShocked", "rich", "sad", "shocked", "skull"]
     
@@ -18,6 +21,11 @@ class IconController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         setupCollection()
         // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func clickDone(_ sender: UIBarButtonItem) {
+        moveBackPrevioous(imageArray[index])
     }
     
     private func setupCollection() {
@@ -33,6 +41,20 @@ class IconController: UIViewController, UICollectionViewDelegate, UICollectionVi
         //panggil image
         cell.iconImage.image = UIImage(named: imageArray[indexPath.row])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        index = indexPath.row
+    }
+    
+   
+    private func moveBackPrevioous(_ value:String) {
+        
+        let storyboard = UIStoryboard(name: "CreateGoals", bundle: nil)
+        
+        let navVC = (storyboard.instantiateViewController(identifier: "createGoalVc") as? CreateGoalController)!
+        navVC.iconSelected = value
+        self.navigationController?.pushViewController(navVC, animated: true)
     }
 
 }

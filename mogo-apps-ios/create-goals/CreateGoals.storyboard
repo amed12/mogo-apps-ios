@@ -11,7 +11,7 @@
         <!--Create Goal-->
         <scene sceneID="Lam-Xw-1eN">
             <objects>
-                <viewController id="TN3-2I-tlw" customClass="CreateGoalController" customModule="mogo_apps_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="createGoalVc" id="TN3-2I-tlw" customClass="CreateGoalController" customModule="mogo_apps_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nw7-Nj-Vc7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,8 +32,7 @@
                                             <constraint firstAttribute="height" constant="80" id="95D-CW-N8e"/>
                                         </constraints>
                                         <connections>
-                                            <action selector="toIconCollection:" destination="TN3-2I-tlw" eventType="touchUpInside" id="4xD-Rm-kdP"/>
-                                            <segue destination="1zd-jm-zKp" kind="presentation" id="G1U-tO-1zz"/>
+                                            <action selector="clickIcon:" destination="TN3-2I-tlw" eventType="touchUpInside" id="IK3-8g-u9I"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Icon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRM-Y1-yMK">
@@ -479,14 +478,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mpj-lA-NTu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2657.971014492754" y="147.32142857142856"/>
-        </scene>
-        <!--Icon-->
-        <scene sceneID="a5q-2r-a9q">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Icon" id="1zd-jm-zKp" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mcM-Zf-JeN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3411" y="87"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SUU-V9-hox">
