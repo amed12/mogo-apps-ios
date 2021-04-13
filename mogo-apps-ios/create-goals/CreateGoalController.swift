@@ -73,6 +73,11 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
     var monthSelection = ""
     var weekSelection = ""
     
+    //skenario 1
+    var budget1 = "IDR 4500000"
+    var saving1 = "IDR 347000"
+    var date1 = "May 5, 2022"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //call icon
@@ -87,6 +92,10 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
         monthInput.delegate = self
         freqInput.inputView = pickerView
         savingDateInput.inputView = pickerView
+        
+        if budgetInput.text == "IDR 4500000" && dateInput.text == "May 5, 2020" {
+            monthInput.text == "IDR 347000"
+        }
     }
     
     func setupView(){
@@ -149,18 +158,6 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
             textField.resignFirstResponder()
         }
     }
-    
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        if textField == budgetInput{
-//            if budgetInput.placeholder == "IDR 10.000.000"{
-//                budgetInput.text = "IDR\(textField.text!)"
-//            }
-//            budgetInput.becomeFirstResponder()
-//        } else {
-//            textField.resignFirstResponder()
-//        }
-//        return true
-//    }
     
     @IBAction func budgetLock(_ sender: UIButton) {
         if temp == 0 {
@@ -316,6 +313,14 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
     
     private func setupPicker() {
         pickerView.reloadAllComponents()
+    }
+    
+    @IBAction func buttonSave(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        let navVC = (storyboard.instantiateViewController(identifier: "homeId") as? HomeController)!
+        navVC.scenario = 1
+//        navVC.scenario = 2
+        self.navigationController?.present(navVC, animated: true)
     }
     
 }

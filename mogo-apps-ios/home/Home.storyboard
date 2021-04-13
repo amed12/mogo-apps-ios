@@ -16,7 +16,7 @@
         <!--Home Controller-->
         <scene sceneID="ilw-VT-rw7">
             <objects>
-                <viewController id="2JD-Mz-5QX" customClass="HomeController" customModule="mogo_apps_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeId" id="2JD-Mz-5QX" customClass="HomeController" customModule="mogo_apps_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aaI-2e-hao">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
