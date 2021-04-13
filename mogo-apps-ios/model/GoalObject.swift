@@ -11,10 +11,10 @@ struct GoalObject {
     //goal-information
     var icon :String
     var name :String
-    var goalBudget :Int
+    var goalBudget :Double
     var targetDate :String
-    var amountSaving :Int
-    var totalSaving :Int
+    var amountSaving :Double
+    var totalSaving :Double
     var isComplete :Bool
     //saving-prefence
     var savingFrequency :String

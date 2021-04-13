@@ -8,7 +8,7 @@
 import UIKit
 
 class withdrawViewController: UIViewController, UITextFieldDelegate {
-
+    
     @IBOutlet weak var cancelButton2: UIBarButtonItem!
     @IBOutlet weak var addSavingTitle2: UINavigationItem!
     @IBOutlet weak var saveButton2: UIBarButtonItem!
@@ -25,6 +25,7 @@ class withdrawViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         borderView()
         createDatePicker()
         clearButton()
@@ -94,11 +95,9 @@ class withdrawViewController: UIViewController, UITextFieldDelegate {
         
         func textFieldDidEndEditing(_ textField: UITextField) {
             if textField == amountField2 {
-              print("Hello World")
                 amountField2.text = "IDR \(textField.text!)"
                 dateField2.becomeFirstResponder()
             } else {
-                print("World Hello")
                 textField.resignFirstResponder()
             }
         }

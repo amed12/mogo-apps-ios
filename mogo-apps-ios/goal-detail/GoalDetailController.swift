@@ -10,9 +10,11 @@ import UIKit
 class GoalDetailController: UIViewController {
     var circleProgressView: ProgressDrawer2!
     var circularViewDuration: TimeInterval = 2
-    let budget: Double = 12000000
-    let saving: Double = 12000000
+    var budget: Double = 12000000
+    var saving: Double = 12000000
     var result: Double = 0.0
+    
+    var goal = GoalObject(icon: "", name: "", goalBudget: 0, targetDate: "", amountSaving: 0, totalSaving: 0, isComplete: false, savingFrequency: "", savingDate: "", savingTime: "")
     
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var progressView: UIView!
@@ -22,6 +24,9 @@ class GoalDetailController: UIViewController {
     @IBOutlet weak var moneySavedValue: UILabel!
     @IBOutlet weak var addView: UIView!
     @IBOutlet weak var withdrawView: UIView!
+    
+    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var withdrawButton: UIButton!
     
     @IBOutlet weak var monthlySavingView: UIView!
     @IBOutlet weak var monthlySaving: UILabel!
@@ -36,7 +41,7 @@ class GoalDetailController: UIViewController {
     @IBOutlet weak var savingFrequencyView: UIView!
     @IBOutlet weak var savingFrequencyValue: UILabel!
     @IBOutlet weak var savingDateView: UIView!
-    @IBOutlet weak var savingDateValue: UIView!
+    @IBOutlet weak var savingDateValue: UILabel!
     @IBOutlet weak var savingTimeView: UIView!
     @IBOutlet weak var savingTimeValue: UILabel!
     
@@ -44,12 +49,46 @@ class GoalDetailController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        addButton.addTarget(self, action: #selector(addPage), for: .touchUpInside)
+//        withdrawButton.addTarget(self, action: #selector(withdrawPage), for: .touchUpInside)
+        
+        setupView()
         progressPercentage.text = "\(String(format: "%.0f", (saving/budget) * 100))%"
         drawCircleView()
         addCornerRadius()
         addBorders()
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(segue.identifier)
+        
+        if segue.destination is addWithdrawViewController {
+            print("Hello World")
+            let vc = segue.destination as? addWithdrawViewController
+            vc?.amountField.placeholder = String(format: "IDR %.0f", goal.amountSaving)
+            vc?.dateField.placeholder = goal.targetDate
+       
+        } else if segue.destination is withdrawViewController {
+            print("World Hello")
+           let vc = segue.destination as? withdrawViewController
+           vc?.amountField2.placeholder = String(format: "IDR %.0f", goal.amountSaving)
+           vc?.dateField2.placeholder = goal.targetDate
+       }
     }
 
+//    @objc func addPage() {
+//        let storyboard = UIStoryboard(name: "addWithdrawStoryboard", bundle: nil)
+//        let navVC = (storyboard.instantiateViewController(identifier: "addSaving") as? addWithdrawViewController)!
+//        self.present(navVC, animated: true, completion: nil)
+//    }
+//
+//    @objc func withdrawPage() {
+//        let storyboard = UIStoryboard(name: "withdraw", bundle: nil)
+//        let navVC = (storyboard.instantiateViewController(identifier: "withdrawSaving") as? withdrawViewController)!
+//        self.present(navVC, animated: true, completion: nil)
+//    }
+    
     func drawCircleView() {
         result = saving / budget
         circleProgressView = ProgressDrawer2(frame: .zero)
@@ -93,6 +132,28 @@ class GoalDetailController: UIViewController {
         savingHistoryView.layer.borderWidth = 0.5
     }
     
+    func setupView() {
+        // Progress Bar
+        budget = goal.goalBudget
+        saving = goal.totalSaving
+        
+        // Goal Detail
+        goalImage.image = UIImage(named: "\(goal.icon)")
+        goalTitle.text = goal.name
+        moneySavedValue.text = String(format: "IDR %.0f", goal.totalSaving)
+        monthlySaving.text = String(format: "IDR %.0f", goal.amountSaving)
+        
+        // Goal Detail - Information
+        goalNameValue.text = goal.name
+        goalBudgetValue.text = String(format: "IDR %.0f", goal.goalBudget)
+        targetDateValue.text = goal.targetDate
+        
+        // Goal Detail - Saving Preference
+        savingFrequencyValue.text = goal.savingFrequency
+        savingDateValue.text = goal.savingDate
+        savingTimeValue.text = goal.savingTime
+        
+    }
  
     @IBAction func editButton(_ sender: UIBarButtonItem) {
         if result >= 1 {
@@ -119,13 +180,18 @@ class GoalDetailController: UIViewController {
         present(alert, animated: true)
     }
     
-    @IBAction func unwindToFirstViewController(_ sender: UIStoryboardSegue) {
-        }
+
     
-    // navigation to saving history
-       @IBAction func toHistory(_ sender: UIButton) {
-           let shStoryboard = UIStoryboard(name: "SavingHistory", bundle: nil)
-           let vc = (shStoryboard.instantiateViewController(identifier: "savingHistoryID") as? SavingHistoryScreen)!
-           self.navigationController?.pushViewController(vc, animated: true)
-       }
+    
+    @IBAction func unwindToFirstViewController(_ sender: UIStoryboardSegue) {
+        
+    }
+    
+//     navigation to saving history
+    @IBAction func toHistory(_ sender: UIButton) {
+        let shStoryboard = UIStoryboard(name: "SavingHistory", bundle: nil)
+        let vc = (shStoryboard.instantiateViewController(identifier: "savingHistoryID") as? SavingHistoryScreen)!
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

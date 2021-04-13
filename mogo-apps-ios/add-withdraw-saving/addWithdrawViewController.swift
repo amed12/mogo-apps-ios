@@ -35,11 +35,15 @@ class addWithdrawViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
  //       self.title = source == 0 ? "Add" : "Withdraw"
-
+        
         borderView()
         createDatePicker()
         clearButton()
         // Do any additional setup after loading the view.
+    }
+    
+    func duarr(){
+        print("Hello World")
     }
     
     //bikin border
