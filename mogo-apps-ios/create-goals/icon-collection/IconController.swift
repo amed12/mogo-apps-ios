@@ -12,7 +12,7 @@ class IconController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     @IBOutlet weak var iconCollection: UICollectionView!
     
-    var imageArray = ["cool", "embarrassed", "happy_hands", "happy", "hardShocked", "rich", "sad", "shocked", "skull"]
+    var imageArray = ["iphone", "rocket", "party", "cool", "embarrassed", "happy_hands", "happy", "hardShocked", "rich", "sad", "shocked", "skull"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
