@@ -25,6 +25,10 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
         super.viewDidLoad()
         setupView()
     }
+    
+    @IBAction func unwindToFirstViewController(_ sender: UIStoryboardSegue) {
+        }
+    
     @IBAction func segmentChanged(_ sender: UISegmentedControl) {
         segmentActive = sender.selectedSegmentIndex
         segmentActive == 0 ? generateDummyEmpty() : generateDummyComplete()

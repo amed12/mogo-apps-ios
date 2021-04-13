@@ -22,14 +22,15 @@ class ReminderViewController: UIViewController, UITableViewDataSource, UITableVi
         reminders = createArray()
     }
     
+    @IBAction func unwindToFirstViewController(_ sender: UIStoryboardSegue) {
+        }
     
     func createArray() -> [Reminder] {
         
-        let reminder1 = Reminder(reminderTitle: "Trip to Sumba", reminderDetail: "Add Saving IDR 500.000")
-        let reminder2 = Reminder(reminderTitle: "Lamborghini Aventador", reminderDetail: "Add Saving IDR 1.000.000")
-        let reminder3 = Reminder(reminderTitle: "Trip to New Zealand", reminderDetail: "Add Saving IDR 2.500.000")
-        return [reminder1, reminder2, reminder3]
+        let reminder1 = Reminder(reminderTitle: "IPhone 12", reminderDetail: "Add Saving IDR 1.500.000")
+        return [reminder1]
     }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reminders.count
@@ -40,14 +41,16 @@ class ReminderViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let reminder = reminders[indexPath.row]
         let cell = (tableView.dequeueReusableCell(withIdentifier: "reminderCellIdentifier", for: indexPath) as? ReminderViewCell)!
-        
+        cell.setReminder(reminder: reminder)
         return cell
+    
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "segueToDetail", sender: self)
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        self.performSegue(withIdentifier: "segueAddWithdraw", sender: self)
+//    }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -58,5 +61,4 @@ class ReminderViewController: UIViewController, UITableViewDataSource, UITableVi
             tableView.endUpdates()
         }
     }
-    
 }
