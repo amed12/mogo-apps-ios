@@ -11,7 +11,7 @@
         <!--Saving History-->
         <scene sceneID="407-Sc-q3w">
             <objects>
-                <viewController storyboardIdentifier="savingHistory" id="I0S-ZD-j0a" customClass="SavingHistoryScreen" customModule="mogo_apps_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="savingHistoryID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I0S-ZD-j0a" customClass="SavingHistoryScreen" customModule="mogo_apps_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sZS-Nf-GPr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,7 +97,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Saving History" id="IKi-U9-gHO">
-                        <barButtonItem key="leftBarButtonItem" title="Back" image="chevron.backward" catalog="system" style="plain" id="zOR-45-iZr"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" image="chevron.backward" catalog="system" style="done" id="zOR-45-iZr">
+                            <color key="tintColor" red="0.092533282940000003" green="0.47499495739999997" blue="0.43137055639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="test:" destination="I0S-ZD-j0a" id="nNQ-QY-OrM"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="SavingHistoryTable" destination="G3O-mT-VXY" id="ZdY-hd-flg"/>
