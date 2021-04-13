@@ -49,6 +49,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BrE-ph-wQ7" kind="presentation" id="4xd-hn-Nw7"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NotifEmpty" translatesAutoresizingMaskIntoConstraints="NO" id="dxJ-f2-VM2">
                                 <rect key="frame" x="344" y="49" width="30" height="50"/>
@@ -150,6 +153,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5OA-gs-EOq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130.76923076923077" y="115.16587677725119"/>
+        </scene>
+        <!--CreateGoals-->
+        <scene sceneID="WPc-7x-R9y">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateGoals" id="BrE-ph-wQ7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GoZ-jY-TDM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="649" y="-93"/>
         </scene>
         <!--ReminderList-->
         <scene sceneID="mpw-rB-B5j">
