@@ -36,12 +36,16 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
             switch scenario {
             case 0:
                 generateDummyEmpty()
+            case 1:
+                generateDummyScenario1()
             default:
                 generateDummyEmpty()
             }
         }else {
             switch scenario {
             case 0:
+                generateDummyEmpty()
+            case 1:
                 generateDummyEmpty()
             default:
                 generateDummyEmpty()
@@ -56,6 +60,8 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
         switch scenario {
         case 0:
             generateDummyEmpty()
+        case 1:
+            generateDummyScenario1()
         default:
             generateDummyActive()
         }
@@ -112,6 +118,13 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
         let goal2 = GoalObject(icon: "hardShocked", name: "Trip to Labuan Bajo", goalBudget: 12000000, targetDate: "5-Mei-2022", amountSaving: 1500000, totalSaving: 385000, isComplete: false, savingFrequency: "Monthly", savingDate: "14", savingTime: "12:00")
         let goal3 = GoalObject(icon: "happy", name: "Trip to Labuan Bajo", goalBudget: 5000000, targetDate: "5-Mei-2022", amountSaving: 385000, totalSaving: 385000, isComplete: false, savingFrequency: "Monthly", savingDate: "14", savingTime: "12:00")
         listGoal = [goal1,goal2,goal3]
+        isProductEmpty = false
+        goalTableView.reloadData()
+    }
+    
+    func generateDummyScenario1()  {
+        let goal1 = GoalObject(icon: "rocket", name: "Trip to Labuan Bajo", goalBudget: 5000000, targetDate: "5-Mei-2022", amountSaving: 385000, totalSaving: 0, isComplete: false, savingFrequency: "Monthly", savingDate: "28", savingTime: "12:00")
+        listGoal = [goal1]
         isProductEmpty = false
         goalTableView.reloadData()
     }
