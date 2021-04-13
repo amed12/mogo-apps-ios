@@ -9,6 +9,7 @@ import UIKit
 
 class EmptyDataGoalCell: UITableViewCell {
 
+    @IBOutlet weak var EmptyLabel: UITextView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
