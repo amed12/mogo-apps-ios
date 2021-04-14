@@ -27,7 +27,9 @@ class ReminderViewController: UIViewController, UITableViewDataSource, UITableVi
         if let sourceViewController = sender.source as? addWithdrawViewController {
             let newAmountString = sourceViewController.amountField.text!.components(separatedBy: " ")
             _ = Double(newAmountString[1])!
-            showMiracle()
+            DispatchQueue.main.async {
+                self.showMiracle()
+            }
         }
     }
     
