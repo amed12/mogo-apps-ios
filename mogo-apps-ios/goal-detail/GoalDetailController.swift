@@ -181,13 +181,25 @@ class GoalDetailController: UIViewController , SendEditGoalToDetail {
         }
     }
     
+//    var badParameters:Bool = true
+//
+//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+//        if identifier == "withdrawIdentifier" {
+//            if badParameters  {
+//                 showAlert2(title: "Withdraw Goal")
+//                 badParameters = false
+//                 return false
+//            }
+//        }
+//        return true
+//    }
+    
     var badParameters:Bool = true
 
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if identifier == "withdrawIdentifier" {
             if badParameters  {
                  showAlert2(title: "Withdraw Goal")
-                 badParameters = false
                  return false
             }
         }
@@ -213,7 +225,7 @@ class GoalDetailController: UIViewController , SendEditGoalToDetail {
             print("Undefined")
         }))
         alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: { (action) in
-            print("Undefined")
+            self.performSegue(withIdentifier: "withdrawIdentifier", sender: nil)
         }))
         present(alert, animated: true)
     }
