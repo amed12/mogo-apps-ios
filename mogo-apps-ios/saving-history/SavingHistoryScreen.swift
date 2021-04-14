@@ -22,8 +22,8 @@ class SavingHistoryScreen: UIViewController, UITableViewDataSource, UITableViewD
 
     func createArray() -> [Transaction] {
         // get data dari coredata
-        let tr1 = Transaction(typeTitle:"Withdraw", date:"21 May 2021", amount: 12345)
-        let tr2 = Transaction(typeTitle:"Add", date:"21 May 2021", amount: 12345)
+        let tr1 = Transaction(typeTitle:"Withdraw", date:"14 April 2021", amount: 500000)
+        let tr2 = Transaction(typeTitle:"Add", date:"14 April 2021", amount: 2000000)
         return [tr1,tr2]
     }
     
