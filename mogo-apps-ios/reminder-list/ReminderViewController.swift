@@ -26,17 +26,27 @@ class ReminderViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBAction func unwindToFirstViewController(_ sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? addWithdrawViewController {
             let newAmountString = sourceViewController.amountField.text!.components(separatedBy: " ")
-            _ = Double(newAmountString[1])!
+            let amount = Double(newAmountString[1])!
             DispatchQueue.main.async {
-                self.showMiracle()
+                if amount == 300000.0{
+                    self.showMiracle(value: 0,descriptionDialog: "1 January 2022")
+                }else if amount == 200000.0{
+                    self.showMiracle(value: 1,descriptionDialog: "IDR 312.500/month")
+                }else if amount == 500000.0{
+                    self.showMiracle(value: 2,descriptionDialog: "5 December 2021")
+                }
+                
             }
         }
     }
     
-    func showMiracle() {
+    func showMiracle(value :Int, descriptionDialog:String) {
         let slideVC = OverlayView()
         // Kirim data 0 - 4
-        slideVC.flag = 4
+        slideVC.flag = value
+        slideVC.a = "Sweet 17th"
+        slideVC.b = descriptionDialog
+        slideVC.c = "200.000"
         slideVC.modalPresentationStyle = .custom
         slideVC.transitioningDelegate = self
         self.present(slideVC, animated: true, completion: nil)
