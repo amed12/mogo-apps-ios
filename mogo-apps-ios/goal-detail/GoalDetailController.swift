@@ -22,6 +22,7 @@ class GoalDetailController: UIViewController , SendEditGoalToDetail {
     var result: Double = 0.0
     var popUp = 0
     var flag = -1
+    var flag2 = -1
     
     var goal = GoalObject(icon: "", name: "", goalBudget: 0, targetDate: "", amountSaving: 0, totalSaving: 0, isComplete: false, savingFrequency: "", savingDate: "", savingTime: "")
     
@@ -77,16 +78,7 @@ class GoalDetailController: UIViewController , SendEditGoalToDetail {
         }
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        if flag == 1 {
-            self.delegate?.updateValue(value: 4)
-        } else if flag == 0 {
-            self.delegate?.updateValue(value: 5)
-        } else {
-            self.delegate?.updateValue(value: 3)
-        }
-    }
+
     
     func setUp() {
         setupView()
@@ -201,22 +193,44 @@ class GoalDetailController: UIViewController , SendEditGoalToDetail {
         present(alert, animated: true)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        print("flag2 = \(flag2)")
+        if flag == 1 {
+            if result >= 1 {
+                self.delegate?.updateValue(value: 6)
+            } else {
+                self.delegate?.updateValue(value: 4)
+            }
+        } else if flag == 0 {
+            if result < 1 && flag2 == 6 {
+                self.delegate?.updateValue(value: 7)
+            } else {
+                self.delegate?.updateValue(value: 5)
+            }
+        } else if flag == -1 {
+            self.delegate?.updateValue(value: 3)
+        }
+    }
+    
     @IBAction func unwindToFirstViewController(_ sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? addWithdrawViewController {
             let newAmountString = sourceViewController.amountField.text!.components(separatedBy: " ")
-            let add = Double(newAmountString[1])!
-            goal.totalSaving += add
-            if add != 0 {
+            let value = Double(newAmountString[1])!
+            goal.totalSaving += value
+            if value != 0 {
                 flag = 1
             }
+            
         } else if let sourceViewController = sender.source as? withdrawViewController {
             let newAmountString = sourceViewController.amountField2.text!.components(separatedBy: " ")
-            let withdraw = Double(newAmountString[1])!
-            goal.totalSaving -= withdraw
-            if withdraw != 0 {
+            let value = Double(newAmountString[1])!
+            goal.totalSaving -= value
+            if value != 0 {
                 flag = 0
             }
         }
+        
         setUp()
     }
     
