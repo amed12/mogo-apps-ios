@@ -20,11 +20,21 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
     var listGoal :[GoalObject] = []
     var segmentActive = 0
     var isProductEmpty = false
-    var scenario = 2
+    var scenario = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     @IBAction func unwindToFirstViewController(_ sender: UIStoryboardSegue) {

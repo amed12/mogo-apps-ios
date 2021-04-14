@@ -8,11 +8,13 @@
 import UIKit
 
 class GoalDetailController: UIViewController {
+    
     var circleProgressView: ProgressDrawer2!
     var circularViewDuration: TimeInterval = 2
     var budget: Double = 12000000
     var saving: Double = 12000000
     var result: Double = 0.0
+    var popUp = 0
     
     var goal = GoalObject(icon: "", name: "", goalBudget: 0, targetDate: "", amountSaving: 0, totalSaving: 0, isComplete: false, savingFrequency: "", savingDate: "", savingTime: "")
     
@@ -49,45 +51,31 @@ class GoalDetailController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        addButton.addTarget(self, action: #selector(addPage), for: .touchUpInside)
-//        withdrawButton.addTarget(self, action: #selector(withdrawPage), for: .touchUpInside)
-        
+        setUp()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addIdentifier" {
+            if let destVC = segue.destination as? UINavigationController{
+                let targetController = destVC.topViewController as? addWithdrawViewController
+                targetController?.amountSaving = String(format: "IDR %.0f", goal.amountSaving)
+            }
+        } else if segue.identifier == "withdrawIdentifier" {
+            if let destVC = segue.destination as? UINavigationController{
+                let targetController = destVC.topViewController as? withdrawViewController
+                targetController?.amountSaving = String(format: "IDR %.0f", goal.amountSaving)
+            }
+        }
+    }
+    
+    func setUp() {
         setupView()
         progressPercentage.text = "\(String(format: "%.0f", (saving/budget) * 100))%"
         drawCircleView()
         addCornerRadius()
         addBorders()
-        
+        notificationPopUp()
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print(segue.identifier)
-        
-        if segue.destination is addWithdrawViewController {
-            print("Hello World")
-            let vc = segue.destination as? addWithdrawViewController
-            vc?.amountField.placeholder = String(format: "IDR %.0f", goal.amountSaving)
-            vc?.dateField.placeholder = goal.targetDate
-       
-        } else if segue.destination is withdrawViewController {
-            print("World Hello")
-           let vc = segue.destination as? withdrawViewController
-           vc?.amountField2.placeholder = String(format: "IDR %.0f", goal.amountSaving)
-           vc?.dateField2.placeholder = goal.targetDate
-       }
-    }
-
-//    @objc func addPage() {
-//        let storyboard = UIStoryboard(name: "addWithdrawStoryboard", bundle: nil)
-//        let navVC = (storyboard.instantiateViewController(identifier: "addSaving") as? addWithdrawViewController)!
-//        self.present(navVC, animated: true, completion: nil)
-//    }
-//
-//    @objc func withdrawPage() {
-//        let storyboard = UIStoryboard(name: "withdraw", bundle: nil)
-//        let navVC = (storyboard.instantiateViewController(identifier: "withdrawSaving") as? withdrawViewController)!
-//        self.present(navVC, animated: true, completion: nil)
-//    }
     
     func drawCircleView() {
         result = saving / budget
@@ -155,6 +143,10 @@ class GoalDetailController: UIViewController {
         
     }
  
+    func notificationPopUp() {
+        
+    }
+    
     @IBAction func editButton(_ sender: UIBarButtonItem) {
         if result >= 1 {
             showAlert(title: "Edit Goal")
@@ -180,11 +172,27 @@ class GoalDetailController: UIViewController {
         present(alert, animated: true)
     }
     
-
-    
-    
     @IBAction func unwindToFirstViewController(_ sender: UIStoryboardSegue) {
-        
+        if let sourceViewController = sender.source as? addWithdrawViewController {
+            let newAmountString = sourceViewController.amountField.text!.components(separatedBy: " ")
+            let add = Double(newAmountString[1])!
+            goal.totalSaving += add
+        } else if let sourceViewController = sender.source as? withdrawViewController {
+            let newAmountString = sourceViewController.amountField2.text!.components(separatedBy: " ")
+            goal.totalSaving -= Double(newAmountString[1])!
+        }
+        setUp()
+    }
+    
+    @objc func showMiracle() {
+        let slideVC = OverlayView()
+        // Kirim data 0 - 4
+        slideVC.flag = 4
+        slideVC.modalPresentationStyle = .custom
+        slideVC.transitioningDelegate = self
+        self.navigationController?.present(slideVC, animated: true, completion: nil)
+
+
     }
     
 //     navigation to saving history
@@ -194,4 +202,9 @@ class GoalDetailController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+}
+extension GoalDetailController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        PresentationController(presentedViewController: presented, presenting: presenting)
+    }
 }
