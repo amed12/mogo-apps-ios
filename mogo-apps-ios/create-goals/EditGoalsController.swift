@@ -330,4 +330,7 @@ class EditGoalsController: UIViewController, UITextFieldDelegate, UIPickerViewDe
         self.delegate?.EditToDetail(Value: editGoal)
     }
     
+    @IBAction func backButton(_ sender: UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
