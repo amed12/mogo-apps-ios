@@ -20,10 +20,25 @@ class ReminderViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         self.title = "Saving Reminder"
         reminders = createArray()
+//        showMiracle()
     }
     
     @IBAction func unwindToFirstViewController(_ sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? addWithdrawViewController {
+            let newAmountString = sourceViewController.amountField.text!.components(separatedBy: " ")
+            _ = Double(newAmountString[1])!
+            showMiracle()
         }
+    }
+    
+    func showMiracle() {
+        let slideVC = OverlayView()
+        // Kirim data 0 - 4
+        slideVC.flag = 4
+        slideVC.modalPresentationStyle = .custom
+        slideVC.transitioningDelegate = self
+        self.present(slideVC, animated: true, completion: nil)
+    }
     
     func createArray() -> [Reminder] {
         
@@ -60,5 +75,10 @@ class ReminderViewController: UIViewController, UITableViewDataSource, UITableVi
             tableView.deleteRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .fade)
             tableView.endUpdates()
         }
+    }
+}
+extension ReminderViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        PresentationController(presentedViewController: presented, presenting: presenting)
     }
 }
