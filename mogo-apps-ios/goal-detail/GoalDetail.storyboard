@@ -11,7 +11,7 @@
         <!--Goal Detail-->
         <scene sceneID="YoR-Ka-W9A">
             <objects>
-                <viewController id="tQt-9S-hGW" customClass="GoalDetailController" customModule="mogo_apps_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="goalDetail" id="tQt-9S-hGW" customClass="GoalDetailController" customModule="mogo_apps_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ibe-7M-jTY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,7 +37,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Money Saved:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KD2-LH-cyC">
-                                        <rect key="frame" x="177" y="55" width="106" height="21"/>
+                                        <rect key="frame" x="177" y="56" width="106" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="wUy-yR-dNx"/>
                                         </constraints>
@@ -46,7 +46,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IDR 12.000.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3k-da-Uv3">
-                                        <rect key="frame" x="177" y="75" width="200" height="21"/>
+                                        <rect key="frame" x="177" y="80" width="200" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="44U-SB-csD"/>
                                             <constraint firstAttribute="width" constant="200" id="lMB-dK-xR7"/>
@@ -66,7 +66,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="ax3-gh-2Pc" kind="presentation" id="5u4-jT-lgY"/>
+                                                    <segue destination="4Mi-bS-f9a" kind="presentation" identifier="addIdentifier" id="sKn-ME-z7d"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -88,7 +88,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="withdrawButton:" destination="tQt-9S-hGW" eventType="touchUpInside" id="SXR-t9-d76"/>
-                                                    <segue destination="8rX-bd-kkT" kind="presentation" id="A7j-ub-azB"/>
+                                                    <segue destination="cMX-tb-WWO" kind="presentation" identifier="withdrawIdentifier" id="S5P-Qf-oF5"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -105,13 +105,12 @@
                                             <constraint firstAttribute="height" constant="30" id="v2o-F2-4mi"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tn-57-ScB">
-                                        <rect key="frame" x="222" y="13" width="150" height="26"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 12" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tn-57-ScB">
+                                        <rect key="frame" x="222" y="13" width="150" height="21.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="3vW-3G-vEV"/>
-                                            <constraint firstAttribute="height" constant="26" id="lzd-Zi-bPl"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -119,19 +118,19 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="CfS-kd-I6g" firstAttribute="top" secondItem="7Kh-7b-qoj" secondAttribute="top" constant="11" id="JpL-7D-CtF"/>
-                                    <constraint firstItem="Ple-k2-Ajv" firstAttribute="top" secondItem="m3k-da-Uv3" secondAttribute="bottom" constant="15" id="KH1-mw-rfq"/>
+                                    <constraint firstItem="Ple-k2-Ajv" firstAttribute="top" secondItem="m3k-da-Uv3" secondAttribute="bottom" constant="10" id="KH1-mw-rfq"/>
                                     <constraint firstItem="GZt-mT-dCd" firstAttribute="leading" secondItem="7Kh-7b-qoj" secondAttribute="leading" constant="15" id="Kao-to-cVW"/>
                                     <constraint firstItem="9tn-57-ScB" firstAttribute="leading" secondItem="CfS-kd-I6g" secondAttribute="trailing" constant="15" id="PgQ-R6-C0h"/>
-                                    <constraint firstItem="m3k-da-Uv3" firstAttribute="top" secondItem="CfS-kd-I6g" secondAttribute="bottom" constant="34" id="Rzo-PF-5Kq"/>
+                                    <constraint firstItem="m3k-da-Uv3" firstAttribute="top" secondItem="CfS-kd-I6g" secondAttribute="bottom" constant="39" id="Rzo-PF-5Kq"/>
                                     <constraint firstItem="GZt-mT-dCd" firstAttribute="top" secondItem="7Kh-7b-qoj" secondAttribute="top" constant="10" id="XG1-qq-tw6"/>
                                     <constraint firstItem="9tn-57-ScB" firstAttribute="top" secondItem="7Kh-7b-qoj" secondAttribute="top" constant="13" id="ZQ0-NX-xFT"/>
                                     <constraint firstItem="Mjl-TB-ggn" firstAttribute="leading" secondItem="Ple-k2-Ajv" secondAttribute="trailing" constant="13" id="ZV4-tw-QXb"/>
-                                    <constraint firstItem="KD2-LH-cyC" firstAttribute="top" secondItem="CfS-kd-I6g" secondAttribute="bottom" constant="14" id="dsZ-Qt-qWQ"/>
                                     <constraint firstAttribute="height" constant="150" id="lfP-Vw-Yrg"/>
                                     <constraint firstItem="KD2-LH-cyC" firstAttribute="leading" secondItem="GZt-mT-dCd" secondAttribute="trailing" constant="34" id="lmo-0P-2H1"/>
                                     <constraint firstItem="m3k-da-Uv3" firstAttribute="leading" secondItem="GZt-mT-dCd" secondAttribute="trailing" constant="34" id="sAE-t9-DJO"/>
+                                    <constraint firstItem="KD2-LH-cyC" firstAttribute="top" secondItem="CfS-kd-I6g" secondAttribute="bottom" constant="15" id="sdI-WO-R3I"/>
                                     <constraint firstItem="CfS-kd-I6g" firstAttribute="leading" secondItem="GZt-mT-dCd" secondAttribute="trailing" constant="34" id="xUs-FQ-LNU"/>
-                                    <constraint firstItem="Mjl-TB-ggn" firstAttribute="top" secondItem="m3k-da-Uv3" secondAttribute="bottom" constant="15" id="yN3-fA-wfH"/>
+                                    <constraint firstItem="Mjl-TB-ggn" firstAttribute="top" secondItem="m3k-da-Uv3" secondAttribute="bottom" constant="10" id="yN3-fA-wfH"/>
                                     <constraint firstItem="Ple-k2-Ajv" firstAttribute="leading" secondItem="GZt-mT-dCd" secondAttribute="trailing" constant="34" id="zPo-NX-ibn"/>
                                 </constraints>
                             </view>
@@ -457,9 +456,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Goal Detail" id="7WI-xF-mf5">
-                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="Ys8-dh-f6Z">
-                            <color key="tintColor" red="0.086274509803921567" green="0.47450980392156861" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="F42-dz-P5e">
                             <color key="tintColor" red="0.086274509803921567" green="0.47450980392156861" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -468,6 +464,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="dsK-xL-C7f" id="F5u-m4-ZRn"/>
                         <outlet property="addView" destination="Ple-k2-Ajv" id="mCj-4V-wWw"/>
                         <outlet property="goalBudgetValue" destination="tnw-mz-Xht" id="oMU-0J-BaN"/>
                         <outlet property="goalBudgetView" destination="VBi-bE-NJl" id="prV-04-xPj"/>
@@ -481,7 +478,7 @@
                         <outlet property="profileView" destination="7Kh-7b-qoj" id="Xbn-b3-imw"/>
                         <outlet property="progressPercentage" destination="UZL-fF-uwM" id="r4f-wb-1bm"/>
                         <outlet property="progressView" destination="GZt-mT-dCd" id="PPe-rs-Pjm"/>
-                        <outlet property="savingDateValue" destination="JC3-Lu-NV9" id="jt1-dw-97a"/>
+                        <outlet property="savingDateValue" destination="JC3-Lu-NV9" id="RGW-qU-X8b"/>
                         <outlet property="savingDateView" destination="c93-1X-EGb" id="W3k-iV-GOb"/>
                         <outlet property="savingFrequencyValue" destination="jdi-76-lOi" id="N8K-85-5hm"/>
                         <outlet property="savingFrequencyView" destination="7xz-Ui-Ktp" id="YBt-X7-odn"/>
@@ -490,6 +487,7 @@
                         <outlet property="savingTimeView" destination="qHV-Iu-CFP" id="gLA-pT-TqN"/>
                         <outlet property="targetDateValue" destination="Mqv-Xl-Vdi" id="XIa-bH-VON"/>
                         <outlet property="targetDateView" destination="aUd-yi-klt" id="5yc-79-p8e"/>
+                        <outlet property="withdrawButton" destination="yyV-Ac-DVW" id="Tb8-PP-PUW"/>
                         <outlet property="withdrawView" destination="Mjl-TB-ggn" id="76f-yI-G4h"/>
                     </connections>
                 </viewController>
@@ -498,24 +496,20 @@
             <point key="canvasLocation" x="102.89855072463769" y="176.78571428571428"/>
         </scene>
         <!--addWithdrawStoryboard-->
-        <scene sceneID="bJb-oJ-Xep">
+        <scene sceneID="0Ed-00-e0t">
             <objects>
-                <viewControllerPlaceholder storyboardName="addWithdrawStoryboard" id="ax3-gh-2Pc" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="mHL-yp-kus"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SuU-qE-lvC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="addWithdrawStoryboard" id="4Mi-bS-f9a" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D5C-9H-wXk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="791" y="26"/>
+            <point key="canvasLocation" x="793" y="104"/>
         </scene>
         <!--withdraw-->
-        <scene sceneID="zCY-hZ-jc5">
+        <scene sceneID="emX-6A-SmD">
             <objects>
-                <viewControllerPlaceholder storyboardName="withdraw" id="8rX-bd-kkT" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="iOt-kh-6kn"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yyW-bC-kuR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="withdraw" id="cMX-tb-WWO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8yr-Gi-R8g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="779" y="177"/>
+            <point key="canvasLocation" x="805" y="190"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H4O-Gl-tU0">

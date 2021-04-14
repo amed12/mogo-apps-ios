@@ -8,10 +8,12 @@
 import UIKit
 
 class withdrawViewController: UIViewController, UITextFieldDelegate {
-
-    @IBOutlet weak var cancelButton2: UIBarButtonItem!
-    @IBOutlet weak var addSavingTitle2: UINavigationItem!
-    @IBOutlet weak var saveButton2: UIBarButtonItem!
+    
+    var amountSaving = ""
+    
+//    @IBOutlet weak var cancelButton2: UIBarButtonItem!
+//    @IBOutlet weak var addSavingTitle2: UINavigationItem!
+//    @IBOutlet weak var saveButton2: UIBarButtonItem!
     
     @IBOutlet weak var monthSavingTitle2: UILabel!
     
@@ -25,6 +27,9 @@ class withdrawViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        amountField2.placeholder = amountSaving
+        
         borderView()
         createDatePicker()
         clearButton()
@@ -55,13 +60,11 @@ class withdrawViewController: UIViewController, UITextFieldDelegate {
         
         func createDatePicker(){
             datePicker.datePickerMode = .date
-            datePicker.addTarget(self, action: #selector(self.dateChanged), for: .allEvents)
+            datePicker.addTarget(self, action: #selector(self.dateChanged), for: .valueChanged)
             
-            
-           if #available(iOS 13.4, *){
-            datePicker.preferredDatePickerStyle = .wheels
+            if #available(iOS 13.4, *){
+                datePicker.preferredDatePickerStyle = .wheels
             }
-            
             
             let toolbar = UIToolbar()
             toolbar.sizeToFit()
@@ -80,85 +83,43 @@ class withdrawViewController: UIViewController, UITextFieldDelegate {
         
         @objc func dateChanged(){
             let dateFormat = DateFormatter()
-            dateFormat.dateStyle = .medium
+//            dateFormat.dateStyle = .medium
+            dateFormat.dateFormat = "MMM dd, yyyy"
             
             dateField2.text = dateFormat.string(from: datePicker.date)
-            
         }
-            
-        
+    
         @objc func tapOnDoneBut(){
-            dateField2.resignFirstResponder()
             
+            // then convert date to string again
+            let dateFormatterResult = DateFormatter()
+            dateFormatterResult.timeZone = TimeZone(abbreviation: "GMT")
+            dateFormatterResult.locale = NSLocale.current
+            dateFormatterResult.dateFormat = "MMM dd, yyyy"
+            let stringDate = dateFormatterResult.string(from: datePicker.date)
+            
+            dateField2.text = stringDate
+            dateField2.resignFirstResponder()
+
         }
         
         func textFieldDidEndEditing(_ textField: UITextField) {
             if textField == amountField2 {
-              print("Hello World")
                 amountField2.text = "IDR \(textField.text!)"
                 dateField2.becomeFirstResponder()
             } else {
-                print("World Hello")
                 textField.resignFirstResponder()
             }
         }
-        
-//        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//            if textField == amountField2 {
-//                amountField2.text = "IDR \(textField.text!)"
-//                dateField2.becomeFirstResponder()
-//            } else {
-//                textField.resignFirstResponder()
-//            }
-//            return true
-//        }
-        
+
         func clearButton(){
             amountField2.clearButtonMode = .always
             amountField2.clearButtonMode = .whileEditing
         }
-        
-        @IBAction func saveButtonAction2(_ sender: UIBarButtonItem) {
-            print(amountField2.text!)
-            print(dateField2.text!)
-        }
-       
-    /*
-        func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-            if !textField.text!.isEmpty {
-                let tempString = string
-                var prevString = textField.text!
-                let newString: () = prevString.append(tempString)
-                textField.text = "IDR \(newString)"
-            }
-            return true
-        }
-         */
-        
-        /*
-        // MARK: - Navigation
-
-        // In a storyboard-based application, you will often want to do a little preparation before navigation
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            // Get the new view controller using segue.destination.
-            // Pass the selected object to the new view controller.
-        }
-        */
-
-        
-        
-        
+    @IBAction func cancelButton(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+}
 
 

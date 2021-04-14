@@ -11,7 +11,7 @@
         <!--Add Saving-->
         <scene sceneID="QoO-NA-uLs">
             <objects>
-                <viewController id="4Zn-sW-yDF" customClass="addWithdrawViewController" customModule="mogo_apps_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addVC" id="4Zn-sW-yDF" customClass="addWithdrawViewController" customModule="mogo_apps_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bZQ-O6-Il2">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,14 +117,13 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cpd-Bw-5xj">
                             <color key="tintColor" red="0.093237645920000001" green="0.47508078809999998" blue="0.43137091399999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <segue destination="jET-xq-VV0" kind="unwind" unwindAction="unwindToFirstViewController:" id="Sij-u6-my3"/>
+                                <action selector="cancelButton:" destination="4Zn-sW-yDF" id="HnL-0n-dgt"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="a3M-xe-wl6">
                             <color key="tintColor" red="0.093237645920000001" green="0.47508078809999998" blue="0.43137091399999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <action selector="saveButtonAction:" destination="4Zn-sW-yDF" id="cbo-cb-prG"/>
-                                <segue destination="jET-xq-VV0" kind="unwind" unwindAction="unwindToFirstViewController:" id="BDk-2c-LWc"/>
+                                <segue destination="jET-xq-VV0" kind="unwind" unwindAction="unwindToFirstViewController:" id="sjP-Cc-sfL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -141,7 +140,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dE1-M4-rQS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="jET-xq-VV0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="946.15384615384608" y="-180.56872037914692"/>
+            <point key="canvasLocation" x="1092" y="-176"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AUX-7O-AWa">
@@ -159,7 +158,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5kK-Aa-cne" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16.923076923076923" y="-180.56872037914692"/>
+            <point key="canvasLocation" x="345" y="-176"/>
         </scene>
     </scenes>
     <resources>

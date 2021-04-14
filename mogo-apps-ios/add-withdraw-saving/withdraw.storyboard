@@ -66,7 +66,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kRp-Nn-ObI">
                                 <rect key="frame" x="0.0" y="185" width="390" height="44"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="April 5, 2021" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KlT-U5-GST">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KlT-U5-GST">
                                         <rect key="frame" x="134" y="5" width="248" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="248" id="CiK-Xi-vnr"/>
@@ -124,14 +124,13 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="dNW-np-pLK">
                             <color key="tintColor" red="0.093237645920000001" green="0.47508078809999998" blue="0.43137091399999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <segue destination="ABB-Uf-TJS" kind="unwind" unwindAction="unwindToFirstViewController:" id="JuJ-0O-RRx"/>
+                                <action selector="cancelButton:" destination="NJ6-bp-64E" id="78q-hB-6uM"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="xDd-Zi-l5a">
                             <color key="tintColor" red="0.093237645920000001" green="0.47508078809999998" blue="0.43137091399999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <action selector="saveButtonAction2:" destination="NJ6-bp-64E" id="kkV-Uu-PVM"/>
-                                <segue destination="ABB-Uf-TJS" kind="unwind" unwindAction="unwindToFirstViewController:" id="OBs-eD-Utv"/>
+                                <segue destination="ABB-Uf-TJS" kind="unwind" unwindAction="unwindToFirstViewController:" id="scF-2p-Kdq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -140,18 +139,16 @@
                         <outlet property="amountCellView2" destination="8yM-aZ-Gxs" id="pes-X5-Ukf"/>
                         <outlet property="amountField2" destination="trp-cL-kuc" id="Jco-ze-Dik"/>
                         <outlet property="amountLabel2" destination="nry-qV-GuH" id="1Td-hN-0AV"/>
-                        <outlet property="cancelButton2" destination="dNW-np-pLK" id="Id3-CQ-LKT"/>
                         <outlet property="dateCellView2" destination="kRp-Nn-ObI" id="yLW-Rh-HJP"/>
                         <outlet property="dateField2" destination="KlT-U5-GST" id="Ihd-n0-PqD"/>
                         <outlet property="dateLabel2" destination="4TY-oU-YF0" id="Dc6-p7-KpQ"/>
                         <outlet property="monthSavingTitle2" destination="aeg-KH-WLW" id="IfU-iz-PcT"/>
-                        <outlet property="saveButton2" destination="xDd-Zi-l5a" id="UJe-ri-Ri6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GtN-rY-g1z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ABB-Uf-TJS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="744.61538461538464" y="40.521327014218009"/>
+            <point key="canvasLocation" x="397" y="-88"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="S6b-8v-Cfe">
@@ -169,7 +166,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ic1-6H-AZ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-184.61538461538461" y="40.521327014218009"/>
+            <point key="canvasLocation" x="-342" y="-88"/>
         </scene>
     </scenes>
     <resources>

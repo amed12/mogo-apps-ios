@@ -27,6 +27,16 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
         setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     @IBAction func unwindToFirstViewController(_ sender: UIStoryboardSegue) {
         }
     
@@ -147,6 +157,11 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
     
     private func navigateToDetailGoal(goalObject: GoalObject) {
         print(goalObject)
+        let storyboard = UIStoryboard(name: "GoalDetail", bundle: nil)
+        let navGD = (storyboard.instantiateViewController(identifier: "goalDetail") as? GoalDetailController)!
+        
+        navGD.goal = goalObject
+        self.navigationController?.pushViewController(navGD, animated: true)
     }
     
     func generateDummyActive()  {
@@ -166,7 +181,7 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     
     func generateDummyScenario2()  {
-        let goal1 = GoalObject(icon: "rocket", name: "Trip to Labuan Bajo", goalBudget: 5000000, targetDate: "May 5, 2022", amountSaving: 385000, totalSaving: 0, isComplete: false, savingFrequency: "Monthly", savingDate: "28", savingTime: "12:00")
+        let goal1 = GoalObject(icon: "rocket", name: "Trip to Labuan Bajo", goalBudget: 5000000, targetDate: "May 5, 2022", amountSaving: 385000, totalSaving: 2500000, isComplete: false, savingFrequency: "Monthly", savingDate: "28", savingTime: "12:00")
         let goal2 = GoalObject(icon: "iphone", name: "iPhone 12", goalBudget: 12000000, targetDate: "Dec 20, 2021", amountSaving: 1500000, totalSaving: 0, isComplete: false, savingFrequency: "Weekly", savingDate: "Sunday", savingTime: "18:00")
         listGoal = [goal1,goal2]
         isProductEmpty = false
