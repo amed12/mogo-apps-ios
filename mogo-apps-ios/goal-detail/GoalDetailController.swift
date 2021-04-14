@@ -197,10 +197,12 @@ class GoalDetailController: UIViewController , SendEditGoalToDetail {
     var badParameters:Bool = true
 
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if identifier == "withdrawIdentifier" {
-            if badParameters  {
-                 showAlert2(title: "Withdraw Goal")
-                 return false
+        if result >= 1 {
+            if identifier == "withdrawIdentifier" {
+                if badParameters  {
+                     showAlert2(title: "Withdraw Goal")
+                     return false
+                }
             }
         }
         return true
