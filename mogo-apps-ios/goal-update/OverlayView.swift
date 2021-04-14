@@ -25,6 +25,9 @@ class OverlayView: UIViewController {
     @IBOutlet weak var buttonView: UIView!
     
     var flag = 0
+    var a = "Trip to Sumba"
+    var b = "12 April 2025."
+    var c = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,19 +47,17 @@ class OverlayView: UIViewController {
         if flag >= 0 && flag <= 3 {
             headerLabel.text = "Goals Update"
             var description = ""
-            let a = "Trip to Sumba"
-            let b = "12 April 2025."
             if flag == 0 {
                 imageResult.image = UIImage(named: "happy_hands")
                 statusResult.text = "Good Job!"
-                description = "If If you stay on track, you could achieve \(a) by \(b)"
+                description = "If you stay on track, you could achieve \(a) by \(b)"
             } else if flag == 1 {
                 imageResult.image = UIImage(named: "shocked")
-                statusResult.text = "Oops, you saved IDR 1.000.000 less!"
+                statusResult.text = "Oops, you saved IDR 100.000 less!"
                 description = "To achieve \(a) goal on time, you need to start saving \(b) or change the target date."
             } else if flag == 2 {
                 imageResult.image = UIImage(named: "rich")
-                statusResult.text = "Whoa, you saved IDR 1.000.000 more!"
+                statusResult.text = "Whoa, you saved IDR \(c) more!"
                 description = "If you keep saving like this, you could achieve \(a) by \(b)"
             } else if flag == 3 {
                 imageResult.image = UIImage(named: "sad")
@@ -69,7 +70,6 @@ class OverlayView: UIViewController {
             descriptionResult.attributedText = result
         } else {
             var status = ""
-            let c = "iPhone 12"
             headerLabel.text = "Congratulations!"
             imageResult.image = UIImage(named: "cool")
             status = "You have achieved \(c) goal!"
