@@ -7,8 +7,12 @@
 
 import UIKit
 
+protocol SendCreateGoalController: class {
+    func CreateGoalToHome(Value: Int)
+}
 
 class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+    
 
     //viewheader
     @IBOutlet weak var headerView: UIView!
@@ -58,6 +62,8 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
     @IBOutlet weak var deleteButton: UIView!
     @IBOutlet weak var buttonDelete: UIButton!
     
+    weak var delagate: SendCreateGoalController?
+    
     var arrayFrequency = ["Monthly", "Weekly"]
     var arrayMonth = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"]
     var weekArray = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
@@ -72,6 +78,7 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
     var freqSelection = ""
     var monthSelection = ""
     var weekSelection = ""
+    var checkScenario = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -222,6 +229,9 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
     
     @objc func tapDone(){
         dateInput.resignFirstResponder()
+        let newAmountString = dateInput.text!.components(separatedBy: " ")
+        print(dateInput.text)
+        print(newAmountString[0])
     }
     
     func createTimePicker(){
@@ -316,6 +326,23 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
     
     private func setupPicker() {
         pickerView.reloadAllComponents()
+    }
+    
+    @IBAction func unwindToFirstViewController(_ sender: UIStoryboardSegue){
+        if let sourceViewController = sender.source as? IconController {
+            imageIcon.image = UIImage(named: sourceViewController.imageSend)
+        }
+    }
+    
+    @IBAction func saveData(_ sender: UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: true)
+        if checkScenario == 0 {
+            self.delagate?.CreateGoalToHome(Value: 1)
+        } else if checkScenario == 1{
+            self.delagate?.CreateGoalToHome(Value: 2)
+        } else{
+            self.delagate?.CreateGoalToHome(Value: 3)
+        }
     }
     
 }
