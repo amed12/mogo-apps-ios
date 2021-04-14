@@ -128,10 +128,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fF1-EO-bTq">
-                                        <rect key="frame" x="191" y="5" width="215" height="34"/>
+                                        <rect key="frame" x="206" y="5" width="200" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="215" id="3JB-81-UdA"/>
+                                            <constraint firstAttribute="width" constant="200" id="3JB-81-UdA"/>
                                             <constraint firstAttribute="height" constant="34" id="UQB-re-tZo"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -176,10 +176,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wgi-Xk-nMx">
-                                        <rect key="frame" x="191" y="5" width="215" height="34"/>
+                                        <rect key="frame" x="206" y="5" width="200" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="215" id="K27-Zg-Iwa"/>
+                                            <constraint firstAttribute="width" constant="200" id="K27-Zg-Iwa"/>
                                             <constraint firstAttribute="height" constant="34" id="kX8-ck-rLo"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -214,7 +214,7 @@
                                             <action selector="monthLock:" destination="TN3-2I-tlw" eventType="touchUpInside" id="QFf-ie-jPk"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monthly Saving" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpS-6J-kx1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saving Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpS-6J-kx1">
                                         <rect key="frame" x="45" y="11" width="125" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="YVr-KZ-hm7"/>
@@ -225,10 +225,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tqS-gd-zVS">
-                                        <rect key="frame" x="191" y="5" width="215" height="34"/>
+                                        <rect key="frame" x="206" y="5" width="200" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="215" id="F4p-EF-a2N"/>
+                                            <constraint firstAttribute="width" constant="200" id="F4p-EF-a2N"/>
                                             <constraint firstAttribute="height" constant="34" id="bhE-8X-Vfn"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
