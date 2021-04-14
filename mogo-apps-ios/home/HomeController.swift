@@ -192,7 +192,7 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     
     func generateDummyScenario2()  {
-        let goal1 = GoalObject(icon: "rocket", name: "Trip to Labuan Bajo", goalBudget: 5000000, targetDate: "May 5, 2022", amountSaving: 385000, totalSaving: 2500000, isComplete: false, savingFrequency: "Monthly", savingDate: "28", savingTime: "12:00")
+        let goal1 = GoalObject(icon: "rocket", name: "Trip to Labuan Bajo", goalBudget: 5000000, targetDate: "May 5, 2022", amountSaving: 385000, totalSaving: 0, isComplete: false, savingFrequency: "Monthly", savingDate: "28", savingTime: "12:00")
         let goal2 = GoalObject(icon: "iphone", name: "iPhone 12", goalBudget: 12000000, targetDate: "Dec 20, 2021", amountSaving: 1500000, totalSaving: 0, isComplete: false, savingFrequency: "Weekly", savingDate: "Sunday", savingTime: "18:00")
         listGoal = [goal1,goal2]
         isProductEmpty = false
