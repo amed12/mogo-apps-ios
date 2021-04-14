@@ -7,9 +7,7 @@
 
 import UIKit
 
-class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate, SecondViewControllerDelegate {
-
-class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate, SendCreateGoalController{
+class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate, SendCreateGoalController , SecondViewControllerDelegate{
     
     @IBOutlet weak var LabelSaved: UILabel!
     @IBOutlet weak var MoneyGoalStatus: UILabel!

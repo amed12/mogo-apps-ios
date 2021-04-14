@@ -80,6 +80,10 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
     var weekSelection = ""
     var checkScenario = 0
     
+    //skenario 1
+    var budget1 = "IDR 4500000"
+    var date1 = "May 5, 2022"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //call icon
@@ -139,7 +143,25 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
 //        self.navigationController?.pushViewController(detailIcon, animated: true)
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        if textField == budgetInput{
+//            if budgetInput.placeholder == "IDR 10.000.000"{
+//                budgetInput.text = "IDR \(textField.text!)"
+//            } else {
+//                datePicker.becomeFirstResponder()
+//            }
+//        } else if textField == monthInput{
+//            if monthInput.placeholder == "IDR 1.000.000"{
+//                monthInput.text = "IDR \(textField.text!)"
+//            } else {
+//                datePicker.becomeFirstResponder()
+//            }
+//        } else {
+//            textField.resignFirstResponder()
+//        }
+//    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == budgetInput{
             if budgetInput.placeholder == "IDR 10.000.000"{
                 budgetInput.text = "IDR \(textField.text!)"
@@ -152,9 +174,14 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
             } else {
                 datePicker.becomeFirstResponder()
             }
-        } else {
-            textField.resignFirstResponder()
+        } else if textField == budgetInput && textField == dateInput{
+            if budgetInput.text == "IDR 4000000" && dateInput.text == "May 5, 2022"{
+                monthInput.text = budget1
+                print(monthInput.text)
+            }
         }
+        return true
+
     }
     
 //    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -229,9 +256,6 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
     
     @objc func tapDone(){
         dateInput.resignFirstResponder()
-        let newAmountString = dateInput.text!.components(separatedBy: " ")
-        print(dateInput.text)
-        print(newAmountString[0])
     }
     
     func createTimePicker(){

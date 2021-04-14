@@ -7,12 +7,11 @@
 
 import UIKit
 
-class GoalDetailController: UIViewController, SendEditGoalToDetail {
 protocol SecondViewControllerDelegate: class {
     func updateValue(value: Int)
 }
 
-class GoalDetailController: UIViewController {
+class GoalDetailController: UIViewController , SendEditGoalToDetail {
     
     weak var delegate: SecondViewControllerDelegate?
     
@@ -240,7 +239,11 @@ class GoalDetailController: UIViewController {
     func EditToDetail(Value: GoalObject) {
         goalImage.image = UIImage(named: Value.icon)
         goalTitle.text = Value.name
-        print(Value)
+        monthlySaving.text = "\(Value.amountSaving)"
+        targetDateValue.text = Value.targetDate
+        savingFrequencyValue.text = Value.savingFrequency
+        savingDateValue.text = Value.savingDate
+        savingTimeValue.text = Value.savingTime
     }
     
 }

@@ -322,6 +322,10 @@ class EditGoalsController: UIViewController, UITextFieldDelegate, UIPickerViewDe
     
     @IBAction func saveButton(_ sender: UIBarButtonItem) {
         editGoal.name = goalInput.text!
+        editGoal.targetDate = dateInput.text!
+        editGoal.savingFrequency = freqInput.text!
+        editGoal.savingDate = savingDateInput.text!
+        editGoal.savingTime = timeInput.text!
         self.navigationController?.popViewController(animated: true)
         self.delegate?.EditToDetail(Value: editGoal)
     }
