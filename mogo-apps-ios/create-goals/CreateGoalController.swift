@@ -79,10 +79,12 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
     var monthSelection = ""
     var weekSelection = ""
     var checkScenario = 0
+    var checkDate: String = ""
     
     //skenario 1
-    var budget1 = "IDR 4500000"
-    var date1 = "May 5, 2022"
+    var budget1 = "IDR 347000"
+    var budget2 = "IDR 500000"
+    var budget3 = "IDR 385000"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -162,23 +164,13 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
 //    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == budgetInput{
-            if budgetInput.placeholder == "IDR 10.000.000"{
-                budgetInput.text = "IDR \(textField.text!)"
-            } else {
-                datePicker.becomeFirstResponder()
-            }
-        } else if textField == monthInput{
-            if monthInput.placeholder == "IDR 1.000.000"{
-                monthInput.text = "IDR \(textField.text!)"
-            } else {
-                datePicker.becomeFirstResponder()
-            }
-        } else if textField == budgetInput && textField == dateInput{
-            if budgetInput.text == "IDR 4000000" && dateInput.text == "May 5, 2022"{
-                monthInput.text = budget1
-                print(monthInput.text)
-            }
+        if budgetInput.text == "4500000"{
+            budgetInput.text = "IDR \(textField.text!)"
+        }
+        else if textField == monthInput{
+            monthInput.text = "IDR \(textField.text!)"
+        } else if budgetInput.text == "IDR 4500000" && monthInput.text == "IDR 300000"{
+            dateInput.placeholder = "Jul 5, 2022"
         }
         return true
 
@@ -256,6 +248,16 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
     
     @objc func tapDone(){
         dateInput.resignFirstResponder()
+        checkDate = dateInput.text!
+        print(checkDate)
+        if budgetInput.text == "IDR 4500000" && checkDate == "May 2, 2022"{
+            monthInput.text = budget1
+            print(monthInput.text)
+        } else if budgetInput.text == "IDR 4500000" && checkDate == "Jan 5, 2022"{
+            monthInput.text = budget2
+        } else if budgetInput.text == "IDR 5000000" && checkDate == "May 5, 2022"{
+            monthInput.text = budget3
+        }
     }
     
     func createTimePicker(){
