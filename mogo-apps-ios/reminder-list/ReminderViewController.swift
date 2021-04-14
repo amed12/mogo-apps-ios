@@ -27,7 +27,7 @@ class ReminderViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func createArray() -> [Reminder] {
         
-        let reminder1 = Reminder(reminderTitle: "IPhone 12", reminderDetail: "Add Saving IDR 1.500.000")
+        let reminder1 = Reminder(reminderTitle: "Sweet 17th", reminderDetail: "Add Saving IDR 300.000")
         return [reminder1]
     }
     
