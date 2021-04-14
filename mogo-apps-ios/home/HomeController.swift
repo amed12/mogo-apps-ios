@@ -252,4 +252,12 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
         isProductEmpty = true
         goalTableView.reloadData()
     }
+    
+    @IBAction func createGoal(_ sender: UIButton) {
+        let cgVC = UIStoryboard(name: "CreateGoals", bundle: nil)
+        let vc = (cgVC.instantiateViewController(identifier: "createGoalID") as? CreateGoalController)!
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
 }
