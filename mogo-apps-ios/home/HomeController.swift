@@ -7,8 +7,8 @@
 
 import UIKit
 
-class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate, SecondViewControllerDelegate {
-
+class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate, SendCreateGoalController , SecondViewControllerDelegate{
+    
     @IBOutlet weak var LabelSaved: UILabel!
     @IBOutlet weak var MoneyGoalStatus: UILabel!
     @IBOutlet weak var AddGoalButton: MyButton!
@@ -257,5 +257,18 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
         listGoal = []
         isProductEmpty = true
         goalTableView.reloadData()
+    }
+    
+    @IBAction func createGoal(_ sender: UIButton) {
+        let cgVC = UIStoryboard(name: "CreateGoals", bundle: nil)
+        let vc = (cgVC.instantiateViewController(identifier: "createGoalID") as? CreateGoalController)!
+        vc.delagate = self
+        vc.checkScenario = scenario
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func CreateGoalToHome(Value: Int) {
+        scenario = Value
+        setupView()
     }
 }
