@@ -44,7 +44,7 @@ class ReminderViewController: UIViewController, UITableViewDataSource, UITableVi
         let slideVC = OverlayView()
         // Kirim data 0 - 4
         slideVC.flag = value
-        slideVC.a = "Sweet 17th"
+        slideVC.a = "Shoes"
         slideVC.b = descriptionDialog
         slideVC.c = "200.000"
         slideVC.modalPresentationStyle = .custom
@@ -54,7 +54,7 @@ class ReminderViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func createArray() -> [Reminder] {
         
-        let reminder1 = Reminder(reminderTitle: "Sweet 17th", reminderDetail: "Add Saving IDR 300.000")
+        let reminder1 = Reminder(reminderTitle: "Shoes", reminderDetail: "Add Saving IDR 300.000")
         return [reminder1]
     }
     
