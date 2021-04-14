@@ -107,12 +107,16 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
             generateDummyScenario3()
         case 4:
             generateDummyScenario4()
+            MoneyGoalStatus.text = "IDR 2.000.000"
         case 5:
             generateDummyScenario5()
+            MoneyGoalStatus.text = "IDR 1.500.000"
         case 6:
             generateDummyScenario6()
+            MoneyGoalStatus.text = "IDR 4.500.000"
         case 7:
             generateDummyScenario7()
+            MoneyGoalStatus.text = "IDR 3.000.000"
         default:
             generateDummyActive()
         }
