@@ -94,6 +94,7 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     
     private func setupView(){
+        print("Flag 1 = \(scenario)")
         goalTableView.register(UINib(nibName: "EmptyDataGoalCell", bundle: nil), forCellReuseIdentifier: "IdGoalNoData")
         goalTableView.register(UINib(nibName: "HomeViewCell", bundle: nil), forCellReuseIdentifier: "GoalCellIdentifier")
         switch scenario {
@@ -165,10 +166,10 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     
     private func navigateToDetailGoal(goalObject: GoalObject) {
-        print(goalObject)
+//        print(goalObject)
         let storyboard = UIStoryboard(name: "GoalDetail", bundle: nil)
         let navGD = (storyboard.instantiateViewController(identifier: "goalDetail") as? GoalDetailController)!
-        
+        navGD.flag2 = scenario
         navGD.goal = goalObject
         navGD.delegate = self
         self.navigationController?.pushViewController(navGD, animated: true)
