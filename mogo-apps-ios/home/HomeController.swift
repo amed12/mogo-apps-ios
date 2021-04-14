@@ -116,6 +116,7 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
             generateDummyScenario6()
             MoneyGoalStatus.text = "IDR 4.500.000"
         case 7:
+            SegmentedGoal.selectedSegmentIndex = 0
             generateDummyScenario7()
             MoneyGoalStatus.text = "IDR 3.000.000"
         default:
