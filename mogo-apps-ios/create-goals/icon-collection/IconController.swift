@@ -16,7 +16,7 @@ class IconController: UIViewController, UICollectionViewDelegate, UICollectionVi
 //    weak var delagate: IconControllerDelegate?
     var imageSend = ""
     
-    var imageArray = ["iphone", "rocket", "party", "cool", "embarrassed", "happy_hands", "happy", "hardShocked", "rich", "sad", "shocked", "skull"]
+    var imageArray = ["iphone", "rocket", "shoes", "cool", "embarrassed", "happy_hands", "happy", "hardShocked", "rich", "sad", "shocked", "skull"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
