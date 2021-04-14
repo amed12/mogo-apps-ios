@@ -177,11 +177,26 @@ class GoalDetailController: UIViewController , SendEditGoalToDetail {
     
     @IBAction func withdrawButton(_ sender: UIButton) {
         if result >= 1 {
-            showAlert(title: "Withdraw Goal")
+            showAlert2(title: "Withdraw Goal")
         }
     }
     
+    var badParameters:Bool = true
+
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "withdrawIdentifier" {
+            if badParameters  {
+                 showAlert2(title: "Withdraw Goal")
+                 badParameters = false
+                 return false
+            }
+        }
+        return true
+    }
     
+    @IBAction func backButton(_ sender: UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: true)
+    }
     func showAlert(title: String) {
         let alert = UIAlertController(title: "\(title)", message: "Changing the value of completed goal may affect the goal status.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
@@ -189,6 +204,16 @@ class GoalDetailController: UIViewController , SendEditGoalToDetail {
         }))
         alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: { (action) in
             self.editMoveAlert()
+        }))
+        present(alert, animated: true)
+    }
+    func showAlert2(title: String) {
+        let alert = UIAlertController(title: "\(title)", message: "Changing the value of completed goal may affect the goal status.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+            print("Undefined")
+        }))
+        alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: { (action) in
+            print("Undefined")
         }))
         present(alert, animated: true)
     }
