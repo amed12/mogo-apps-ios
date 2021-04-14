@@ -152,7 +152,8 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
             var percent: Double = 0.0
             percent = Double(data.totalSaving) / Double(data.goalBudget) * 100.0
             result = Double(data.totalSaving) / Double(data.goalBudget)
-            cell?.GoalPercent.text = "\(percent) %"
+            let formatedValue = String(format: "%.0f", percent)
+            cell?.GoalPercent.text = "\(formatedValue) %"
             cell?.progressGoal.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
             cell?.progressGoal.center = (cell?.progressGoal.center)!
             cell?.progressGoal.progressAnimation(toValue: result, duration: circularViewDuration)
@@ -245,7 +246,7 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     
     func generateDummyCompleteScenario6()  {
-        let goal1 = GoalObject(icon: "rocket", name: "Trip to Labuan Bajo", goalBudget: 4500000, targetDate: "Jan 5, 2022", amountSaving: 500000, totalSaving: 5000000, isComplete: true, savingFrequency: "Monthly", savingDate: "28", savingTime: "12:00")
+        let goal1 = GoalObject(icon: "rocket", name: "Trip to Labuan Bajo", goalBudget: 4500000, targetDate: "Jan 5, 2022", amountSaving: 500000, totalSaving: 4500000, isComplete: true, savingFrequency: "Monthly", savingDate: "28", savingTime: "12:00")
         listGoal = [goal1]
         isProductEmpty = false
         goalTableView.reloadData()
