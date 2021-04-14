@@ -85,6 +85,8 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
     var budget1 = "IDR 347000"
     var budget2 = "IDR 500000"
     var budget3 = "IDR 385000"
+    var budget4 = "IDR 1500000"
+    var budget5 = "IDR 300000"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -165,12 +167,12 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if budgetInput.text == "4500000"{
+            monthInput.text = budget1
             budgetInput.text = "IDR \(textField.text!)"
-        }
-        else if textField == monthInput{
-            monthInput.text = "IDR \(textField.text!)"
-        } else if budgetInput.text == "IDR 4500000" && monthInput.text == "IDR 300000"{
-            dateInput.placeholder = "Jul 5, 2022"
+        } else if budgetInput.text == "5000000" || budgetInput.text == "12000000" || budgetInput.text == "2700000"{
+            budgetInput.text = "IDR \(textField.text!)"
+        } else if textField == monthInput{
+            dateInput.becomeFirstResponder()
         }
         return true
 
@@ -250,13 +252,17 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
         dateInput.resignFirstResponder()
         checkDate = dateInput.text!
         print(checkDate)
-        if budgetInput.text == "IDR 4500000" && checkDate == "May 2, 2022"{
+        if budgetInput.text == "IDR 4500000" && checkDate == "May 5, 2022"{
             monthInput.text = budget1
             print(monthInput.text)
         } else if budgetInput.text == "IDR 4500000" && checkDate == "Jan 5, 2022"{
             monthInput.text = budget2
         } else if budgetInput.text == "IDR 5000000" && checkDate == "May 5, 2022"{
             monthInput.text = budget3
+        } else if budgetInput.text == "IDR 12000000" && checkDate == "Dec 20, 2022"{
+            monthInput.text = budget4
+        } else if budgetInput.text == "IDR 2700000" && checkDate == "Jan 1, 2022"{
+            monthInput.text = budget5
         }
     }
     
@@ -369,6 +375,9 @@ class CreateGoalController: UIViewController, UITextFieldDelegate, UIPickerViewD
         } else{
             self.delagate?.CreateGoalToHome(Value: 3)
         }
+    }
+    @IBAction func backButton(_ sender: UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: true)
     }
     
 }

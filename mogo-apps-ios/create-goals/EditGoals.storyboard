@@ -403,6 +403,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Goal" id="m1k-76-e3F">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" style="done" id="pSn-cy-Kgv">
+                            <color key="tintColor" red="0.086274509799999996" green="0.47450980390000003" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="backButton:" destination="flR-he-0xR" id="ROC-d3-Pyk"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="XsS-jY-kUi">
                             <color key="tintColor" red="0.086274509799999996" green="0.47450980390000003" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -447,14 +453,6 @@
             </objects>
             <point key="canvasLocation" x="1673.913043478261" y="157.36607142857142"/>
         </scene>
-        <!--Icon-->
-        <scene sceneID="n6P-e5-XQw">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Icon" id="1pP-W8-6zV" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lp7-s1-01x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2364" y="29"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="kc5-Vp-A7Z">
             <objects>
@@ -476,6 +474,7 @@
     </scenes>
     <resources>
         <image name="Unlock" width="20" height="19"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="cool" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
