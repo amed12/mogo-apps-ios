@@ -11,7 +11,7 @@
         <!--Edit Goal-->
         <scene sceneID="Tyd-1c-kic">
             <objects>
-                <viewController id="flR-he-0xR" customClass="EditGoalsController" customModule="mogo_apps_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="editGoalID" id="flR-he-0xR" customClass="EditGoalsController" customModule="mogo_apps_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZOM-bs-I04">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,29 +22,17 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cool" translatesAutoresizingMaskIntoConstraints="NO" id="9yF-bH-M1v">
                                         <rect key="frame" x="167" y="10" width="80" height="80"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="FHR-18-5OG"/>
-                                            <constraint firstAttribute="height" constant="80" id="Hpl-Fl-Vyo"/>
+                                            <constraint firstAttribute="height" constant="80" id="Cv2-Hp-IHR"/>
+                                            <constraint firstAttribute="width" constant="80" id="tKA-bq-ebS"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUM-Kv-48g">
-                                        <rect key="frame" x="167" y="10" width="80" height="80"/>
+                                        <rect key="frame" x="167" y="10" width="80" height="76"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="0nB-iq-hDk"/>
-                                            <constraint firstAttribute="height" constant="80" id="dLx-au-7v8"/>
+                                            <constraint firstAttribute="width" constant="80" id="ORm-71-VCk"/>
+                                            <constraint firstAttribute="height" constant="76" id="W05-O4-BIc"/>
                                         </constraints>
-                                        <connections>
-                                            <segue destination="1pP-W8-6zV" kind="presentation" id="Uxp-AA-9jQ"/>
-                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Icon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lw2-EP-PAJ">
-                                        <rect key="frame" x="170" y="100" width="74" height="16"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="74" id="s26-2q-tM6"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" red="0.086274509799999996" green="0.47450980390000003" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOAL INFORMATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TsS-Fp-Myc">
                                         <rect key="frame" x="16" y="154" width="127.5" height="16"/>
                                         <constraints>
@@ -54,20 +42,25 @@
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Icon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lw2-EP-PAJ">
+                                        <rect key="frame" x="0.0" y="95" width="414" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.086274509799999996" green="0.47450980390000003" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
+                                    <constraint firstItem="tUM-Kv-48g" firstAttribute="top" secondItem="cr6-j3-fQ2" secondAttribute="top" constant="10" id="3Am-Bo-Aad"/>
                                     <constraint firstAttribute="bottom" secondItem="TsS-Fp-Myc" secondAttribute="bottom" id="48Y-i1-TUd"/>
+                                    <constraint firstItem="9yF-bH-M1v" firstAttribute="top" secondItem="cr6-j3-fQ2" secondAttribute="top" constant="10" id="7Sk-vy-QIk"/>
+                                    <constraint firstItem="9yF-bH-M1v" firstAttribute="centerX" secondItem="cr6-j3-fQ2" secondAttribute="centerX" id="8TK-JE-3we"/>
                                     <constraint firstAttribute="height" constant="170" id="AgK-dF-zvs"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lw2-EP-PAJ" secondAttribute="trailing" id="CqU-cV-wSG"/>
                                     <constraint firstItem="TsS-Fp-Myc" firstAttribute="leading" secondItem="cr6-j3-fQ2" secondAttribute="leading" constant="16" id="IkK-ix-ZsW"/>
-                                    <constraint firstAttribute="trailing" secondItem="tUM-Kv-48g" secondAttribute="trailing" constant="167" id="JC0-BD-cg0"/>
-                                    <constraint firstItem="Lw2-EP-PAJ" firstAttribute="top" secondItem="9yF-bH-M1v" secondAttribute="bottom" constant="10" id="SR5-Cd-eYg"/>
-                                    <constraint firstItem="9yF-bH-M1v" firstAttribute="top" secondItem="cr6-j3-fQ2" secondAttribute="top" constant="10" id="TBN-l4-XMA"/>
-                                    <constraint firstItem="tUM-Kv-48g" firstAttribute="leading" secondItem="cr6-j3-fQ2" secondAttribute="leading" constant="167" id="Tl9-fj-mIP"/>
-                                    <constraint firstAttribute="trailing" secondItem="Lw2-EP-PAJ" secondAttribute="trailing" constant="170" id="dJF-Vs-9lJ"/>
-                                    <constraint firstItem="tUM-Kv-48g" firstAttribute="top" secondItem="cr6-j3-fQ2" secondAttribute="top" constant="10" id="sXC-jX-JKR"/>
-                                    <constraint firstItem="9yF-bH-M1v" firstAttribute="leading" secondItem="cr6-j3-fQ2" secondAttribute="leading" constant="167" id="ugE-fP-kym"/>
-                                    <constraint firstItem="Lw2-EP-PAJ" firstAttribute="leading" secondItem="cr6-j3-fQ2" secondAttribute="leading" constant="170" id="xo7-UM-s0f"/>
+                                    <constraint firstItem="tUM-Kv-48g" firstAttribute="centerX" secondItem="cr6-j3-fQ2" secondAttribute="centerX" id="P5T-QX-54C"/>
+                                    <constraint firstItem="Lw2-EP-PAJ" firstAttribute="leading" secondItem="cr6-j3-fQ2" secondAttribute="leading" id="fMX-jC-uVh"/>
+                                    <constraint firstItem="Lw2-EP-PAJ" firstAttribute="top" secondItem="9yF-bH-M1v" secondAttribute="bottom" constant="5" id="txo-Nf-LlD"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nq-3m-ltj" userLabel="Goal Name">
@@ -102,6 +95,9 @@
                                             <constraint firstAttribute="height" constant="31" id="u4L-sd-ThU"/>
                                         </constraints>
                                         <state key="normal" image="Unlock"/>
+                                        <connections>
+                                            <action selector="budgetLock:" destination="flR-he-0xR" eventType="touchUpInside" id="ZmF-WF-mXY"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal Budget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNf-mA-CyT">
                                         <rect key="frame" x="46" y="11" width="130" height="22"/>
@@ -146,6 +142,9 @@
                                             <constraint firstAttribute="height" constant="31" id="zGT-6l-OFA"/>
                                         </constraints>
                                         <state key="normal" image="Unlock"/>
+                                        <connections>
+                                            <action selector="dateLock:" destination="flR-he-0xR" eventType="touchUpInside" id="PAE-cD-ZYk"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtC-Co-wtN">
                                         <rect key="frame" x="46" y="11" width="125" height="22"/>
@@ -190,6 +189,9 @@
                                             <constraint firstAttribute="height" constant="31" id="Jjo-Qo-dmI"/>
                                         </constraints>
                                         <state key="normal" image="Unlock"/>
+                                        <connections>
+                                            <action selector="monthLock:" destination="flR-he-0xR" eventType="touchUpInside" id="bZI-P2-VPR"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monthly Saving" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7d3-Hg-9ba">
                                         <rect key="frame" x="46" y="11" width="125" height="22"/>
@@ -401,11 +403,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Goal" id="m1k-76-e3F">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="jfr-nw-2tr">
-                            <color key="tintColor" red="0.086274509799999996" green="0.47450980390000003" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="XsS-jY-kUi">
                             <color key="tintColor" red="0.086274509799999996" green="0.47450980390000003" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="saveButton:" destination="flR-he-0xR" id="lfT-sj-wSI"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

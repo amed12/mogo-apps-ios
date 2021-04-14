@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol SendEditGoalToDetail: class {
+    func EditToDetail(Value: GoalObject)
+}
+
 class EditGoalsController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
     //viewheader
@@ -57,9 +61,12 @@ class EditGoalsController: UIViewController, UITextFieldDelegate, UIPickerViewDe
     @IBOutlet weak var deleteButton: UIView!
     @IBOutlet weak var buttonDelete: UIButton!
     
+    weak var delegate: SendEditGoalToDetail?
+    
     var arrayFrequency = ["Monthly", "Weekly"]
     var arrayMonth = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"]
     var weekArray = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    var editGoal = GoalObject(icon: "", name: "", goalBudget: 0, targetDate: "", amountSaving: 0, totalSaving: 0, isComplete: false, savingFrequency: "", savingDate: "", savingTime: "")
     
     var datePicker = UIDatePicker()
     var timePicker = UIDatePicker()
@@ -79,6 +86,7 @@ class EditGoalsController: UIViewController, UITextFieldDelegate, UIPickerViewDe
         createDatePicker()
         setupView()
         createTimePicker()
+        setupViewInput()
         pickerView.delegate = self
         pickerView.dataSource = self
         budgetInput.delegate = self
@@ -94,6 +102,18 @@ class EditGoalsController: UIViewController, UITextFieldDelegate, UIPickerViewDe
         timeInput.placeholder = "12:00"
         freqInput.text = "Monthly"
         savingDateInput.text = "2"
+    }
+    
+    func setupViewInput(){
+        imageIcon.image = UIImage(named: "\(editGoal.icon)")
+        goalInput.placeholder = editGoal.name
+        budgetInput.placeholder = String(format: "IDR %.0f", editGoal.goalBudget)
+        dateInput.placeholder = editGoal.targetDate
+        monthInput.placeholder = String(format: "IDR %.0f", editGoal.amountSaving)
+        
+        freqInput.text = editGoal.savingFrequency
+        savingDateInput.text = editGoal.savingDate
+        timeInput.text = editGoal.savingTime
     }
     
     func borderView(){
@@ -298,6 +318,12 @@ class EditGoalsController: UIViewController, UITextFieldDelegate, UIPickerViewDe
     
     private func setupPicker() {
         pickerView.reloadAllComponents()
+    }
+    
+    @IBAction func saveButton(_ sender: UIBarButtonItem) {
+        editGoal.name = goalInput.text!
+        self.navigationController?.popViewController(animated: true)
+        self.delegate?.EditToDetail(Value: editGoal)
     }
     
 }
