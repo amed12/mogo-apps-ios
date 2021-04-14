@@ -8,6 +8,13 @@
 import UIKit
 
 class GoalDetailController: UIViewController, SendEditGoalToDetail {
+protocol SecondViewControllerDelegate: class {
+    func updateValue(value: Int)
+}
+
+class GoalDetailController: UIViewController {
+    
+    weak var delegate: SecondViewControllerDelegate?
     
     var circleProgressView: ProgressDrawer2!
     var circularViewDuration: TimeInterval = 2
@@ -15,6 +22,7 @@ class GoalDetailController: UIViewController, SendEditGoalToDetail {
     var saving: Double = 12000000
     var result: Double = 0.0
     var popUp = 0
+    var flag = -1
     
     var goal = GoalObject(icon: "", name: "", goalBudget: 0, targetDate: "", amountSaving: 0, totalSaving: 0, isComplete: false, savingFrequency: "", savingDate: "", savingTime: "")
     
@@ -59,12 +67,25 @@ class GoalDetailController: UIViewController, SendEditGoalToDetail {
             if let destVC = segue.destination as? UINavigationController{
                 let targetController = destVC.topViewController as? addWithdrawViewController
                 targetController?.amountSaving = String(format: "IDR %.0f", goal.amountSaving)
+//                flag = 1
             }
         } else if segue.identifier == "withdrawIdentifier" {
             if let destVC = segue.destination as? UINavigationController{
                 let targetController = destVC.topViewController as? withdrawViewController
                 targetController?.amountSaving = String(format: "IDR %.0f", goal.amountSaving)
+//                flag = 0
             }
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        if flag == 1 {
+            self.delegate?.updateValue(value: 4)
+        } else if flag == 0 {
+            self.delegate?.updateValue(value: 5)
+        } else {
+            self.delegate?.updateValue(value: 3)
         }
     }
     
@@ -186,9 +207,16 @@ class GoalDetailController: UIViewController, SendEditGoalToDetail {
             let newAmountString = sourceViewController.amountField.text!.components(separatedBy: " ")
             let add = Double(newAmountString[1])!
             goal.totalSaving += add
+            if add != 0 {
+                flag = 1
+            }
         } else if let sourceViewController = sender.source as? withdrawViewController {
             let newAmountString = sourceViewController.amountField2.text!.components(separatedBy: " ")
-            goal.totalSaving -= Double(newAmountString[1])!
+            let withdraw = Double(newAmountString[1])!
+            goal.totalSaving -= withdraw
+            if withdraw != 0 {
+                flag = 0
+            }
         }
         setUp()
     }
@@ -200,8 +228,6 @@ class GoalDetailController: UIViewController, SendEditGoalToDetail {
         slideVC.modalPresentationStyle = .custom
         slideVC.transitioningDelegate = self
         self.navigationController?.present(slideVC, animated: true, completion: nil)
-
-
     }
     
 //     navigation to saving history

@@ -7,6 +7,8 @@
 
 import UIKit
 
+class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate, SecondViewControllerDelegate {
+
 class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate, SendCreateGoalController{
     
     @IBOutlet weak var LabelSaved: UILabel!
@@ -23,6 +25,7 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(scenario)
         setupView()
     }
     
@@ -36,6 +39,11 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
         self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
+    func updateValue(value: Int) {
+        scenario = value
+        setupView()
+    }
+
     @IBAction func unwindToFirstViewController(_ sender: UIStoryboardSegue) {
         }
     
@@ -160,6 +168,7 @@ class HomeController :UIViewController,UITableViewDataSource,UITableViewDelegate
         let navGD = (storyboard.instantiateViewController(identifier: "goalDetail") as? GoalDetailController)!
         
         navGD.goal = goalObject
+        navGD.delegate = self
         self.navigationController?.pushViewController(navGD, animated: true)
     }
     
