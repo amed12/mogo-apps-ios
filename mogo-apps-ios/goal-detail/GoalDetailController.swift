@@ -11,7 +11,7 @@ protocol SecondViewControllerDelegate: class {
     func updateValue(value: Int)
 }
 
-class GoalDetailController: UIViewController {
+class GoalDetailController: UIViewController , SendEditGoalToDetail {
     
     weak var delegate: SecondViewControllerDelegate?
     
@@ -170,9 +170,18 @@ class GoalDetailController: UIViewController {
     @IBAction func editButton(_ sender: UIBarButtonItem) {
         if result >= 1 {
             showAlert(title: "Edit Goal")
+        } else {
+            editMoveAlert()
         }
     }
     
+    func editMoveAlert(){
+        let cgVC = UIStoryboard(name: "EditGoals", bundle: nil)
+        let vc = (cgVC.instantiateViewController(identifier: "editGoalID") as? EditGoalsController)!
+        vc.delegate = self
+        vc.editGoal = goal
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     @IBAction func withdrawButton(_ sender: UIButton) {
         if result >= 1 {
@@ -187,7 +196,7 @@ class GoalDetailController: UIViewController {
             print("Undefined")
         }))
         alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: { (action) in
-            print("Undefined")
+            self.editMoveAlert()
         }))
         present(alert, animated: true)
     }
@@ -225,6 +234,16 @@ class GoalDetailController: UIViewController {
         let shStoryboard = UIStoryboard(name: "SavingHistory", bundle: nil)
         let vc = (shStoryboard.instantiateViewController(identifier: "savingHistoryID") as? SavingHistoryScreen)!
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func EditToDetail(Value: GoalObject) {
+        goalImage.image = UIImage(named: Value.icon)
+        goalTitle.text = Value.name
+        monthlySaving.text = "\(Value.amountSaving)"
+        targetDateValue.text = Value.targetDate
+        savingFrequencyValue.text = Value.savingFrequency
+        savingDateValue.text = Value.savingDate
+        savingTimeValue.text = Value.savingTime
     }
     
 }

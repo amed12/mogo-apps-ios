@@ -50,7 +50,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="YEp-1Q-V1p" kind="presentation" id="nBq-lk-JUK"/>
+                                    <action selector="createGoal:" destination="Oki-O9-QZW" eventType="touchUpInside" id="RE8-4U-ppP"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NotifEmpty" translatesAutoresizingMaskIntoConstraints="NO" id="bYS-T0-rVy">
@@ -154,14 +154,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z5m-3D-feC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="686.15384615384608" y="27.72511848341232"/>
-        </scene>
-        <!--CreateGoals-->
-        <scene sceneID="9fA-KN-Jcw">
-            <objects>
-                <viewControllerPlaceholder storyboardName="CreateGoals" id="YEp-1Q-V1p" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZV6-Uj-fLQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1683.8461538461538" y="128.67298578199052"/>
         </scene>
         <!--ReminderList-->
         <scene sceneID="NHZ-9J-pl5">

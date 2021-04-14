@@ -7,10 +7,14 @@
 
 import UIKit
 
+
 class IconController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
 
     @IBOutlet weak var iconCollection: UICollectionView!
+    
+//    weak var delagate: IconControllerDelegate?
+    var imageSend = ""
     
     var imageArray = ["iphone", "rocket", "party", "cool", "embarrassed", "happy_hands", "happy", "hardShocked", "rich", "sad", "shocked", "skull"]
     
@@ -34,5 +38,13 @@ class IconController: UIViewController, UICollectionViewDelegate, UICollectionVi
         cell.iconImage.image = UIImage(named: imageArray[indexPath.row])
         return cell
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        imageSend = imageArray[indexPath.item]
+    }
+    
+    @IBAction func buttonCancel(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
