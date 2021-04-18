@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A2DC96126122D4100CBD461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DC96026122D4100CBD461 /* AppDelegate.swift */; };
+		4A2DC96326122D4100CBD461 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DC96226122D4100CBD461 /* SceneDelegate.swift */; };
+		4A2DC96526122D4100CBD461 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DC96426122D4100CBD461 /* ViewController.swift */; };
+		4A2DC96826122D4100CBD461 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2DC96626122D4100CBD461 /* Main.storyboard */; };
+		4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DC96926122D4100CBD461 /* mogo_apps_ios.xcdatamodeld */; };
+		4A2DC96D26122D4200CBD461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A2DC96C26122D4200CBD461 /* Assets.xcassets */; };
+		4A2DC97026122D4200CBD461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2DC96E26122D4200CBD461 /* LaunchScreen.storyboard */; };
+		4A726F002623455F00562DAC /* CreateGoals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A726EF82623455F00562DAC /* CreateGoals.storyboard */; };
+		4A726F012623455F00562DAC /* CreateGoalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A726EF92623455F00562DAC /* CreateGoalController.swift */; };
+		4A726F022623455F00562DAC /* IconController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A726EFB2623455F00562DAC /* IconController.swift */; };
+		4A726F032623455F00562DAC /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A726EFD2623455F00562DAC /* CollectionViewCell.swift */; };
+		4A726F042623455F00562DAC /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A726EFE2623455F00562DAC /* CollectionViewCell.xib */; };
+		4A726F052623455F00562DAC /* Icon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A726EFF2623455F00562DAC /* Icon.storyboard */; };
+		4AC610A42623EA1A00E9898F /* GoalObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC610A32623EA1A00E9898F /* GoalObject.swift */; };
+		4AD0A0D4262081730075118A /* SavingHistoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A0D0262081730075118A /* SavingHistoryScreen.swift */; };
+		4AD0A0D5262081730075118A /* SavingHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A0D1262081730075118A /* SavingHistoryCell.swift */; };
+		4AD0A0D6262081730075118A /* SavingHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0A0D2262081730075118A /* SavingHistory.storyboard */; };
+		4AD0A0D7262081730075118A /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A0D3262081730075118A /* Transaction.swift */; };
+		4AD0A10C26208BE40075118A /* ProgressDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A10026208BE40075118A /* ProgressDrawer.swift */; };
+		4AD0A10D26208BE40075118A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A10126208BE40075118A /* HomeController.swift */; };
+		4AD0A11026208BE40075118A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0A10526208BE40075118A /* Home.storyboard */; };
+		4AD0A11126208BE40075118A /* EmptyDataGoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A10726208BE40075118A /* EmptyDataGoalCell.swift */; };
+		4AD0A11226208BE40075118A /* EmptyDataGoalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0A10826208BE40075118A /* EmptyDataGoalCell.xib */; };
+		4AD0A11326208BE40075118A /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A10926208BE40075118A /* HomeViewCell.swift */; };
+		4AD0A11426208BE40075118A /* HomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0A10A26208BE40075118A /* HomeViewCell.xib */; };
+		4AD0A11526208BE40075118A /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A10B26208BE40075118A /* MyButton.swift */; };
+		4AD0A12526208ED50075118A /* addWithdrawStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0A12326208ED50075118A /* addWithdrawStoryboard.storyboard */; };
+		4AD0A12626208ED50075118A /* addWithdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A12426208ED50075118A /* addWithdrawViewController.swift */; };
+		4AD0A130262091F10075118A /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A12B262091F10075118A /* PresentationController.swift */; };
+		4AD0A131262091F10075118A /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A12C262091F10075118A /* OverlayView.swift */; };
+		4AD0A132262091F10075118A /* GoalUpdateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A12D262091F10075118A /* GoalUpdateController.swift */; };
+		4AD0A133262091F10075118A /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0A12E262091F10075118A /* OverlayView.xib */; };
+		4AD0A134262091F10075118A /* GoalUpdate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0A12F262091F10075118A /* GoalUpdate.storyboard */; };
+		4AD0A145262093C10075118A /* ProgressDrawer2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A142262093C10075118A /* ProgressDrawer2.swift */; };
+		4AD0A146262093C10075118A /* GoalDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A143262093C10075118A /* GoalDetailController.swift */; };
+		4AD0A147262093C10075118A /* GoalDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0A144262093C10075118A /* GoalDetail.storyboard */; };
+		4AD0A154262095BE0075118A /* ReminderObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A14F262095BE0075118A /* ReminderObject.swift */; };
+		4AD0A155262095BE0075118A /* ReminderList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0A150262095BE0075118A /* ReminderList.storyboard */; };
+		4AD0A156262095BE0075118A /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A151262095BE0075118A /* ReminderViewController.swift */; };
+		4AD0A157262095BE0075118A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A152262095BE0075118A /* DetailViewController.swift */; };
+		4AD0A158262095BE0075118A /* ReminderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0A153262095BE0075118A /* ReminderViewCell.swift */; };
+		EA28361726240FB5006D204D /* EditGoals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA28361626240FB5006D204D /* EditGoals.storyboard */; };
+		EA28361A26240FD0006D204D /* EditGoalsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA28361926240FD0006D204D /* EditGoalsController.swift */; };
+		FBB4AC90262367EB0057B329 /* withdraw.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBB4AC8F262367EB0057B329 /* withdraw.storyboard */; };
+		FBB4AC93262368060057B329 /* withdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4AC92262368060057B329 /* withdrawViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4A2DC95D26122D4100CBD461 /* mogo-apps-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mogo-apps-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A2DC96026122D4100CBD461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4A2DC96226122D4100CBD461 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4A2DC96426122D4100CBD461 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4A2DC96726122D4100CBD461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4A2DC96A26122D4100CBD461 /* mogo_apps_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mogo_apps_ios.xcdatamodel; sourceTree = "<group>"; };
+		4A2DC96C26122D4200CBD461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4A2DC96F26122D4200CBD461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4A2DC97126122D4200CBD461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A726EF82623455F00562DAC /* CreateGoals.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateGoals.storyboard; sourceTree = "<group>"; };
+		4A726EF92623455F00562DAC /* CreateGoalController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGoalController.swift; sourceTree = "<group>"; };
+		4A726EFB2623455F00562DAC /* IconController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconController.swift; sourceTree = "<group>"; };
+		4A726EFD2623455F00562DAC /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		4A726EFE2623455F00562DAC /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		4A726EFF2623455F00562DAC /* Icon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Icon.storyboard; sourceTree = "<group>"; };
+		4AC610A32623EA1A00E9898F /* GoalObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalObject.swift; sourceTree = "<group>"; };
+		4AD0A0D0262081730075118A /* SavingHistoryScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavingHistoryScreen.swift; sourceTree = "<group>"; };
+		4AD0A0D1262081730075118A /* SavingHistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavingHistoryCell.swift; sourceTree = "<group>"; };
+		4AD0A0D2262081730075118A /* SavingHistory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SavingHistory.storyboard; sourceTree = "<group>"; };
+		4AD0A0D3262081730075118A /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		4AD0A10026208BE40075118A /* ProgressDrawer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressDrawer.swift; sourceTree = "<group>"; };
+		4AD0A10126208BE40075118A /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		4AD0A10526208BE40075118A /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		4AD0A10726208BE40075118A /* EmptyDataGoalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyDataGoalCell.swift; sourceTree = "<group>"; };
+		4AD0A10826208BE40075118A /* EmptyDataGoalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyDataGoalCell.xib; sourceTree = "<group>"; };
+		4AD0A10926208BE40075118A /* HomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		4AD0A10A26208BE40075118A /* HomeViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewCell.xib; sourceTree = "<group>"; };
+		4AD0A10B26208BE40075118A /* MyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
+		4AD0A12326208ED50075118A /* addWithdrawStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = addWithdrawStoryboard.storyboard; sourceTree = "<group>"; };
+		4AD0A12426208ED50075118A /* addWithdrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addWithdrawViewController.swift; sourceTree = "<group>"; };
+		4AD0A12B262091F10075118A /* PresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
+		4AD0A12C262091F10075118A /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		4AD0A12D262091F10075118A /* GoalUpdateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalUpdateController.swift; sourceTree = "<group>"; };
+		4AD0A12E262091F10075118A /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
+		4AD0A12F262091F10075118A /* GoalUpdate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GoalUpdate.storyboard; sourceTree = "<group>"; };
+		4AD0A142262093C10075118A /* ProgressDrawer2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressDrawer2.swift; sourceTree = "<group>"; };
+		4AD0A143262093C10075118A /* GoalDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalDetailController.swift; sourceTree = "<group>"; };
+		4AD0A144262093C10075118A /* GoalDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GoalDetail.storyboard; sourceTree = "<group>"; };
+		4AD0A14F262095BE0075118A /* ReminderObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderObject.swift; sourceTree = "<group>"; };
+		4AD0A150262095BE0075118A /* ReminderList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReminderList.storyboard; sourceTree = "<group>"; };
+		4AD0A151262095BE0075118A /* ReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
+		4AD0A152262095BE0075118A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		4AD0A153262095BE0075118A /* ReminderViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewCell.swift; sourceTree = "<group>"; };
+		EA28361626240FB5006D204D /* EditGoals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditGoals.storyboard; sourceTree = "<group>"; };
+		EA28361926240FD0006D204D /* EditGoalsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalsController.swift; sourceTree = "<group>"; };
+		FBB4AC8F262367EB0057B329 /* withdraw.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = withdraw.storyboard; sourceTree = "<group>"; };
+		FBB4AC92262368060057B329 /* withdrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = withdrawViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4A2DC95A26122D4100CBD461 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A2DC95426122D4100CBD461 = {
+			isa = PBXGroup;
+			children = (
+				4A2DC95F26122D4100CBD461 /* mogo-apps-ios */,
+				4A2DC95E26122D4100CBD461 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4A2DC95E26122D4100CBD461 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A2DC95D26122D4100CBD461 /* mogo-apps-ios.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4A2DC95F26122D4100CBD461 /* mogo-apps-ios */ = {
+			isa = PBXGroup;
+			children = (
+				4AC610A22623E9F400E9898F /* model */,
+				4A726EF72623455F00562DAC /* create-goals */,
+				4AD0A14E262095BD0075118A /* reminder-list */,
+				4AD0A141262093C10075118A /* goal-detail */,
+				4AD0A12A262091F10075118A /* goal-update */,
+				4AD0A12226208ED50075118A /* add-withdraw-saving */,
+				4AD0A0FF26208BE40075118A /* home */,
+				4AD0A0CF262081730075118A /* saving-history */,
+				4A2DC96026122D4100CBD461 /* AppDelegate.swift */,
+				4A2DC96226122D4100CBD461 /* SceneDelegate.swift */,
+				4A2DC96426122D4100CBD461 /* ViewController.swift */,
+				4A2DC96626122D4100CBD461 /* Main.storyboard */,
+				4A2DC96C26122D4200CBD461 /* Assets.xcassets */,
+				4A2DC96E26122D4200CBD461 /* LaunchScreen.storyboard */,
+				4A2DC97126122D4200CBD461 /* Info.plist */,
+				4A2DC96926122D4100CBD461 /* mogo_apps_ios.xcdatamodeld */,
+			);
+			path = "mogo-apps-ios";
+			sourceTree = "<group>";
+		};
+		4A726EF72623455F00562DAC /* create-goals */ = {
+			isa = PBXGroup;
+			children = (
+				4A726EFA2623455F00562DAC /* icon-collection */,
+				4A726EF92623455F00562DAC /* CreateGoalController.swift */,
+				4A726EF82623455F00562DAC /* CreateGoals.storyboard */,
+				EA28361626240FB5006D204D /* EditGoals.storyboard */,
+				EA28361926240FD0006D204D /* EditGoalsController.swift */,
+			);
+			path = "create-goals";
+			sourceTree = "<group>";
+		};
+		4A726EFA2623455F00562DAC /* icon-collection */ = {
+			isa = PBXGroup;
+			children = (
+				4A726EFC2623455F00562DAC /* icon-collection-cell */,
+				4A726EFB2623455F00562DAC /* IconController.swift */,
+				4A726EFF2623455F00562DAC /* Icon.storyboard */,
+			);
+			path = "icon-collection";
+			sourceTree = "<group>";
+		};
+		4A726EFC2623455F00562DAC /* icon-collection-cell */ = {
+			isa = PBXGroup;
+			children = (
+				4A726EFD2623455F00562DAC /* CollectionViewCell.swift */,
+				4A726EFE2623455F00562DAC /* CollectionViewCell.xib */,
+			);
+			path = "icon-collection-cell";
+			sourceTree = "<group>";
+		};
+		4AC610A22623E9F400E9898F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4AC610A32623EA1A00E9898F /* GoalObject.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4AD0A0CF262081730075118A /* saving-history */ = {
+			isa = PBXGroup;
+			children = (
+				4AD0A0D0262081730075118A /* SavingHistoryScreen.swift */,
+				4AD0A0D1262081730075118A /* SavingHistoryCell.swift */,
+				4AD0A0D2262081730075118A /* SavingHistory.storyboard */,
+				4AD0A0D3262081730075118A /* Transaction.swift */,
+			);
+			path = "saving-history";
+			sourceTree = "<group>";
+		};
+		4AD0A0FF26208BE40075118A /* home */ = {
+			isa = PBXGroup;
+			children = (
+				4AD0A10626208BE40075118A /* homeCell */,
+				4AD0A10026208BE40075118A /* ProgressDrawer.swift */,
+				4AD0A10126208BE40075118A /* HomeController.swift */,
+				4AD0A10526208BE40075118A /* Home.storyboard */,
+				4AD0A10B26208BE40075118A /* MyButton.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		4AD0A10626208BE40075118A /* homeCell */ = {
+			isa = PBXGroup;
+			children = (
+				4AD0A10726208BE40075118A /* EmptyDataGoalCell.swift */,
+				4AD0A10826208BE40075118A /* EmptyDataGoalCell.xib */,
+				4AD0A10926208BE40075118A /* HomeViewCell.swift */,
+				4AD0A10A26208BE40075118A /* HomeViewCell.xib */,
+			);
+			path = homeCell;
+			sourceTree = "<group>";
+		};
+		4AD0A12226208ED50075118A /* add-withdraw-saving */ = {
+			isa = PBXGroup;
+			children = (
+				4AD0A12326208ED50075118A /* addWithdrawStoryboard.storyboard */,
+				4AD0A12426208ED50075118A /* addWithdrawViewController.swift */,
+				FBB4AC8F262367EB0057B329 /* withdraw.storyboard */,
+				FBB4AC92262368060057B329 /* withdrawViewController.swift */,
+			);
+			path = "add-withdraw-saving";
+			sourceTree = "<group>";
+		};
+		4AD0A12A262091F10075118A /* goal-update */ = {
+			isa = PBXGroup;
+			children = (
+				4AD0A12B262091F10075118A /* PresentationController.swift */,
+				4AD0A12C262091F10075118A /* OverlayView.swift */,
+				4AD0A12D262091F10075118A /* GoalUpdateController.swift */,
+				4AD0A12E262091F10075118A /* OverlayView.xib */,
+				4AD0A12F262091F10075118A /* GoalUpdate.storyboard */,
+			);
+			path = "goal-update";
+			sourceTree = "<group>";
+		};
+		4AD0A141262093C10075118A /* goal-detail */ = {
+			isa = PBXGroup;
+			children = (
+				4AD0A142262093C10075118A /* ProgressDrawer2.swift */,
+				4AD0A143262093C10075118A /* GoalDetailController.swift */,
+				4AD0A144262093C10075118A /* GoalDetail.storyboard */,
+			);
+			path = "goal-detail";
+			sourceTree = "<group>";
+		};
+		4AD0A14E262095BD0075118A /* reminder-list */ = {
+			isa = PBXGroup;
+			children = (
+				4AD0A14F262095BE0075118A /* ReminderObject.swift */,
+				4AD0A150262095BE0075118A /* ReminderList.storyboard */,
+				4AD0A151262095BE0075118A /* ReminderViewController.swift */,
+				4AD0A152262095BE0075118A /* DetailViewController.swift */,
+				4AD0A153262095BE0075118A /* ReminderViewCell.swift */,
+			);
+			path = "reminder-list";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4A2DC95C26122D4100CBD461 /* mogo-apps-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A2DC97426122D4200CBD461 /* Build configuration list for PBXNativeTarget "mogo-apps-ios" */;
+			buildPhases = (
+				4A2DC95926122D4100CBD461 /* Sources */,
+				4A2DC95A26122D4100CBD461 /* Frameworks */,
+				4A2DC95B26122D4100CBD461 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "mogo-apps-ios";
+			productName = "mogo-apps-ios";
+			productReference = 4A2DC95D26122D4100CBD461 /* mogo-apps-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A2DC95526122D4100CBD461 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					4A2DC95C26122D4100CBD461 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 4A2DC95826122D4100CBD461 /* Build configuration list for PBXProject "mogo-apps-ios" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4A2DC95426122D4100CBD461;
+			productRefGroup = 4A2DC95E26122D4100CBD461 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A2DC95C26122D4100CBD461 /* mogo-apps-ios */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4A2DC95B26122D4100CBD461 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A2DC97026122D4200CBD461 /* LaunchScreen.storyboard in Resources */,
+				4AD0A133262091F10075118A /* OverlayView.xib in Resources */,
+				4A726F052623455F00562DAC /* Icon.storyboard in Resources */,
+				4AD0A147262093C10075118A /* GoalDetail.storyboard in Resources */,
+				FBB4AC90262367EB0057B329 /* withdraw.storyboard in Resources */,
+				4AD0A0D6262081730075118A /* SavingHistory.storyboard in Resources */,
+				4AD0A155262095BE0075118A /* ReminderList.storyboard in Resources */,
+				4A2DC96D26122D4200CBD461 /* Assets.xcassets in Resources */,
+				4AD0A134262091F10075118A /* GoalUpdate.storyboard in Resources */,
+				4AD0A11026208BE40075118A /* Home.storyboard in Resources */,
+				4A726F042623455F00562DAC /* CollectionViewCell.xib in Resources */,
+				4A726F002623455F00562DAC /* CreateGoals.storyboard in Resources */,
+				4A2DC96826122D4100CBD461 /* Main.storyboard in Resources */,
+				4AD0A11426208BE40075118A /* HomeViewCell.xib in Resources */,
+				4AD0A12526208ED50075118A /* addWithdrawStoryboard.storyboard in Resources */,
+				4AD0A11226208BE40075118A /* EmptyDataGoalCell.xib in Resources */,
+				EA28361726240FB5006D204D /* EditGoals.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4A2DC95926122D4100CBD461 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AD0A0D7262081730075118A /* Transaction.swift in Sources */,
+				4AD0A10C26208BE40075118A /* ProgressDrawer.swift in Sources */,
+				4A2DC96526122D4100CBD461 /* ViewController.swift in Sources */,
+				4AD0A11526208BE40075118A /* MyButton.swift in Sources */,
+				FBB4AC93262368060057B329 /* withdrawViewController.swift in Sources */,
+				4AD0A11126208BE40075118A /* EmptyDataGoalCell.swift in Sources */,
+				4A726F032623455F00562DAC /* CollectionViewCell.swift in Sources */,
+				EA28361A26240FD0006D204D /* EditGoalsController.swift in Sources */,
+				4A726F012623455F00562DAC /* CreateGoalController.swift in Sources */,
+				4AD0A145262093C10075118A /* ProgressDrawer2.swift in Sources */,
+				4AD0A157262095BE0075118A /* DetailViewController.swift in Sources */,
+				4A2DC96B26122D4100CBD461 /* mogo_apps_ios.xcdatamodeld in Sources */,
+				4AD0A11326208BE40075118A /* HomeViewCell.swift in Sources */,
+				4AD0A154262095BE0075118A /* ReminderObject.swift in Sources */,
+				4A2DC96126122D4100CBD461 /* AppDelegate.swift in Sources */,
+				4AC610A42623EA1A00E9898F /* GoalObject.swift in Sources */,
+				4A726F022623455F00562DAC /* IconController.swift in Sources */,
+				4AD0A10D26208BE40075118A /* HomeController.swift in Sources */,
+				4AD0A131262091F10075118A /* OverlayView.swift in Sources */,
+				4AD0A156262095BE0075118A /* ReminderViewController.swift in Sources */,
+				4AD0A130262091F10075118A /* PresentationController.swift in Sources */,
+				4A2DC96326122D4100CBD461 /* SceneDelegate.swift in Sources */,
+				4AD0A158262095BE0075118A /* ReminderViewCell.swift in Sources */,
+				4AD0A146262093C10075118A /* GoalDetailController.swift in Sources */,
+				4AD0A0D5262081730075118A /* SavingHistoryCell.swift in Sources */,
+				4AD0A0D4262081730075118A /* SavingHistoryScreen.swift in Sources */,
+				4AD0A12626208ED50075118A /* addWithdrawViewController.swift in Sources */,
+				4AD0A132262091F10075118A /* GoalUpdateController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4A2DC96626122D4100CBD461 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A2DC96726122D4100CBD461 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4A2DC96E26122D4200CBD461 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A2DC96F26122D4200CBD461 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4A2DC97226122D4200CBD461 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4A2DC97326122D4200CBD461 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4A2DC97526122D4200CBD461 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "mogo-apps-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mogo-apps-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4A2DC97626122D4200CBD461 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "mogo-apps-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mogo-apps-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4A2DC95826122D4100CBD461 /* Build configuration list for PBXProject "mogo-apps-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A2DC97226122D4200CBD461 /* Debug */,
+				4A2DC97326122D4200CBD461 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A2DC97426122D4200CBD461 /* Build configuration list for PBXNativeTarget "mogo-apps-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A2DC97526122D4200CBD461 /* Debug */,
+				4A2DC97626122D4200CBD461 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4A2DC96926122D4100CBD461 /* mogo_apps_ios.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4A2DC96A26122D4100CBD461 /* mogo_apps_ios.xcdatamodel */,
+			);
+			currentVersion = 4A2DC96A26122D4100CBD461 /* mogo_apps_ios.xcdatamodel */;
+			path = mogo_apps_ios.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4A2DC95526122D4100CBD461 /* Project object */;
+}
